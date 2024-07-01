@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lanxNavbar</title>
+
+	<style type="text/css">
+
+		/* body {
+			margin: 0;
+			padding: 0;
+			font-family: arial;
+			min-width: 1250px;
+			max-width: 1280px;
+		}
+
+		header {
+			background:#333;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100px;
+			color: #e3e3e3;
+		}
+
+		#logo {
+			height: 100px; 
+			width: 30%; 
+			margin:0; 
+			float: left;
+		}
+
+
+		header nav {
+			float: right;
+			margin: 0;
+			padding: 40px 0 0 0;
+		}
+
+		header nav > ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			list-style-type: none;
+		}
+
+		header ul > li {
+			float: left;
+			/* display: block;
+			margin: 0;
+			padding: 0; 
+		} 
+
+		header ul li > a {
+			display: block;
+			line-height: 60px;
+			border-right: 1px #555 solid;
+			font-weight: 300;
+			font-size: 16px;
+			color: #e3e3e3;
+			text-decoration: none;
+			padding: 0 25px;
+
+		}
+
+		header ul ul {
+			width:130px ;
+			display: none;
+			padding: 0;
+			margin: 2px 0 0 0;
+			border:1px #555 solid;
+			background: #444;
+			list-style-type: none;
+		}
+
+		header nav ul ul li {
+			float: none;
+			border: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		header nav li li a {
+			line-height: 45px;
+			font-size: 15px;
+			border-bottom: 1px #555 solid;
+			padding: 0 0 0 25px;
+			
+		} 
+
+		header ul li:hover > a {
+			background: #754842EC;
+		}
+
+		header li:hover > ul {
+			display: block;
+		} */
+
+
+
+		/* When you float elements nested in the parent element, set "overflow" ppty to "auto" to capture all the contents */
+
+		/* body {
+			margin: 0;
+			font-family:arial;
+			min-width: 1230px; 
+		}
+
+		header {
+			position: relative;
+			background: #333;
+			width: 100%;
+			height: 50px;
+		}
+
+		header h1 {
+			float: left;  /*note this line*
+			display: block;
+			width: 20%;
+			margin: 0 3% 0 0;
+			padding-left: 2%;
+			font-size: 25px;
+			line-height: 50px;
+			color: #e3e3e3;
+			text-shadow: 2px -2px 0 #8B7973FF,
+						 0  1px 0 #c4c4c4; /*x-y-blurring-color*
+
+		}
+
+		header nav {
+			display: inline-block;
+			width: 75%;
+			height: 50px;
+		}
+
+		nav > ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			overflow: visible;  /*note this line *
+		}
+
+		nav ul > li {
+			float: left;
+			display: block;
+			width: 130px;
+		}
+
+		nav li > a {
+			display: block;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 0;
+			border-right: 1px #555 solid;
+			line-height: 50px;
+			width: 100%;
+			color: #c4c4c4;
+			text-align: center;
+		}
+
+		nav ul > li a#last-child {
+			border: none;
+		}
+
+		nav ul ul {
+			margin: 2px 0 0 0;
+			padding: 0;
+			background:#4c4c4c;
+			border: 1px #333 solid;
+			width: 130px;
+			display: none;
+
+		}
+
+		nav li li {
+			float: none;
+			width: 100%;
+			height: 45px;
+		
+		}
+
+		nav ul ul li > a {
+			border: none;
+			font-size: 16px;
+			line-height: 44px;
+			border-bottom: 1px solid #333;
+		}
+
+		nav ulu ul li > a:last-child {
+			border: none;
+		}
+
+		nav li:hover ul {
+			display: block;
+		}
+
+		nav li a:hover {
+			background: #754842EC;
+			color: #e3e3e3;
+			border-radius: 15px;
+		}
+
+		main {
+			width: 50%;
+			background: #754842EC;
+			margin: 0 2%;
+			padding: 15px 0 0 0;
+		}
+
+		main p:first-child {
+			margin:0;
+			width: 50%;
+		}
+
+		form input {
+			box-shadow: ;
+			
+		} */
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: darkseagreen;
+			color: #fff;
+		}
+
+		header {
+			background: #333;
+			display: flex;
+			flex-wrap: wrap;
+			text-transform: capitalize;
+			text-align: center;
+		}
+
+		.grid {
+			flex: 1;
+		}
+
+		.grid_2 {
+			flex: 2;
+		}
+
+		header h1 {
+			padding: 0 1rem;
+			line-height: 3rem;
+		}
+
+		nav ul {
+			list-style: none;
+		}
+
+		nav > ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		nav ul > li {
+			position: relative;
+		}
+
+		nav li > a {
+			display: block;
+			color: #c40a80;
+			text-decoration: none;
+			padding: 0 1rem;
+			line-height: 3rem;
+			border-right: 1px solid #555;
+		}
+
+		nav ul ul {
+			display: none;
+			position: absolute;
+			left: 0;
+			background: #333;
+			border: 1px #555 solid;
+			margin-top: 0.1rem;
+			width: 7rem;
+			z-index: 1;
+		}
+
+		nav li li a {
+			border: none;
+			line-height: 1rem;
+			padding: 0.75rem 0;
+			border-bottom: #555;
+		}
+
+		nav li:hover ul {
+			display: block;
+			text-align: left;
+		}
+
+		nav li a:hover {
+			background: #555;
+			color: #fff;
+		}
+
+		@media (max-width: 500px) {
+			header {
+				flex-direction: column;
+			}
+
+			nav li a {
+				border: none;
+				line-height: 2rem;
+			}
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		// alert("Welcome back Engr. Lanx"); 
+		// console.log("You are highly welcome Engr. Lanx");
+
+	</script>
+</head>
+<body>
+	<!-- <header>
+
+		<h1>The LanxtEchwoRld</h1>
+
+		<nav>
+			<ul>
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#tutorial">TUTORIAL</a>
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">PYTHON</a></li>
+					</ul>
+				</li>
+				<li><a href="#blogs">BLOGS</a>
+					<ul>
+						<li><a href="#">UPDATES</a></li>
+						<li><a href="#">TRENDING</a></li>
+						<li><a href="#">EXPLORE</a></li>
+					</ul>
+				</li>
+				<li><a href="#contact">CONTACT</a></li>
+				<li><a href="#partnership">PARTNERSHIP</a></li>
+				<li><a href="#help" id="last-child">HELP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quasi iure repudiandae optio dolorum rerum inventore ex iusto facilis, repellat fugit! Aspernatur explicabo pariatur tenetur repellat. Similique earum a quibusdam sequi expedita, tempora quo odio aut ratione numquam enim ipsam? Ea reiciendis, sunt, a eos repudiandae asperiores saepe ipsa quae.</p>
+		<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Iusto deleniti quas praesentium doloremque vitae, blanditiis, error ad aliquid eos, alias tempore. Et asperiores facere iure, debitis cumque voluptate aperiam natus quis, rem quasi harum unde veniam quod temporibus incidunt esse pariatur tempora doloribus facilis nihil officia architecto! Dicta temporibus quaerat, id, beatae odio odit possimus numquam totam doloribus? Nulla dolor, quasi voluptatem quos atque incidunt dolorem non natus velit unde quia expedita doloremque explicabo cumque sunt tempore corrupti quod iusto error impedit vero saepe, consequuntur dicta laboriosam. Eum, voluptate. Alias numquam tempora pariatur incidunt molestias quis beatae illo odio vero.</p>
+	</main> -->
+
+	<header>
+		<h1 class="grid grid_4">LanxtEchwoRld</h1>
+		<nav class="grid grid_2">
+			<ul>
+				<li><a href="">home</a></li>
+				<li><a href="">about</a></li>
+				<li><a href="">contact</a></li>
+				<li class="drop-down"><a href="">explore</a>
+					<ul>
+						<li><a href="">suit tips</a></li>
+						<li><a href="">trending style</a></li>
+						<li><a href="">other</a></li>
+					</ul>
+				</li>
+				<li><a href="">update</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Debitis repudiandae consequatur libero repellat vel, hic, ex est, ullam labore molestiae tempore facilis. Laudantium vel harum aspernatur delectus atque aperiam tempora qui officiis ipsam sint fugiat molestiae, alias quos vero minima dolores a animi, omnis temporibus aliquid. Libero tempore velit, quae?</p>
+	</main>
+
+	<form action="sodiq.js"><input type="text"></form>
+	
+</body>
+</html>

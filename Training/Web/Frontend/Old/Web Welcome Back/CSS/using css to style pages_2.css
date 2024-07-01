@@ -1,0 +1,88 @@
+body{
+	background-color: rgba(127, 0, 50, 1.0);
+	border: solid blue;
+}
+
+#name:before {
+	content:"programmer";
+}
+
+#name:after {
+	content:" coding python";
+}
+
+ul.backgrd {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+a {
+	color: orangered;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: blueviolet;
+	background-color: black;
+}
+
+#firstParagraph {
+	border: double 20px;
+	padding: 12px;
+	width: fit-content;
+	margin: 20px;
+	border-right: dashed 5px green;
+	border-bottom: dotted 10px palegreen;
+	border-left: solid 5px skyblue;
+}
+
+#outside {
+	border: solid 2px;
+	padding: 30px;
+	
+}
+
+#inside {
+	border: solid blue;
+	background-color: hotpink;
+	width: 20%;
+	height: 70px;
+	margin:-5px auto 0 auto;
+	overflow: auto;
+}
+
+.right {
+	border: solid rebeccapurple;
+	float: right;
+	width: 30%;
+}
+
+.floated{
+	border: dashed cyan;
+	width: 50%;
+	float: left;
+}
+
+ul.topmost > li {
+	background-color: green;
+}
+
+
+
+h3#firstSibling + div {
+	background-color: blue;
+}
+
+#firstSibling + div:first-letter {
+	font-size: 300%;
+	font-family: sans-serif;
+	float: left;
+	padding: 0 5px;
+	
+}
+
+#allSiblings ~ p {
+	background-color: pink;
+}

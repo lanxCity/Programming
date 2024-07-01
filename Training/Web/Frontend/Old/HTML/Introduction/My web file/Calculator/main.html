@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="./main.css" />
+		<title>My first calculator</title>
+	</head>
+	<body>
+		<main>
+			<div class="main-container">
+				<section id="section-screen">
+					<div class="screen-container">
+						<input
+							type="text"
+							name="screen"
+							id="screen"
+							readonly=""
+						/>
+					</div>
+				</section>
+				<section id="section-switch-clear">
+					<div id="switch-container">
+						<input type="checkbox" id="switch" />
+						<div>
+							<p>
+								<span id="switch-on">ON</span>/<span
+									id="switch-off"
+									>OFF</span
+								>
+							</p>
+						</div>
+					</div>
+					<div class="clear-container">
+						<input type="button" value="CLR" id="clear" />
+					</div>
+				</section>
+				<section id="section-values">
+					<div class="values-container">
+						<div>
+							<input type="button" value="9" class="item value" />
+							<input type="button" value="8" class="item value" />
+							<input type="button" value="7" class="item value" />
+						</div>
+						<div>
+							<input type="button" value="6" class="item value" />
+							<input type="button" value="5" class="item value" />
+							<input type="button" value="4" class="item value" />
+						</div>
+						<div>
+							<input type="button" value="3" class="item value" />
+							<input type="button" value="2" class="item value" />
+							<input type="button" value="1" class="item value" />
+						</div>
+						<div>
+							<input type="button" value="." class="item value" />
+							<input type="button" value="0" class="item value" />
+							<input type="button" value="(" class="item value" />
+						</div>
+
+						<div>
+							<input type="button" value=")" class="item value" />
+							<input
+								type="button"
+								value="="
+								class="item equation"
+								id="equate"
+							/>
+						</div>
+					</div>
+				</section>
+				<section id="section-operators">
+					<div class="operators-container">
+						<input
+							type="button"
+							value="Del"
+							class="operator delete"
+						/>
+						<input type="button" value="/" class="operator value" />
+						<input type="button" value="+" class="operator value" />
+						<input type="button" value="-" class="operator value" />
+						<input type="button" value="*" class="operator value" />
+					</div>
+				</section>
+			</div>
+		</main>
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>

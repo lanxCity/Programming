@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testing My Form</title>
+
+	<style type="text/css">
+
+	 body {
+		min-width: 760px;
+		max-width: 1280px;
+	}
+
+
+		form {
+			width: 50%;
+			margin: 0 auto;
+			background: #e3e3e3;
+		}
+
+		form p span {
+			color: red;
+		}
+
+		form div {
+			background: pink;
+			height: 40px;
+			margin: 0 0 15px 0;
+			font-family: sans-serif;
+		}
+
+		form .required {
+			font-weight: bold;
+		}
+
+		form .title {
+			display: block;
+			height: 40px;
+			font-size: 16px;
+			width: 30%;
+			margin-right: 4%;
+			text-align: right;
+			float: left;
+		}
+
+		form #biography {
+			width: 50%; 
+			height: 75px; 
+			min-width: 40%; 
+			max-width: 60%;
+			min-height: 40px;
+			max-height: 90px;
+		}
+
+		form #register {
+			margin: 60px 0 0 0;
+			padding-top: 15px;
+		}
+
+		form #register #submit {
+			margin-left: 34%;
+			padding: 5px;
+		}
+
+		form #submit:hover {
+			background: #6E8E90FF;
+			cursor: pointer;
+		} 
+
+
+	</style>
+</head>
+<body>
+
+	<form action="#" method="get"> 
+
+		<!- Superb Job and well arranged ->
+
+		<h1>Registration Form</h1>
+		<p>Please fill out the form below to join the team&period;
+			<span>Note that Fields with <b>BOLD</b> labels are required&period;</span>
+		</p>
+		<div>
+			<label for="name" class="title required">Name&colon;</label>
+			<input type="text" name="name" required="" id="name" >
+		</div>
+
+		<div>
+			<label for="gender" class="title required">Gender&colon;</label>
+
+			<label>Male<input type="radio" name="gender" value="male" id="male" required=""></label>
+
+			<label>Female<input type="radio" name="gender" value="female" id="female" required=""></label>
+		</div>
+
+		<div>
+			<label for="operating_system" class="title required">Operating System&colon;</label>
+
+			<select name="operating_system" required="" id="">
+				<option value="">Windows</option>
+				<option value="">Linux</option>
+				<option value="">Mac Os</option>
+				<option value="">Other</option>
+			</select>
+
+		</div>
+
+		<div>
+			<label for="toy" class="title">Toys&colon;</label>
+
+			<label for="digitalCamera"><input type="checkbox" name="toy" value="Digital Camera" id="digitalCamera">Digital Camera</label>
+			<label for="mp3Player"><input type="checkbox" name="toy" value="MP3 Player" id="mp3Player">MP3 Player</label>
+			<label for="wirelessLAN"><input type="checkbox" name="toy" value="wirelessLAN" id="wirelessLAN">Wireless LAN</label>
+		</div>
+
+		<div>
+			<label for="portrait" class="title">Portrait&colon;</label>
+			<input type="file" name="portrait" id="portrait" style="width:66% ;">
+		</div>
+
+		<div>
+			<label for="biography" class="title">Mini Biography&colon;</label>
+			<textarea name="biography" id="biography" maxlength="250"></textarea>
+		</div>
+
+		<div id="register">
+			<button type="submit" name="submit" id="submit">Register</button>
+		</div>
+
+	</form>
+
+
+	<!-- THE HTML ENTITIES e.g. &nbsp;(non-breaking space), &emsp;-->
+
+	<h1>THE USE OF THE &ldquo;HTML&nbsp;ENTITIES&rdquo; or &ldquo;SPECIAL&emsp;CHARACTERS&rdquo;</h1>
+	<div id="">This is a <code>&lt;div&gt;</code> tag</div>
+
+	
+
+
+
+
+	
+</body>
+</html>

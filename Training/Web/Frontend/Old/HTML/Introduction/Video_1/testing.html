@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The use of 960_12_clos</title>
+	<link rel="stylesheet" href="./CSS/960_12_col.css">
+
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.container_12 {
+			background: red;
+		}
+
+		header {
+			/* overflow: hidden;  Not this or use class of "clearfix" */
+			background: yellow;
+
+		}
+
+		header nav {
+			background: green;
+		}
+
+		header nav li {
+			display: inline-block;
+			list-style: none;
+		}
+
+		div.grid_8 {
+			background: #e3e3e3;
+		}
+
+		section {
+			padding: 15px;
+		}
+
+		main aside {
+			background: #000;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper container_12">
+		<header class="clearfix">
+
+			<h1 class="grid_4">My Web</h1>
+			<nav class="grid_8">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">products</a></li>
+					<li><a href="#">internship</a></li>
+					<li><a href="#">magazine</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<main class="clearfix">
+
+			<div class="grid_8">
+
+				<section class="grid_2 alpha">
+					<h2>About Mr&period; Lorem</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum atque, quae deleniti laborum impedit at, optio sint ex consectetur, dolor id commodi quasi unde libero. Dolorum aut magni nemo, eius.</p>
+				</section>
+				
+				<section class="grid_2">
+					<h2>About Mr&period; Lorem</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum atque, quae deleniti laborum impedit at, optio sint ex consectetur, dolor id commodi quasi unde libero. Dolorum aut magni nemo, eius.</p>
+				</section>
+
+				<section class="grid_2">
+					<h2>About Mr&period; Lorem</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum atque, quae deleniti laborum impedit at, optio sint ex consectetur, dolor id commodi quasi unde libero. Dolorum aut magni nemo, eius.</p>
+				</section>
+
+				<section class="grid_2 omega">
+					<h2>About Mr&period; Lorem</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum atque, quae deleniti laborum impedit at, optio sint ex consectetur, dolor id commodi quasi unde libero. Dolorum aut magni nemo, eius.</p>
+				</section>
+			</div>
+
+			<aside class="grid_4">
+				<ul>
+					<li><a href="#">Purchase</a></li>
+					<li><a href="#">Explore</a></li>
+					<li><a href="#">blogging</a></li>
+					<li><a href="#">other</a></li>
+				</ul>
+			</aside>
+		</main>
+
+		<footer>
+			<p>Copyright&copy; 2021. All right reserved.</p>
+		</footer>
+	</div>
+	
+</body>
+</html>

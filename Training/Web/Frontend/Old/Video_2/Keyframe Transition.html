@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The CSS Transition</title>
+	<style type="text/css">
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+			height: 80vh;
+			width: 100%;
+			background: #333;
+			/* transition-property: width,height;
+			transition-duration: 10s; */
+		}
+
+		.container .box {
+			width: 100px;
+			height: 100px;
+			background: white;
+
+			/* "transition-properties" is used to specify which property we need to transit when will "hover"  or etc. */
+
+			/* transition-property: background,width,height,border-radius;
+			transition-duration: 2s;
+			transition-delay: .5s;
+			transition-timing-function: ease-in-out; */
+
+			transition: all 2s .2s ease-in-out;
+		}
+
+		/* .container:hover .box {
+			width: 150px;
+			height: 150px;
+		} */
+
+		.box:hover {
+			background: darkgreen;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		/* -------The "transition" properties; properties that have identifiable halfway point.------- 
+			color,
+			bg-color,
+			bg-position,
+			border-radius,border-color,border-width,border-spacing,
+			bottom,top,left,right,
+			font-size,font-weight,
+			width,height,
+			line-height,letter-spacing,word-spacing,
+			max-(height,width,), min-(height,width),
+			opacity
+			outline-(color,offset,width),
+			padding,margin,
+			text-(indent,shadow),
+			align,vertical-align,
+			visibility,
+			z-index.
+		*/
+	</style>
+</head>
+<body>
+	<!-- The use of Transition on a page:  It's basically happen on an event e.g. "hover". And it is used with css properties that are animatable -->
+
+	<h1>The Use Of Transition On A Page</h1>
+
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>

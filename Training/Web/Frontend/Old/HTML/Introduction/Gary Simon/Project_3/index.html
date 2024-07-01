@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Home &verbar; UI DESIGN COURSE</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="flex-item">
+        <div class="container">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/logo_copy.svg"
+            alt="UI Design Course Logo"
+            id="logo"
+          />
+
+          <div class="header-content">
+            <div class="bg-card-container">
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+              <div class="bg-card"></div>
+            </div>
+            <section class="main">
+              <h1>Complete UI Design Course</h1>
+              <p>
+                Tired of producing subpar UI designs? CompleteUI is an upcoming
+                course created to help aspiring UI designers create work that's
+                worthy of front&hyphen;page dribble & behance
+              </p>
+              <p class="para-special">
+                CompleteUI is releasing before 2020 on Udemy & other networks.
+              </p>
+            </section>
+          </div>
+        </div>
+      </header>
+
+      <section class="notice-form flex-item">
+        <div class="container">
+          <p>Get notified when I release this course!</p>
+          <form action="">
+            <div class="field">
+              <input type="email" placeholder="your email" />
+            </div>
+
+            <input type="submit" value="Notify Me" class="btn" />
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="../../../../Javascript/JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("header").mousemove(function (event) {
+          let bgCardMove = event.clientX * 0.05 + 4;
+          let sectionMainMove = event.clientX * 0.003;
+
+          $("section.main").css({
+            transform: `translate(${-sectionMainMove}%)`,
+          });
+
+          $(".bg-card").css({
+            transform: `translate(${-bgCardMove}%)`,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

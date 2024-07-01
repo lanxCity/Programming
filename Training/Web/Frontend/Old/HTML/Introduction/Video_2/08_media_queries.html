@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The use of media queries for RWD; Responsive Web Design">
+	<meta name="keywords" content="">
+	<title>Media Queries & Rem and Em</title>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			/* Not necessary */
+			/* font-size: 62.5%;  */
+		}
+
+		body {
+			background: #333;
+			color: #fff;
+			text-align: center;
+			font-family: 'Segoe UI',sans-serif;
+		}
+
+		.all-screen {
+			display: none;
+			padding: 2rem;
+			padding-top:10rem ;
+		}
+
+
+
+		@media all and (max-width: 500px) {
+			body {
+				background: red;
+			}
+
+			#smartphones {
+				display: block;
+			}
+			
+		}
+
+		@media all and (min-width:501px) and (max-width: 768px) {
+			body {
+				background: pink;
+			}
+
+			#tablet {
+				display: block;
+			}
+			
+		}
+
+		@media all and (min-width: 769px) and (max-width: 1200px) {
+			body {
+				background: green;
+			}
+
+			#normalscreen {
+				display: block;
+			}
+			
+		}
+
+		@media all and (min-width: 1201px) {
+			body {
+				background: blue;
+			}
+
+			#widescreen {
+				display: block;
+			}
+			
+		}
+
+		@media all and (max-height: 500px) {
+			body {
+				background: orange;
+				padding-top: 50px;
+			}
+
+			#landscape {
+				display: block;
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="smartphones" class="all-screen">
+		<h1>This is for smartphones</h1>
+		<p></p>
+	</div>
+	<div id="tablet" class="all-screen">
+		<h1>This is for tablet</h1>
+		<p></p>
+	</div>
+	<div id="normalscreen" class="all-screen">
+		<h1>This is for normal screen</h1>
+		<p></p>
+	</div>
+	<div id="widescreen" class="all-screen">
+		<h1>This is for wide screen</h1>
+		<p></p>
+	</div>
+	<div id="landscape" class="all-screen">
+		<h1>This is for landscape</h1>
+		<p></p>
+	</div>
+
+<!-- 	<ul>  -----------------ul>li{$}*4
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul> -->
+</body>
+</html>

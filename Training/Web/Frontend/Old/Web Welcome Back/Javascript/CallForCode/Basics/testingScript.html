@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TESTING PAGE</title>
+
+    <style type="text/css">
+      #submitBtn {
+        display: block;
+        padding: 0.5rem 1rem;
+        border: none;
+        background: #333;
+        color: #a3a3a3;
+      }
+
+      #submitBtn:hover {
+        opacity: 0.6;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+    <!-- <script defer="" type="text/javascript" src="./Arrays.js"></script> -->
+
+    <!-- the "defer" attribute makes the page to first before executing javascript file. Another one is "async" which does the opposite. But 
+      this page is still working fine with the absence of "defer" for those
+      codes are within  a function already been declared here.-->
+  </head>
+  <body>
+    <!--   <ol id="ordered-list"></ol>
+    <p id="confirm">Click to confirm your payment</p>
+    <button
+      type="submit"
+      id="confirm-btn"
+      onclick="confirmButton()"
+      onmouseover="changeColour()"
+    >
+      Confirm
+    </button>
+
+    <form action="./Recap/Recap_2.js" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" /><br />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" /><br />
+
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <form action="" method="get">
+      <div class="user-name">
+        <label for="">Name&colon;</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="user-age">
+        <label for="">Age&colon;</label>
+        <input type="text" name="userAge" id="userAge" />
+      </div>
+      <div class="user-fav-food">
+        <label for="">Favorite Meal&colon;</label>
+        <input type="text" name="userFood" id="userFood" />
+      </div>
+      <div class="submit">
+        <button type="button" id="submitBtn" onclick="profileSubmitBtn()">
+          Submit
+        </button>
+      </div>
+    </form>
+    <script
+      type="text/javascript"
+      src="./Object-oriented-javascript.js"
+    ></script>
+  </body>
+</html>

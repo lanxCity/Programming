@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="desccription" content="Flexbox is a modern layout in CSS3 for a web page which replaces float.">
+	<meta name="keywords" content="Flexbox is used by assigning 'flex' value to the 'display' property. It align items both horizontal(row) and vertical(column) direction ">
+	<title>INTRODUCTION TO FLEXBOX</title>
+	<style type="text/css">
+		#container {
+			text-transform: capitalize;
+			border: 1px yellow solid;
+			display: flex;
+			/* flex-direction: row; row is the default
+			flex-wrap: wrap; */
+			flex-flow: row wrap;
+		}
+
+		.item {
+			background: #e3e3e3;
+			border: 1px #555 solid;
+			text-align: center;
+			padding: 1rem;
+			flex: 1;
+			margin: 0.5rem;
+		}
+
+		.item:first-child {
+			flex: 9;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="item">
+			<h3>item 1</h3>
+		</div>
+		<div class="item">
+			<h3>item 2</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+		<div class="item">
+			<h3>item 3</h3>
+		</div>
+	</div>
+</body>
+</html>

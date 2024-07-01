@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  line-height: 1.2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem 3rem;
+  text-transform: capitalize;
+}
+
+p[title="page-title"] {
+  color: rgb(40, 110, 153);
+  padding: 2rem 0;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-bottom: 2px dotted rgb(162, 219, 238);
+}
+input {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  outline: none;
+  letter-spacing: 3px;
+  border: 2px solid transparent;
+  transition: all ease-out 0.3s;
+}
+input:focus {
+  border-color: rgb(40, 110, 153);
+  border-radius: 10px;
+}
+button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0 0 1rem;
+  background: rgb(40, 110, 153);
+  color: #eee;
+  cursor: pointer;
+  transition: all ease-out 0.5s;
+  text-transform: capitalize;
+}
+
+button:hover {
+  color: #333;
+  opacity: 0.8;
+}
+
+ul {
+  list-style: inside;
+}
+
+ul li {
+  padding: 0.5rem;
+  font-weight: 650;
+}
+
+li span {
+  float: right;
+}
+li:first-child span .up {
+  display: none;
+}
+
+li:last-child span .down {
+  display: none;
+}
+
+.change-description-container {
+  padding: 1rem 0;
+}
+#title-btn {
+  margin-top: 0;
+}
+
+#toggle-list {
+  cursor: pointer;
+}
+
+#toggle-list + label::after {
+  display: block;
+  content: "";
+  margin-bottom: 1rem;
+}
+
+#list-of-items ul {
+  transition: all 0.5s ease-in; /*all timetaken delay ease-in*/
+}
+/* #toggle-list:checked ~ #list-of-items ul {
+  
+} */

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <label for="name">Name</label> <input type="text" /><br /><br />
+
+      <label for="password">Password</label>
+      <input type="password" pattern="" />
+    </form>
+    <script>
+      const print = console.log.bind();
+
+      // ----------------Revision on prototype & inheritance
+      //==> Creating prototype method for constructor method.
+      //N:B While using function constructor, it's not recommended having methods  inside the constructor. Therefore, we use "prototype" methods for constructor function.
+      // A prototype is just one object that another object can inherit from.
+
+      /**
+       * @param {string} name - the new user name
+       * @param {integer} age - the new user age
+       * @param {string} gender - the new user gender
+       * @param {object} contact - the new user contact info; phone and address
+       * @param {string} campusStatus - the new user contact info; phone and address
+       * @param {boolean} isActive - the status of user
+       */
+      // function Profile(
+      //   name,
+      //   age,
+      //   gender,
+      //   contact,
+      //   campusStatus,
+      //   isActive = false
+      // ) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.gender = gender;
+      //   this.contact = contact;
+      //   this.campusStatus = campusStatus;
+      //   this.isActive = isActive;
+      // }
+
+      // // changing prototype of the constructor (instead of the instances using "set")
+
+      // let User = {
+      //   defaultValue() {
+      //     for (data in this) {
+      //       if (!this[data]) this[data] = null;
+      //     }
+      //   },
+
+      //   greetings() {
+      //     if (this.campusStatus.toLowerCase() === "lecturer") {
+      //       if (this.title) {
+      //         print(`Hello guys! I'm ${this.title} ${this.name.toUpperCase()}`);
+      //       }
+      //     } else {
+      //       print(`${this.name.toUpperCase()} says good day to you sir`);
+      //     }
+      //   },
+      // };
+
+      // Profile.prototype = User;
+
+      // // Profile.prototype.defaultValue = function () {
+      // //   for (data in this) {
+      // //     if (!this[data]) print(data);
+      // //   }
+      // // };
+
+      // // N:B Prototype of instances can't be accessed using instance.prototype. But by using "instance.get"
+      // let user1 = new Profile(
+      //   "Sodiq",
+      //   25,
+      //   "Male",
+      //   {
+      //     phone: "+2348146257816",
+      //     address:
+      //       "Lane 4, House 4, Akuru complex, Elebu Oluyole Ext., Ring Road, Ib.",
+      //   },
+      //   "Student",
+      //   true
+      // );
+
+      // let user2 = new Profile(
+      //   "Oyefeso",
+      //   46,
+      //   "",
+      //   {
+      //     phone: "+2348122554422",
+      //     address: "Bodija Estate, Ib.",
+      //   },
+      //   "Lecturer",
+      //   false
+      // );
+
+      // // print(Object.getPrototypeOf(user1));
+      // // print(Object.setPrototypeOf(user1, Profile));
+
+      // // Instead of setting the prototype of those instances, we decided to change that of their constructor.
+
+      // // print(Profile.prototype);
+
+      // // ==> Polymorphism
+      // /*  let users = [user1, user2];
+
+      // users = users.map(function (person) {
+      //   for (data in person) {
+      //     if (person[data] === false) continue;
+      //     if (!person[data]) person[data] = null;
+      //   }
+
+      //   return person;
+      // }); */
+
+      // user1.defaultValue();
+      // user2.defaultValue();
+      // user1.greetings();
+      // user2.greetings();
+      // --------End
+
+      // document.addEventListener("onload", function (event) {
+      //   print(this);
+      // });
+
+      //  ==> Revision on Class
+
+      // class User {
+      //   constructor(name, gender, campusStatus, isActive = false) {
+      //     this.name = name;
+      //     this.gender = gender;
+      //     this.campusStatus = campusStatus;
+      //     this.isActive = isActive;
+      //   }
+
+      //   // Additional info for student
+      //   get matricNum() {
+      //     return this._matricNum;
+      //   }
+      //   set matricNum(matricNum) {
+      //     const getMatNum = matricNum;
+      //     if (this.campusStatus.toLowerCase() === "student") {
+      //       this._matricNum = Boolean(getMatNum) === true ? getMatNum : null;
+      //     }
+      //   }
+
+      //   // Additional info for lecturer
+      //   // ==> lecture title
+      //   get title() {
+      //     return this._title;
+      //   }
+      //   set title(title) {
+      //     let getTitle = title;
+      //     if (this.campusStatus.toLowerCase() === "lecturer") {
+      //       this._title = Boolean(getTitle) === true ? getTitle : instructor;
+      //     }
+      //   }
+
+      //   // ==> courses taken by lecturer
+      //   get coursesTaken() {
+      //     return this._coursesTaken;
+      //   }
+      //   set coursesTaken(coursesTaken) {
+      //     let getCoursesTaken = coursesTaken;
+
+      //     if (getCoursesTaken instanceof Array) {
+      //       getCoursesTaken = getCoursesTaken.join(", ");
+      //     }
+
+      //     if (this.campusStatus.toLowerCase() === "lecturer") {
+      //       this._coursesTaken =
+      //         Boolean(getCoursesTaken) === true ? getCoursesTaken : null;
+      //     }
+      //   }
+
+      //   // Additional info for both lecturer and student
+      //   get currentCourse() {
+      //     return this._currentCourse;
+      //   }
+      //   set currentCourse(currentCourse) {
+      //     let getCurrentCourse = currentCourse;
+      //     if (this.isActive) {
+      //       this._currentCourse =
+      //         Boolean(getCurrentCourse) === true ? getCurrentCourse : null;
+      //     }
+      //   }
+
+      //   // Greetings
+      //   // End
+      // }
+
+      // let user1 = new User("Sodiq", "Male", "Student", true);
+      // let user2 = new User("Oyefeso", "male", "lecturer", false);
+      // // End
+
+      // let me = [2, 3, 4, 5, 6, 1, 3, 2, 11, 1, 3, 4];
+
+      // let newMe = me.filter(function (el) {
+      //   if (el % 2 === 0) return el;
+      // });
+    </script>
+  </body>
+</html>

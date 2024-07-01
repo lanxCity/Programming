@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Variables Or Custom Properties</title>
+	<style type="text/css">
+		/* Creating variables require you to define a scope for those variables. And to format variable, you start the variable name with "--" */
+
+		:root {
+			--primary-bg: #333;
+			--secondary-bg: #555;
+			--primary-text-color: #fff;
+			--button-color: ;
+
+			/* The "root" scope allows us to those variables anywhere.  */
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			/* You can set the variable within the element. But the proper way is to define the variable elsewhere */
+
+			--dark-background: #e3e3e3;
+			background: var(--dark-background);
+			color: var(--primary-text-color);
+		}
+
+		header {
+			background: var(--primary-bg);
+			padding: 2rem;
+		}
+
+		header h1 {
+			text-shadow: 3px 3px 3px #668B98FF;
+		}
+
+		.container {
+			background: var(--secondary-bg);
+			padding: 1rem;
+		}
+
+		.box {
+			margin-bottom: 1.5rem;
+		}
+	</style>
+</head>
+<body>
+	<!-- THE CSS VARIABLES ARE JUST A PLACEHOLDER FOR VALUES  -->
+
+	<header>
+		<h1>The CSS Variables</h1>
+	</header>
+
+	<div class="container">
+		<div class="box box_1">
+			<h2>The First Box</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error vero voluptatem cupiditate aspernatur, quaerat quos cum mollitia assumenda dolorum alias omnis, non pariatur, facere blanditiis veniam nostrum, fugit. Recusandae, minima.</p>
+		</div>
+		<div class="box box_2">
+			<h2>The Second Box</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error vero voluptatem cupiditate aspernatur, quaerat quos cum mollitia assumenda dolorum alias omnis, non pariatur, facere blanditiis veniam nostrum, fugit. Recusandae, minima.</p>
+		</div>
+		<div class="box box_3">
+			<h2>The Third Box</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error vero voluptatem cupiditate aspernatur, quaerat quos cum mollitia assumenda dolorum alias omnis, non pariatur, facere blanditiis veniam nostrum, fugit. Recusandae, minima.</p>
+		</div>
+	</div>
+</body>
+</html>

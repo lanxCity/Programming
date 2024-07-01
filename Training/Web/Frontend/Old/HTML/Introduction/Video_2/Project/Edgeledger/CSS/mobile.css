@@ -1,0 +1,16 @@
+#what .container {
+	display: block;
+}
+
+#what .what-segment {
+	text-align: left;
+	display: flex;
+}
+
+.what-segment h6 {
+	text-align: left;
+}
+
+.what-segment i {
+	margin-right: 1.3rem;
+}

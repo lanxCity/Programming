@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This is a way of aligning contents in flexbox">
+	<meta name="keywords" content="Flex align and order">
+	<title>Flex Alignment And Order</title>
+	<style type="text/css">
+		.container {
+			display: flex;
+			flex-direction: column;
+			background: #555;
+			text-align: center;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			/* propertie
+			flex-start (default)
+			flex-end
+			center
+			space-around
+			space-between
+			space-evenly
+			 */
+
+			 height: 500px;
+			 align-items: center;  
+			 /* Height must be specified for the "container" for this ppty to work. 
+			 propertie
+			 stretch (default)
+			 flex-start or baseline
+			 flex-end
+			 center
+			 */
+
+			 align-content: flex-en;
+			 /* This works when there's extra spaces in the container
+			 propertie
+			 flex-start
+			 flex-end
+			 center
+			 space-around
+			 space-between
+			 space-evenly
+			  */
+		}
+
+		/* Alignment properties can also be added to the individual item */
+
+		.item {
+			background: #c4c4c4;
+			flex: ;  
+			/*flex is for the equal auto width e.g flex: 1;*/
+			margin: 0.5rem;
+			flex-basis: 7rem;  /* The same as width */
+		}
+
+	 	.item_3 {
+			/* align-self is used for a single item */
+			align-self: cente; 
+			order: 1; 
+			/*not working unless align-content is off*/
+			/* propertie
+			flex-start
+			flex-end
+			center
+			baseline
+			stretch */
+		}
+
+		.item_2 {
+			order: 2;
+		}
+
+		.item_1 {
+			order: 3;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item_1">
+			<h3>item 1</h3>
+		</div>
+		<div class="item item_2">
+			<h3>item 2</h3>
+		</div>
+		<div class="item item_3">
+			<h3>item 3</h3>
+		</div>		
+	</div>
+	
+</body>
+</html>

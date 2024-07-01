@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Transformation</title>
+	<style type="text/css">
+		/* Some effects in "transform" ppty include 
+		"e.g. rotate(0,5turn),scale(2,0.5),skew(30deg, 20deg),matrix(1,2,3,4,5,6),translate(50px,120px)"
+
+		scale: resizing;
+		translate: move around;
+		rotate: rotation;
+		*/
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+			height: 80vh;
+			width: 100%;
+			background: #333;
+		}
+
+		.container .box {
+			width: 150px;
+			height: 150px;
+			background: white;
+			/* transform: skew(10deg,5deg); */
+			/* transform: rotate(25deg); */
+			/* transform: scale(2); */
+
+			/* Using "transform" with "transition" */
+			transition: all 1s ease-in-out;
+		}
+
+		.box:hover {
+			/* transform: translate(50px, 50px); */
+			transform: rotate(360deg) scale(4);
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>

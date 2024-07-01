@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction To DOM</title>
+    <style type="text/css">
+      h1 {
+        background-color: green;
+      }
+
+      .btn:hover {
+        color: blue;
+      }
+
+      .description {
+        background-color: yellow;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        padding: 1rem;
+        background-color: coral;
+        list-style-position: inside;
+      }
+
+      ul li {
+        padding: 0.5rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        border: 1px solid red;
+      }
+
+      li .list-buttons-container {
+        float: right;
+      }
+
+      li:first-child .list-buttons-container .up-button {
+        display: none;
+      }
+
+      li:last-child .list-buttons-container .down-button {
+        display: none;
+      }
+
+      button {
+        display: inline-block;
+        margin: 0 0.5rem;
+      }
+      button:hover {
+        cursor: pointer;
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Get element by "id" -->
+
+    <!-- <h1 id="heading">
+		Introduction To Document Object Model
+	</h1>
+
+	<label>Type in your desired Color
+		<input type="text" id="heading-color-input">
+	</label>
+	<br />
+
+	<button type="custom" class="btn heading-color-button">Change Headline Color</button>
+
+	<button type="reset" class="btn reset-color-button">Back to original Color</button> -->
+
+    <!-- 2. Get elements by "tag name" -->
+
+    <!-- <p>
+		Paragraph 1: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia autem, tempora quibusdam asperiores
+		nesciunt quas assumenda. In voluptatem numquam quasi.
+	</p>
+
+	<p>
+		Paragraph 1: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia autem, tempora quibusdam asperiores
+		nesciunt quas assumenda. In voluptatem numquam quasi.
+	</p>
+
+	<label>Type in your desired Color
+		<input type="text" id="paragraph-color-input">
+	</label>
+	<br />
+
+	<button type="custom" id="paragraph-color-button">Change paragraph background</button>
+
+	<button type="reset" id="reset-color-button">Back to original state</button> -->
+
+    <!-- <p>Things that are purple</p>
+
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+		<li>Item 6</li>
+		<li>Item 7</li>
+		<li>Item 8</li>
+	</ul> -->
+
+    <!-- Changes to elements' values -->
+
+    <div class="list">
+      <p class="description" title="List Description">
+        THE FOLLOWING ARE THE SET OF FRUITS:
+      </p>
+      <input type="text" name="desc" class="new-description-input" />
+      <button type="custom" class="new-description-button">
+        Add New Description
+      </button>
+
+      <ul id="list-of-fruits">
+        <li>
+          Mango
+
+          <!-- <span class="list-buttons-container">
+			<button class="up-button">Up</button>
+			<button class="down-button">Down</button>
+			<button class="remove-item" type="custom">Remove</button>
+			</span>-->
+        </li>
+        <li>
+          Orange
+
+          <!-- <span class="list-buttons-container">
+			<button class="up-button">Up</button>
+			<button class="down-button">Down</button>
+			<button class="remove-item" type="custom">Remove</button>
+			</span>-->
+        </li>
+        <li>
+          Pineapple
+
+          <!-- <span class="list-buttons-container">
+			<button class="up-button">Up</button>
+			<button class="down-button">Down</button>
+			<button class="remove-item" type="custom">Remove</button>
+			</span>-->
+        </li>
+        <li>
+          Pawpaw
+
+          <!-- <span class="list-buttons-container">
+			<button class="up-button">Up</button>
+			<button class="down-button">Down</button>
+			<button class="remove-item" type="custom">Remove</button>
+			</span>-->
+        </li>
+        <li>
+          Grape
+
+          <!-- <span class="list-buttons-container">
+			<button class="up-button">Up</button>
+			<button class="down-button">Down</button>
+			<button class="remove-item" type="custom">Remove</button>
+			</span>-->
+        </li>
+      </ul>
+
+      <input type="text" id="new-list-input" />
+      <button type="custom" id="new-list-button">Add new item</button>
+      <!-- <button type="custom" id="remove-last-item-button">Remove item</button> -->
+    </div>
+
+    <label for="toggler" id="toggler-content"
+      >Check the box to see what happens</label
+    ><input type="checkbox" id="toggler" />
+    <!-- Hide class of "list" -->
+
+    <script
+      type="text/javascript"
+      src="./Making changes to the DOM.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./Getting references to element in the dom.js"
+    ></script>
+  </body>
+</html>

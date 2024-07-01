@@ -1,0 +1,390 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main styling */
+
+html,body {
+	line-height:1.7em;
+}
+
+h2,h3 {
+	text-transform: capitalize;
+}
+
+ a {
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #fff;
+	display: inline-block;
+}
+
+/* Utility styling */
+
+.container {
+	max-width: 1280px;
+	margin: auto;
+	overflow: auto;
+	padding: 0 20px;
+	position: relative;
+}
+
+.btn {
+	font-size: 18px;
+	margin-top: 40px;
+	padding: 15px;
+	background: #333; /*dack*/
+}
+
+
+.btn:hover {
+	color: #333;
+	background: #EBAF7EFF;
+}
+
+.btn-light, .light-bg {
+	background: #fff;
+	color: #333;
+}
+
+#welcome article h2 span,
+ h3 span,
+ /*about and contact*/.brwn-color
+  {
+	color: #EBAF7EFF;
+}
+
+.dark-color {
+	color: #000;
+} 
+
+
+/* Content styling */
+
+#wrapper {
+	background: #333;
+	position: relative;
+
+}
+
+header {
+	position: relative;
+	color: #fff;
+	background: #333;
+}
+
+header nav { 
+	background: #333;
+	overflow: auto;
+}
+
+
+
+header nav #logo {
+	float: left;
+	text-transform: uppercase;
+	padding: 20px 0;
+}
+
+header nav #logo a {
+	text-transform: uppercase;
+}
+
+header nav ul {
+	float: right;
+	list-style: none;
+}
+
+header nav li {
+	float: left;
+	
+}
+
+header nav li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	
+}
+
+header nav li .current {
+	background: #555;
+	color:#EBAF7EFF;
+} 
+
+#wrapper nav li a:hover {
+	background: #555;
+	color:#EBAF7EFF;
+}
+
+.clear {
+	clear: both;
+}
+
+header #welcome {
+	background: url('../image_resources/showcase.jpg') no-repeat center center/cover;
+	height: 600px;
+	text-align: center;
+}
+
+#welcome article {
+	padding: 170px 0 20px;
+}
+
+#welcome article h2 {
+	font-size: 60px;
+	padding: 20px 0;
+	line-height: 1.2em;
+}
+
+#welcome #guestname {
+	text-transform: capitalize;
+}
+
+
+#welcome article p {
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding-bottom: 20px;  
+}
+
+main .history, .others {
+	color: #fff;
+	overflow: hidden;
+}
+
+main .container,
+footer .container {
+	padding: 0;
+} 
+
+.history {
+	height: 450px;
+}
+
+main #photo {
+	background: url('../image_resources/photo-1.jpg');
+	width: 50%;
+	min-height: 100%;
+	float: left;
+
+}
+
+main .history article {
+	float: right;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	padding:30px;
+}
+
+main .history h3 {
+	font-size: 22px;
+	padding: 20px 0;
+}
+
+.history p {
+	margin: 20px 0;
+}
+
+.others article {
+	float: left;
+	width: 33.33%;
+	background: #fff;
+	text-align: center;
+	padding: 30px;
+}
+
+.others i {
+	color: #333;
+}
+
+.others #free_meals {
+	background: #EBAF7EFF;
+}
+
+
+.others h3, .others p {
+	color: #333;
+	margin: 20px 0;
+}
+
+footer {
+	padding: 30px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #fff;
+	background: #333;
+}
+
+footer p span {
+	text-transform: uppercase;
+} 
+
+
+
+/* The about page  */
+
+#about-welcome {
+	padding: 30px 0;	
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+#about-welcome .abt-info-img {	
+	float: right;
+	width: 50%;
+	min-height: 100%;
+}
+
+#about-welcome img {
+	display: block;
+	width: 80%;
+	border-radius: 50%;
+	margin: auto;
+
+}
+
+#about-welcome #content {
+	float:left ;
+	width: 50%;
+	min-height: 100%;
+}
+
+#about-welcome h1 {
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+#about-welcome #content p:first-of-type {
+	padding-bottom: 10px;
+}
+
+.guest-feedback {
+	background: url('../image_resources/test-bg.jpg') no-repeat center center/cover;
+	height: 100%;
+	text-align: center;
+	padding: 50px 50px;
+}
+
+.guest-feedback h2 {
+	font-size: 40px;
+	color: #fff;
+	margin: 40px 0;
+}
+
+.guest-feedback .guest-speech {
+	background: #EBAF7EFF;
+	padding:10px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	opacity:0.9;
+}
+
+ .guest-feedback img {
+	display: block;
+	float: left;
+	width: 100px;
+	padding: 0 10px;
+	border-radius: 50%;
+}
+
+.guest-feedback p {
+	text-align: left;
+
+}
+
+
+/* contact page */
+
+.contact {
+	background: #fff;
+	color: #333;
+}
+
+form {
+	padding:30px 0;
+}
+
+form h1 {
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+form p {
+	margin: 10px 0;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form input, textarea {
+	padding: 10px;
+	width: 100%;
+	border:1px #ddd solid;
+}
+
+form textarea {
+	min-width: 100%;
+	max-width: 100%;
+	height: 12rem;
+	max-height: 200px;
+}
+
+form input:focus,
+textarea:focus {
+	outline: none;
+	border-color: #EBAF7EFF;
+}
+
+form .btn {
+	color: #fff;
+	padding: 15px 25px;
+	margin-top: 20px;
+	border: 1px #ddd solid;
+}
+
+.contact .info-enquiry {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.contact .info-enquiry #location,
+.contact .info-enquiry #phone,
+.contact .info-enquiry #mail {
+	float: left;
+	width: 33.33%;
+}
+
+.info-enquiry h3 {
+	margin-top: 10px;
+}
+
+.info-enquiry p {
+	margin: 20px 0;
+}
+
+.info-enquiry a {
+	text-transform: lowercase;
+}
+
+.contact footer {
+	background: #444;
+}
+
+
+

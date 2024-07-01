@@ -1,0 +1,40 @@
+/* A. Into: Page layout */
+body {
+  background-color: aliceblue;
+}
+
+/*header {
+  /* background-color: grey; *
+  height: 20vh;
+}
+
+section.content {
+  background-color: palegoldenrod;
+  min-height: 60vh;
+}
+
+section.content .row {
+  height: 100%;
+}
+
+section.content .row main {
+  background-color: peru;
+}
+
+section.content .row .left-content {
+  /* overflow-y: scroll; /*Not working yet *
+}
+footer {
+  background-color: palevioletred;
+  height: 20vh;
+} */
+
+/* B. Responsive layout */
+.adverts {
+  background-color: antiquewhite;
+}
+
+.adverts .card {
+  background-color: grey;
+  color: #fff;
+}

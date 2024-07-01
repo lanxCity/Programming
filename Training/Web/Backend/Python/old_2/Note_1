@@ -1,0 +1,56 @@
+<=====> Glossaries <======>
+A.]
+* Statistician - Gathering and and cleaning data sets. And applying stat methods to the data.
+* Data Mining - Extracting pattern from data.
+* Predictive analytics - Performing more accurate forecasts
+* Data science
+* Business Intelligence (BI)- The process of analysing and reporting historical business data.
+    It aims to explain past events using business data.
+* Business Insight
+
+
+<=====> Terminologies and Comparison <======>
+1. Analytics and Analysis
+* Analysis - This is perform on things(data and/or event ) that have already happened in the past
+  i.e. Using analysis to explain "how" and "why" certain things happened.
+  E.g. how there was a decrease in sales in last summer.
+
+* Analytics - This explains the future instead of the past event. It's the application of
+  logical and computational reasoning to the component parts obtained in an analysis.
+
+  i.) Qualitative analytics (intuition and analysis) - This is using one's intuition and experience in
+      conjunction with the analysis to plan your next business moves.
+  ii.) Quantitative analytics - This is applying formulas and algorithms to numbers gathered from the analysis.
+
+
+<======> An overview of discipline to cover <======>
+(Business analytics, data analytics, data science, BI, and ML overlapped)
+
+=> Analysis
+- Preliminary Data Report
+- Reporting with Visuals
+- Creating Dashboard
+- Creating Real-time Dashboards
+
+=> Analytics
+- Sales Forecasting
+- Client Retention
+- Fraud Prevention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

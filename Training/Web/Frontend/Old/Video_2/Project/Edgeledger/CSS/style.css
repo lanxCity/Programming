@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset styling */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* General styling */
+
+body {
+	background: #e3e3e3;
+	line-height: 1.4;
+	font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+	font-size: 1rem;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+
+/* Utilities styling */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.green-color {
+	color: #93cb52;
+}
+
+/* Main styling */
+
+/* -----Home----- */
+
+nav {
+	background: #333;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+}
+
+nav li a {
+	padding: 0.75rem;
+	margin: 0 .25rem;
+	
+}
+
+nav a:hover {
+	background: #93cd52;
+	border-radius: 5px;
+
+}
+
+header.showcase {
+	background: url('../img/showcase.jpg') no-repeat center center/cover;
+	height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.showcase-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	height: 100%;
+	/* overlay for text readability */
+	position: absolute;
+	background: rgba(0, 0, 0, 0.4);
+	top: 65px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.showcase-content h1 {
+	font-size: 4rem;
+	padding-bottom: 2rem;
+}
+
+.showcase-content p {
+	font-size: 1.5rem;
+	padding: 0.75rem 0;
+}
+
+.showcase-content a {
+	display: inline-block;
+	background: #93cd52;
+	padding: .7rem 2rem;
+	border: none;
+	border-radius: 5px;
+}
+
+.showcase-content a:hover {
+	background: #7ab436;
+} 
+
+/* "What" section */
+
+#what {
+	padding: 1rem;
+}
+
+#what h2{
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+
+}
+
+#what .container {
+	display: flex;
+}
+
+#what .what-segment {
+	padding: 1rem;
+	text-align: center;
+}
+.what-segment .icon {
+	margin-bottom: 1.5rem;
+}
+
+.what-segment i {
+	padding: 1rem;
+	border-radius: 50%;
+	background: #93cd52;
+}
+
+
+
+/* "Who" Section */
+
+#who {
+	display: flex;
+	flex-direction: column;
+}
+
+#who .who-intro {
+	background: #333;
+	color: #fff;
+	display: flex;
+}
+
+#who .team-photo, #who .who-content {
+	flex: 1;
+}
+
+#who .team-photo {
+	background: url('../img/people.jpg') no-repeat center center/cover;
+}
+
+#who .who-content {
+	padding: 2rem;
+
+}
+
+.who-content h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.who-content h6 {
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.who-content .our-team li {
+	line-height: 2.25rem;
+	border-bottom: 1px #555 dotted;
+}
+
+#who .clients {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+}
+
+#who .clients h2 {
+	font-size: 2rem;
+	padding: 1rem;
+}
+
+#who .logos {
+	display: flex;
+	padding: 2rem;
+}
+
+.logos img {
+	width: 60%;
+}
+
+/* Contact Section */
+
+#contact {
+	display: flex;
+	color: #fff;
+}
+
+.contact-content,
+#contact  #location-map {
+	flex: 1;
+}
+
+
+.contact-content {
+	background: #93cd52;
+	padding: 2rem;
+}
+
+#contact  h2 {
+	font-size: 2rem;
+}
+
+#contact h2,#contact p  {
+	padding-bottom: 1rem;
+}
+
+.formgroup {
+	padding: 0.5rem;
+}
+
+form label {
+	display: block;
+	font-weight: 500;
+}
+
+form input, form textarea {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #444;
+}
+
+form button {
+	width: 100%;
+	padding: 0.5rem;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+	border: 1px #444 solid;
+	border-radius: .25rem;
+}
+
+/* Footer */ 
+footer {
+	background: #333;
+	padding: 2rem;
+	text-align: center;
+	color: #fff;
+}
+

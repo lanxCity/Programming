@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./Revision.js" defer></script>
+    <link rel="stylesheet" href="Revision.css" />
+    <title>DOM REVISION</title>
+  </head>
+  <body>
+    <h1 id="heading">JavaScript And The DOM</h1>
+    <p title="page-title">Making a webpage interactive</p>
+    <!-- Note that the "tooltip" shows the title when you hover over the element -->
+    <main>
+      <input type="checkbox" name="toggle-list" id="toggle-list" />
+      <label for="toggle-list" id="togglebel"> Check to hide the list</label>
+      <section id="list-of-items">
+        <p id="list-title" class="description">
+          list of best fruits for breaking while fasting&colon;
+        </p>
+        <div class="change-description-container">
+          <input
+            type="text"
+            id="title-input"
+            name="titleInput"
+            class="description"
+          />
+          <button id="title-btn" class="description">
+            Change Title ("default" for initial title)
+          </button>
+        </div>
+        <ul id="fruit-list">
+          <li class="fruit great-fruit">Water Melon</li>
+
+          <li class="fruit great-fruit">Dates (Dabinu)</li>
+
+          <li class="fruit great-fruit">Apple</li>
+
+          <li class="fruit">Grape</li>
+
+          <li class="fruit great-fruit">Banana</li>
+
+          <li class="fruit">Mango</li>
+        </ul>
+        <div class="add-element-container">
+          <input type="text" id="add-item-input" name="add-item-input" />
+          <button id="add-item-btn">Add Item</button>
+          <!-- <button id="remove-item-btn">
+            Remove last Item
+          </button> -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

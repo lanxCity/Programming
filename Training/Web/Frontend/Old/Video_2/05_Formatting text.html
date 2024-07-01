@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formatting&#32;Text</title>
+</head>
+<body>
+	<h1>Formatting text with HTML and CSS</h1>
+
+	<section id="section_1">
+
+		<h2>The use of semantic tags</h2>
+
+		<!--The use of semantic tags-->
+
+		<p>This is a paragraph tag</p>
+		<code>This is a code tag</code>
+		<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. <var>This is a "var" tag</var>,<br/> quam assumenda sint repellat dolore accusantium odio, The "abbreviation" of South Africa is <abbr>SA</abbr>.<br/>illum aperiam vitae perferendis necessitatibus similique qui, architecto cumque voluptas? The knowledge that involves the application of science principles is called <dfn>"definition tag"</dfn>. <br>
+		<cite>Engr. Lanx</cite>
+		</p>
+
+	</section>
+
+	<section id="section_2">
+		
+		<h2>Character formatting using CSS</h2>
+
+		<!-- 1. The use of "Text decoration" -->
+
+		<h3 style="text-decoration: underline;" align="center">The use of "text-decoration"</h3>
+
+		<p>This is an <span style="text-decoration: underline;">underlined</span> word</p>
+		<p>This is an <span style="text-decoration: overline;">overlined</span> word</p>
+		<p>This is a <span style="text-decoration: line-through;">line-through</span> word</p>
+		<p>This is a <span style="text-decoration: blink;">blink</span> word</p>
+
+		<!-- 2. The use of font properties  -->
+
+		<h3 style="text-decoration: underline;" align="center">The use of font properties</h3>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit <span style="font-style: normal;">"Normal" font-style</span>.
+		<br/> Earum impedit quisquam distinctio, <span style="font-style: italic;"> Italic font</span> quo excepturi, with the <span style="font-style:oblique;">Oblique font</span> alias,<br> neque quod dignissimos labore qui 
+		<span style="font-weight: bold;">This is a bold font-weight</span> laudantium adipisci iure,<br/>consequuntur dolorem dolor odio recusandae molestias <span style="font-weight: lighter;">This is a lighter font-weight</span> cupiditate.<br/> <span style="font-weight: 700;"> The use of font-weight of 700Units. </span>
+		</p>
+
+		<p>Generally, the <span style="font-family:sans-serif; font-variant: small-caps;"> "font-family" </span> property could be used for all the properties </p>
+		<p style="font-weight: 900;">The use of <pre>Preformatted    tag to maintain      the amount of spaces or tab used for some texts on a page.</pre></p>
+
+		<!-- 3. The use of Horizontal line or thematic break (as its semantic meaning suggested)  -->
+
+		<h3 style="text-decoration: underline;" align="center">The use of Horizontal Rule</h3>
+
+		<p>At first, on	hearing	this account from Zillah, I	determined to leave	my situation, take a cottage, and get Catherine	to come	and	live with me: but Mr. Heathcliff would as soon permit that as he would set up Hareton in an	independent	house; and I can see no	remedy,	at present,	unless she could marry again; and that scheme it does not come within my province to arrange.</p> 
+		<hr width="1000"> <!-- the width is set in "Pixel" automatically if used HR attribute, unless you specify "%"-->
+		<p>Thus	ended Mrs. Dean’s story. Notwithstanding the doctor’s prophecy, I am rapidly recovering	strength; and though it	be only	the	second week	in January,	I propose getting out on horseback in a	day	or two,	and	riding over	to Wuthering Heights,
+		to inform my landlord that I shall spend the next six months in London; and, if	he likes, he may look out for another tenant to	take the place after October. I	would not pass another winter here for much.</p>
+
+		<h1>100%, Default Size</h1>
+		<hr>
+
+		<h2>80%, Size 2</h2>
+		<hr width="80%">
+
+		<h3>50%, Size 3</h3>
+		<hr style="width: 800px; height: 50px;" noshade="">
+
+		<h4>30%, Size 4</h4>
+		<hr width="30%">
+
+		<h5>10%, Size 5</h5>
+		<hr width="10%">
+
+		<!-- 4. The use of "Addresses" (Block-level tag)on a page -->
+
+		<h3 style="text-decoration: underline;" align="center">The use of Addresses on a page</h3>
+
+		<address>
+			LanxtEchwoRld <a href="mailto:sodiqramon0@gmail.com">lanxtechworld@gmail.com</a><br/>
+			Last revised August 12, 2021<br/>
+
+		</address>
+
+		<!-- 5. The use of "Blockquotes" or "q" tag (Block-level tag)on a page -->
+
+		<blockquote cite="http://www.lanxnation.com">
+			NO PATH STARTED AS A PATH.<br/>
+			SOMEONE MUST WALK ON IT FOR IT TO BECOME A PATH.<br>
+			YOU MUST POUND AND BREAK THE HARD LAND, AND PIERCE THROUGH IT FOR THE WATER TO FLOW OUT.
+		</blockquote>
+		<p>--Hwarang</p>
+
+		<p>Terry Fox said,
+			<q cite="http://www.lanxnation.com">Try the impossible to show that it can be done.</q>
+		</p>
+
+		<!-- 6. The use of character entities -->
+		<h3>The use of Character Entities</h3>
+		
+		<p>The use of <code>&lt;p&gt;</code> in html shows the starting of a new paragraph</p>
+
+		<!-- 7. The use of fonts and font sizes -->
+		
+		<p style="font-family:Courier New;font-style:oblique;font-weight: 700;">This is Verdana text</p>
+
+		<p>This text is	normal sized, and this text	is <span style="font-size: 200%;">twice that size</span></p>
+
+	</section>
+
+
+	
+</body>
+</html>

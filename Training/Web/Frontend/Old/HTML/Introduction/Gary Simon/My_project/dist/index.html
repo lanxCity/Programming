@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A project page for frontend beginners" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <script src="../../../../../Javascript/JQuery downloaded file/jquery-3.6.0.js"></script>
+
+    <title>Frontend Dev Course</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./img/logo.svg" alt="23andfour logo" class="logo" />
+        <nav>
+          <a href="#" class="hide-desktop">
+            <img src="./img/ham.svg" alt="toggle menu" class="menu" id="menu" />
+          </a>
+          <ul class="show-desktop hide-mobile">
+            <li id="exit" class="exit-btn hide-desktop">
+              <img src="./img/exit.svg" alt="exit menu" />
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <img src="./img/server.svg" alt="server graphic" class="server" />
+        <h1>Web Hosting for the Modern Era</h1>
+        <p class="subheading">Go serverless and pay only for what you use.</p>
+        <img
+          src="./img/scroll.svg"
+          alt="scroll down"
+          class="scroll hide-mobile show-desktop"
+        />
+      </main>
+    </div>
+
+    <div class="blue-container">
+      <div class="container">
+        <ul>
+          <li>
+            <img src="./img/icon-1.svg" alt="calender icon" class="icon" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore
+            </p>
+          </li>
+          <li>
+            <img src="./img/icon-2.svg" alt=" icon" class="icon" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore
+            </p>
+          </li>
+          <li>
+            <img src="./img/icon-3.svg" alt="Phone icon" class="icon" />
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grey-container">
+      <div class="container">
+        <ul>
+          <li>
+            <figure>
+              <img src="./img/user1.png" alt="User testimonial picture" />
+              <blockquote>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptas tenetur totam, dolore
+              </blockquote>
+              <figcaption>&hyphen; Jane Doe</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="./img/user2.png" alt="User testimonial picture" />
+              <blockquote>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptas tenetur totam, dolore
+              </blockquote>
+              <figcaption>&hyphen; John Doe</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container trial-container">
+      <h2>Start your free trial now &excl;</h2>
+      <a href="#" class="cta">Get Started</a>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="container footer-content">
+          <a href="#">
+            <img src="./img/logo-white.svg" alt="23andfour logo" class="logo" />
+          </a>
+
+          <p>
+            Melrose Place&comma; 90210 <br />
+            USA
+          </p>
+
+          <ul class="footer-links">
+            <li><a href="#">Terms of Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navUl = $("nav ul");
+
+      $("nav #menu").click((e) => {
+        e.preventDefault();
+
+        // ------------------------
+        navUl.toggle().animate(
+          {
+            right: 0,
+          },
+          1000
+        );
+      });
+
+      $("nav #exit img").click((e) => {
+        e.preventDefault();
+
+        // ------------------------
+        navUl.toggle("1500", () => {
+          $(this).animate(
+            {
+              right: "-80%",
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

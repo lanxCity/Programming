@@ -1,0 +1,49 @@
+<html><head><script>// Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
+// For details: https://github.com/gaogaotiantian/codesnap/blob/master/NOTICE.txt
+function wheel(event) {
+    let width = parseInt(document.getElementById("root").style.width.slice(0, -2));
+    let pageX = event.pageX;
+    let clientX = event.clientX;
+    if (event.deltaY > 0 && width > 100) {
+        // Zoom out
+        document.getElementById("root").style.width = (width / 2).toString() + "vw";
+        window.scrollTo(pageX/2 - clientX, 0);
+    } else if (event.deltaY < 0) {
+        // Zoom in
+        document.getElementById("root").style.width = (width * 2).toString() + "vw";
+        window.scrollTo(2*pageX - clientX, 0);
+    }
+}
+
+document.onwheel = wheel;</script><style>/* Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
+   For details: https://github.com/gaogaotiantian/codesnap/blob/master/NOTICE.txt */
+.func-block {
+    border: 1px solid #444;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: #222;
+    font-size: 14px;
+    width: 100%;
+    height: 20px;
+}
+
+.func-block:hover {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.func-container {
+    position: absolute;
+}
+
+#root {
+    position: absolute;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}</style></head><body><div id="root" style="width:98vw;margin-left:1vw"><div style="left:0.0%;width:7.797818776549371e-05%;" class="func-container"><div style="background-color:#fabed4;" class="func-block">codecs.IncrementalDecoder.getstate</div></div><div style="left:99.99976051961865%;width:0.00023948038135870872%;" class="func-container"><div style="background-color:#42d4f4;" class="func-block">codecs.IncrementalDecoder.decode</div></div></div></body></html>

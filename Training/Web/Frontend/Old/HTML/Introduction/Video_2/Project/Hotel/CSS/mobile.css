@@ -1,0 +1,73 @@
+/* Home page */
+
+header nav #logo {
+	float: none;
+	text-align: center;
+
+}
+
+header nav ul,
+header nav li {
+	float: none;
+}
+
+#welcome article {
+	padding-top: 50px;
+}
+
+main #photo {
+	display: none
+}
+
+main .history article {
+	float: none;
+	width: 100%;
+}
+
+.others article {
+	float: none;
+	width: 100%;
+}
+
+/* About page */
+
+#about-welcome {
+	padding-top: 30px;
+}
+
+
+#about-welcome .abt-info-img,
+#about-welcome #content {
+	float: none;
+	width: 100%;
+}
+
+#about-welcome #content {
+	padding: 20px 0 0 10px;
+
+}
+.guest-feedback {
+	padding: 20px;
+}
+
+.guest-feedback h2 {
+	line-height: 40px;
+	margin-top: 20px;
+}
+
+/* Contact page */
+
+.contact .info-enquiry #location,
+.contact .info-enquiry #phone,
+.contact .info-enquiry #mail  {
+	float: none;
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px #555 dashed;
+}
+
+.contact .info-enquiry #mail {
+	border: none;
+}

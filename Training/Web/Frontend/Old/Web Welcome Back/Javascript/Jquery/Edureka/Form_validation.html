@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery &verbar; Form Validation</title>
+    <style>
+      select {
+        width: 50%;
+        outline: none;
+        border: 1px red solid;
+        padding: 0.5em;
+        cursor: pointer;
+        color: blue;
+      }
+      /*  .box {
+        box-sizing: border-box;
+        display: inline-block;
+        border-width: 20px 0 20px 40px;
+        border-color: transparent transparent transparent red;
+        border-style: solid;
+      } */
+
+      #password-validator {
+        /* display: inline-block; */
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+      }
+
+      .invalid {
+        color: red;
+      }
+      .valid {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--  <div class="box"></div>
+      <a href="#">google</a> -->
+      <form action="" method="get">
+        <div class="field">
+          <label for="name">name&colon;</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class=""
+            title="Your name is important"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="name">Password&colon;</label>
+          <input type="password" name="password" id="password" />
+          <div id="password-validator">
+            <p class=""></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email&colon;</label>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+
+        <div class="field">
+          <span>Gender: </span>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" value="male" id="male" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" value="female" id="female" />
+        </div>
+
+        <div class="field">
+          <input type="checkbox" name="" id="1" class="chech-1" value="Apple" />
+          <input type="checkbox" name="" id="2" class="chech-2" value="Mango" />
+          <input
+            type="checkbox"
+            name=""
+            id="3"
+            class="chech-3"
+            value="Orange"
+          />
+        </div>
+
+        <div class="field">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script>
+      const print = console.log.bind();
+
+      // A. -----------------------------Selection
+      // 1. For value.......................
+      // $('input:text').val()
+      // $("input:text").val("Lanx");
+      // ---------Getting(n1.) and setting(n2.) value inside the input.
+      /*  $("input:password").focus(function () {
+            $(this).css({
+              outline: "none",
+              border: "1px solid yellow",
+            });
+          });
+
+          /* $("input:password").focus().css({
+            outline: "none",
+            border: "1px solid yellow",
+          });*/
+      // 2.---------For attr and prop
+      /*$("input:radio[name = 'gender']").click(function (e) {
+            if ($(this).is(":checked")) print($(this).val());
+          });
+
+          $("input:radio[type = 'radio']:nth(1)").attr("checked", true);
+
+          $("input:radio[name = 'radio']").prop('checked',false)
+          // prop has much effect
+          $("input:radio").attr("checked", true);
+          $("input:checkbox").attr("checked", true);
+          */
+      // $("select").val("Select from the list");
+      // $("select")[0].selectedIndex; //returns the index of the selected option/value on box
+      // $("select")[0].selectedIndex = 3;
+      // $("select").val("4"); //the value must much those in the option to select from. and this select "4"
+      // $("input:submit")
+      // $("input:reset")
+      // 3.--------- Validation of Form: validating user input
+      /* let boxes = [];
+        let me = { boxes };
+        $("input:checkbox").click(function (e) {
+          if ($(this).is(":checked")) {
+            print($(this).val());
+            me.boxes.push($(this).val());
+          } else {
+            let newBoxes = [];
+            for (let el of me.boxes) {
+              if (el === $(this).val()) continue;
+              newBoxes.push(el);
+            }
+            print($(this).val() + " removed");
+            me.boxes = newBoxes;
+          }
+        }); */
+
+      $("button:submit").click((e) => {
+        // e.preventDefault();
+      });
+
+      // --------------------------Intro to Regular expressions (regex or regexp)------
+      /*
+      // To test your regex, visit "www.regex101.com"
+      // Some are,
+
+        ^ => start with str; alphabeth; It assert position at start of the string. E.g "^A" checks for first char of the string which must be "A"
+
+        $ => End with str. E.g. "C$" C must end the string input
+
+        . => Any single char E.g. "^A.C$" means start with "A", and any single char within, and end with "C". And making 3 chr in total. But "^A.+C$", the ".+" means any char as many as possible
+
+        + => One or more char E.g. "^A+C$" matches the previous token between one and unlimited times; "A" can be as many times as possible,
+        * => zero or more char E.g. "^A+C$" matches the previous token between one and unlimited times; "A" can be as many times as possible,
+
+        ? => Zero or more char E.g It the same thing as "+". But unlike "+", it either prev token exist or not
+
+        \ => Escape special char E.g To detect if "$" end the string, we use "\$$"; we use "\$" to mask the first "$" sign as part of the string.
+        let me = 'I\'m coming home`
+        \b => A word boundary
+        \B => Non-word boundary
+        \d => Any digit
+        \D => Any non-digit
+        \s => whitespace char
+        \S => non-whitespace char
+        \w[a-zA-Z0-9_] => Any word char and "_"
+        \W => Any non-word char
+
+        a|b => Alternate - match either a or b
+        [abc] => The string must include any of these.
+        [^abc] => The string must not include any of these.
+        [a-z] => The string can include from a-z.
+        [^a-z] => The string must not include from a-z.
+        [A-Z] => The string can include from A-Z.
+        [a-zA-Z] => The string can include from a-z-A-Z.
+        [a-zA-Z0-9] => The string can include from a-z-A-Z)-9.
+        [a-z-._] => The string can include from a-z-A-Z.
+
+        (?:....) => match everything enclosed accordingly
+        (....) => capture every pattern enclosed.
+        (.*?) => capture everything enclosed.
+        (com|info)
+
+        {2} => atleast 2 char
+        {2,6} => atleast 2 char to 6
+        {2,} => atleast 2 char to infinity
+
+      */
+
+      // ---------------------Regex Suspended till further notice----------
+
+      // ---------------------Regex Continued----------
+
+      // Regex are denoted by two frwd slashes; //
+
+      /*  let pattern = /^[sodiq|lanx]$/;
+      $("#username").keyup(function () {
+        if (!pattern.test($(this).val())) {
+          $(this).removeClass("valid").addClass("invalid");
+        } else {
+          $(this).removeClass("invalid").addClass("valid");
+        }
+      }); */
+
+      let pattern = /^sodiq$/;
+      $("#username").keyup(function () {
+        if (!pattern.test($(this).val())) {
+          $(this).removeClass("valid").addClass("invalid");
+        } else {
+          $(this).removeClass("invalid").addClass("valid");
+          console.log("Correct");
+        }
+      });
+      // End of document
+    </script>
+  </body>
+</html>

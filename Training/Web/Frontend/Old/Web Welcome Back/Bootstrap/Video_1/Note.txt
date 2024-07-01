@@ -1,0 +1,20 @@
+A. Container =>  is important in bootstrap
+==> Types: 
+i) fixed container: e.g <div class = "container"></div> of width of px unit
+
+=>           Xsmall    small      medium     large       Xlarge      XXlarge
+            < 576px    >= 576     >= 768     >= 992       >=1200    >= 1400
+
+max-width    100%       540px        720px       960px        1140px
+
+ii) fluid container: e.g <div class = "container-fluid"></div> of width of % unit of the view port; 100%.
+
+
+B. Grid features => 12cols for any screen resolution such as (xs, sm, md, lg, xl).
+=> Some bootsrap grid classes for design layout and template include,
+=> col-1 (auto), col-3, col-6 etc. to occupy certain num of column(s). And there is also "col-sm-6" means occupy six cols for small screen e.g. col-2-col-sm-6 (occupy 2 col for every width and 6 col for small screen)
+
+
+
+
+

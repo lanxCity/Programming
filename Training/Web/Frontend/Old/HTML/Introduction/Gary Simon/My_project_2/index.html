@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Home &verbar; yummy&period;eat</title>
+  </head>
+  <body>
+    <div class="overlay">
+      <h2>Searching now...</h2>
+    </div>
+    <header>
+      <div class="header-wrapper">
+        <section class="info">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html">yummy&period;eats</a>
+            </div>
+            <div class="content">
+              <h1 class="capitalize">
+                <span class="underlined uppercase"> the healthy </span>
+                eating experience
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                sequi rerum eaque voluptates totam, ipsam molestiae id officiis
+                amet repellendus!
+              </p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </section>
+        <div class="form-container">
+          <form>
+            <div class="input-container">
+              <label for="">Enter your city&colon;</label>
+              <input type="text" id="city-input" />
+              <span class="sample">Example&colon; &ldquo;San Diego&rdquo;</span>
+            </div>
+
+            <button class="btn">Find Food Now</button>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </header>
+    <main>
+      <section class="other card">
+        <article>
+          <h2 class="uppercase">
+            <span class="underlined">Authentic&period; wholesome&period;</span>
+          </h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+            assumenda neque maiores nulla velit ratione atque animi! Officiis
+            eum corporis facilis, deserunt ab tempore cum soluta delectus earum,
+            aspernatur quam.
+          </p>
+        </article>
+      </section>
+
+      <img
+        src="./img/charlesdeluvio.jpg"
+        alt="Food picture"
+        class="food card"
+      />
+    </main>
+
+    <script>
+      const foodBtn = document.querySelector(".btn");
+      const overlay = document.querySelector(".overlay");
+
+      foodBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        overlay.style.display = "grid";
+        overlay.classList.add("animate-overlay");
+
+        setTimeout(function () {
+          overlay.classList.remove("animate-overlay");
+          overlay.style.display = "none";
+          // overlay.style.zIndex ="-1";
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

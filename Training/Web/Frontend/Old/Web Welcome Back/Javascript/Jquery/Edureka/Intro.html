@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro To JQUERY</title>
+    <style>
+      /* h1 {
+         text-transform: capitalize;
+         font-size: 1.3rem;
+         background: burlywood;
+         color: #fff;
+         padding: 1rem;
+         line-height: 1.5;
+       } */
+
+      /* a:not([href="http://google.com"])
+       {
+         color: red;
+       } */
+
+      /* Box styling */
+
+      /* .box {
+         box-sizing: border-box;
+         overflow: hidden;
+         width: 80%;
+         height: 400px;
+         position: relative;
+         margin: auto;
+         background: grey;
+         border: 2px solid #333;
+       }
+
+       .box .img {
+         box-sizing: border-box;
+         width: 100%;
+         height: 100%;
+         border-radius: 15px;
+         background-color: #555;
+         background-position: center center;
+         background-size: cover;
+         background-origin: padding-box;
+         border: 30px solid rgba(55, 55, 55, 0.5);
+         background-origin: padding-box;
+         position: relative;
+         transition: all 1s ease-in;
+       } */
+
+      .box-container {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        border: 2px solid #444;
+        position: relative;
+        background: slategray;
+      }
+
+      /* .box {
+        width: 50%;
+        height: 50%;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        right: -100%; */
+      /* animation-name: move;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-delay: 5s;
+        animation-fill-mode: forwards; */
+      /* forwards: should stay in your last position (only works for 100% or to)
+           backwards: return to initial position
+         */
+      /* animation-iteration-count: infinite; */
+      /* alternate: alternate once the anime is done,
+           infinite: continues the anime infinity
+         *
+      }*/
+
+      /*  @keyframes move {
+         25% {
+           top: 0;
+           right: 0;
+         }
+
+         50% {
+           top: 0;
+           right: 100%;
+         }
+
+         75% {
+           top: 0;
+           left: -9999px;
+         }
+
+         100% {
+           top: 0;
+           right: 0;
+         }
+       } */
+
+      .img {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 10px solid rgba(52, 74, 87, 0.5);
+        position: absolute;
+        top: 0;
+        right: -150%;
+      }
+    </style>
+  </head>
+  <body>
+
+  
+
+    <div class="box-container">
+      <img src="./images/Chrysanthemum.jpg" alt="" class="img" />
+    </div>
+    <h2>The Level 1 Head</h2>
+    <a href="http://google.com/" id="link-1">Facebook Page</a>
+
+    <!-- <main
+      id="main"
+      class="main-container main-data"
+      data-content='["h1","a","ul.main-ul"]'
+    ></main> -->
+    <main id="main" class="main-container main-data">
+      <h1>The Level 2 Head</h1>
+      <a href="http://google.com/" target="_self" id="link-2">Google Page</a>
+      <a href="#" id="link-3">Item 1</a>
+      <ul class="main-ul">
+        <h1>The Level 3 Head</h1>
+        <li>
+          <ul>
+            <li>
+              <h1 id="head">The Level 3 Head</h1>
+              <a href="http://google.com/" id="my-link">Google Page</a>
+              <h1>The Level 3 Head</h1>
+            </li>
+          </ul>
+        </li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+
+      <ul id="secondary">
+        <li class="selected">New-1</li>
+        <li>New-2</li>
+        <li>New-3</li>
+        <li class="selected">New-4</li>
+        <li class="selected">New-5</li>
+      </ul>
+      <h1>Heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1>
+    </main>
+
+    <!--  <div class="box">
+      <div class="img"></div>
+    </div>
+    <div class="container">
+      <h1 id="page-head">welcome to jQuery, one of JS library</h1>
+      <a href="#" id="outer-link">Outer Link</a>
+      <div class="links">
+        <a href="http://google.com" target="_blank" rel="noreferrer">Google</a>
+        <a href="http://gmail.com" target="_self" rel="noopener">Email Us</a>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum
+        dolore, architecto eum autem corrupti?
+      </p>
+      <ul id="my-list">
+        <li>
+          Item 1
+
+          <a
+            href="http://google.com"
+            target="_blank"
+            rel="noreferrer"
+            id="first-link"
+            >Google</a
+          >
+        </li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+
+      <button id="btn-1">Click</button> 
+    </div>-->
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script src="./Intro.js"></script>
+    <script>
+      // The jQuery object($), is a jQuery func that starts with either "jQuery(code)" or "$(code)" sign.
+      // Consider the "$" as a variable. e.g. let $ = {}; in plain JS.
+      // But in jQuery, "$" is a function which consists methods; "$()". And it takes a single argument.
+      // Installing jQuery into project (since it's an open source library.)
+
+      // -----------------------------------------------------
+
+      // A. "ready" methods: The callback is executed after the page ready loaded (html,css, and JS)
+      /* (function () {
+          console.log('Before the document "ready" method');
+
+          $(document).ready(function () {
+            console.log("?????????????????????After the page is ready");
+          });
+
+          console.log('After the page document "ready" method');
+        })(); */
+
+      // B. Selection
+      // All jQuery selectors are the same with css selectors
+      // TagName, ID, class, etc.
+      // $('.container').text('This is from the jQuery');
+
+      // C. jQuery function chaining: This involves calling multiple methods on the same set of elements such as, "$.get().done()"
+      /*
+        $(".container")
+          .text("This is from the jQuery")
+          .css({ fontSize: "2rem", color: "blue" })
+          .fadeOut(3000); */
+
+      // D. Custom functions in JS/jQuery
+      // Pending
+      // E. Most common function while traversing the DOM
+      // a. "find()"
+
+      /*  $("#my-list li:nth-child(2n+1").addClass("imprtnt").css("color", "red");
+        $("#my-list").find("li:not([class='imprtnt'])").css("color", "blue"); */
+
+      /* // b. "children"
+          $(".container").children("a").css("text-decoration", "none"); */
+
+      // c. closest
+      // $("#first-link").closest("li").css("border", "1px solid red");
+      // N:B closest parent, grand-parent, etc.
+
+      // d. parent
+      // $("#first-link").parents().css("border", "1px solid red");
+      // e. next
+      // $("#outer-link").next().css("border", "1px solid red");
+
+      /*  var counter = 0;
+       var img = [
+         "Desert",
+         "Jellyfish",
+         "Koala",
+         "Tulips",
+         "Lighthouse",
+         "Chrysanthemum",
+         "Penguins",
+         "Hydrangeas",
+       ];
+
+       (function imgDisplay(images) {
+         if (counter === images.length) counter = 0;
+
+         $(".img").css(
+           "background-image",
+           `url(./images/${images[counter]}.jpg)`
+         );
+
+         counter++;
+
+         setTimeout(imgDisplay, 3000, images);
+       })(img); */
+      // --------------------------------------------
+
+      // ==========> Revision on some functions used
+
+      // $(".main-container ul").find("li").css("color", "blue");
+      //-----Grabs all elements with "li"
+
+      // $(".main-container ul").children("li").css("background", "red");
+      // ------Grabs all children with "li"
+
+      // $("#my-link").closest("ul").css("background", "red");
+      // ------Grabs the first of it ancestors that matches "ul"
+
+      // $("#my-link").parents("ul").css("background", "red");
+      // ------returns all its ancestors of "ul" element
+
+      // $("#my-link").next("h1").css("background", "red");
+      // ------target the immediate sibling of "h1"
+
+      // $("#secondary li:first-child").next("li").css("color", "red");
+
+      // $("#secondary li:nth-child(5)").prev("li").css("color", "red");
+      //------target the last of all "ul" in a parent
+
+      // $(".main-ul").siblings("h1").css("color", "red");
+      // ------target all siblings of "h1"
+
+      // $("main ul").first().css("color", "red");
+      // ------target the first of all "ul" in a parent
+
+      // $("main > ul").html("<li id = 'only child'></li>");
+      // ------this add new html tag to the selector.
+
+      // $("main > ul li").text("My Item").css("color", "red");
+      // ------target the last of all "ul" in a parent
+
+      // $("main").prepend('<button class="btn-1"></button>');
+      // $("<button class='btn-2'>Sodiq</button>").prependTo("main");
+      // $("main").append('<button class="btn-2"></button>');
+      // $("<button class='btn-2'>Sodiq</button>").appendTo("main");
+      // $("main button").text("Submit");
+
+      /* $("button[class |= btn]").css({
+         outline: "none",
+         width: "20%",
+         display: "inline-block",
+         background: "#333",
+         color: "#fff",
+         cursor: "pointer",
+         });
+       */
+      // ------Styling of just added buttons
+
+      // $("#secondary li:nth-child(3)").before("<p>Hello World</p>");
+      // --------target the 3rd element and place the new "p" before it
+
+      // $("#secondary li:nth-child(3)").after("<p>Hello World</p>");
+      //------- target the 3rd element and place the new "p" after it
+
+      // $(".main-ul li").remove();
+      // -------target the selector and removes every element that matches it.
+
+      /* $(document).click((e) => {
+         if (e.target.tagName === "A") {
+           $(e.target).attr("target", "_blank");
+         }
+       }); */
+      // -------target all "a" in the document
+
+      /* $(document).click((e) => {
+         if (e.target.tagName === "A") {
+           if (!$(e.target).attr("target")) $(e.target).attr("target", "_blank");
+         }
+       }); */
+
+      // And the other one is removeAttr(name), and also "prop()", which is more faster than attr().
+      // ----------target all "a" with no "target" attr in the document
+
+      // $("ul li:first-child").clone().insertAfter("ul li:last-child");
+
+      /* $("ul li:first-child").click(function (e) {
+         $(this).css("color", "red");
+       }); */
+
+      // $("ul li:first-child").clone().insertAfter("ul li:last-child");
+
+      // $("ul li:first-child").clone(true).insertAfter("ul li:last-child");
+      // ------It makes the copy of a certain element. It accept a boolean arg; "true" means copying with event handler(s) of the original element (and every other ppties). The default is "false"
+
+      /*  $("#secondary li").each(function (index, el) {
+         // console.log(el.text());  //throws an error because "el" is out the jquery func
+         // console.log(el.textContent); //It works
+
+         // console.log($(this).text()); //It works
+       }); */
+      // -----------This is used for iteration.
+
+      // console.log($("#secondary li").eq(2).css("color", "red"));
+      // ------Picks element at index of arg passed. N:B the counting start from 0
+
+      // console.log($("#secondary li").filter(".selected").css("color", "red"));
+      // -------Picks all elements that satisfy the test or has class "selected"
+
+      // console.log($("#secondary li").not(".selected").css("color", "red"));
+      // -------Picks all elements that satisfy the test or has no class "selected"
+
+      // $("ul").has("li");
+      // console.log($("ul").has("a").css("background", "red"));
+      // --------This checks for any ancestor ul to the parent ul that has descendants of li or a element(s)
+
+      // console.log($("li").has("ul").css("background", "red"));
+      // ---------It checks any "li" that has "ul" as descendant
+
+      // console.log($("main").data("content"));  //getting data-content
+      /*  $("#main").data({ new: ["Meat", "Fish", "Egg"] }); //N:B it wouldn't reflect inside the HTML tag. But it's stored virtually
+       console.log($("#main").data("new")); */
+      /*  console.log(
+         typeof JSON.parse(
+           document.querySelector("main").getAttribute("data-content")
+         )
+       );*/
+      //--------- HTML5 introduces the concept of "data-*" (the "-*" means "-anything") attributes. As it allow to store extra info on standard, semantic HTML elements. So, any attributes on any element whose attr name start with "data-" is a data attr. Instead of using "JSON.Parse()", ".data()" get the attr and turns it to pure js data type. And note that the value of "data-*" must be in double quote.
+
+      // show() && hide(), toggle()
+      // -----They take 3 pre-defined args; slow,normal,fast in string. Or number in ms, show(3000). They also accept optional 2nd arg callback func to be executed after the animation is completed
+
+      // fadeIn,fadeOut,fadeTo(speed,opacity,callback),slideUp,slideDown()
+
+      // $(".box").animate({ top: 50, left: 50 }, 1000);
+      /*  $(".box")
+         .animate({ top: "150px", left: "50%" }, 1000)
+         .delay(1000)
+         .animate({ top: 0, left: 0 }, 1000, function () {
+           $("html, body").animate({
+             scrollTop: 0,
+             scrollLeft: 0,
+           });
+         }); */
+
+      // animate(properties[, duration][, easing][, callback])
+
+      $(document).ready(function () {
+        let index = 0;
+        var images = [
+          "Desert",
+          "Jellyfish",
+          "Koala",
+          "Tulips",
+          "Lighthouse",
+          "Chrysanthemum",
+          "Penguins",
+          "Hydrangeas",
+        ];
+
+        const boxContainer = document.querySelector(".box-container");
+
+        /*  const defaultStyle = {
+          right: "200%",
+          top: 0,
+        }; */
+
+        (function displayImg(imageArray) {
+          let imgIndex = index % imageArray.length;
+
+          const newImg = `<img src = './images/${imageArray[imgIndex]}.jpg' alt = '${imageArray[imgIndex]}' class = 'img'/>`;
+
+          boxContainer.innerHTML = newImg;
+
+          index++;
+
+          $(".img")
+            .animate(
+              {
+                top: 0,
+                right: 0,
+              },
+
+              2000
+            )
+            .delay(3000)
+            .animate(
+              {
+                top: 0,
+                right: "200%",
+              },
+              2000
+            );
+
+          setTimeout(displayImg, 6000, imageArray);
+        })(images);
+
+        // Object.assign(box.style, defaultStyle);
+
+        // End document
+      });
+
+      /*
+      ----------------------- Event bubbling moveUp: Warming up
+
+       $("#secondary").click(function (e) {
+         if (e.target.tagName === "LI") {
+           $(e.target).insertBefore($(e.target).prev("li"));
+         }
+       });
+
+       */
+
+      /*
+        Event bubbling moveDown
+
+       $("#secondary").click(function (e) {
+         if (e.target.tagName === "LI") {
+           $(e.target).next("li").insertBefore(e.target);
+         }
+       }); */
+
+      const selectedH1 = document.querySelector("h1");
+      const arrCallback = () => {
+        console.log(this);
+      };
+      selectedH1.addEventListener("click", arrCallback);
+    </script>
+  </body>
+</html>

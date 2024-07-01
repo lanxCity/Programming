@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links &verbar; Images &verbar; Attributes</title>
+    <style>
+      .ext-int-links {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- A. Creating links
+        -- Internal And External links
+        -- To create a link, "anchor / <a>" tag is used
+        
+        -> Internal links are links created to navigate pages within the site. These pages can be linked together through "Relative and Absolute" pathnames
+
+        -- > Relative pathnames point to files based on their locations relative to the current file location.
+        e.g.
+        - href="about.html" -> the about file is located in the current directory as this file.
+
+        - href="contactFolder/contact.html" -> the contact.html is located in the directory "contactFolder", which is located in the current directory
+
+        - href="../about.html" -> the about.html is located in the directory one level up from the currernt directory (the parent directory)
+
+        - href="../../contactFolder/contact.html" -> the contact.html is located two directory level up from the currernt directory, in a folder contactFolder
+
+        -- > Absolute pathnames point to the page by starting at the top level of your directory hierarchy and working downward through all the
+        intervening directories to reach the file. Absolute pathnames always begin with a slash, "/" which is the way they’re differentiated from relative pathnames. Following the slash are all directories in the path from the top level or document root to the file you are linking.
+
+        - Unlike relative pathnames, href="/about.html" points to the topmost folder we are working in; the current "workspace" on the VS code which is "Frontend" folder. This is the root folder or workspace folder of the current file.
+    
+        -- > External links are Links to other websites from one's page. e.g. href="http://google.com" 
+    -->
+    <h1>
+      <a href="#links">Links</a> &verbar; <a href="#images">Images</a> &verbar;
+      <a href="attr">Attributes</a>
+    </h1>
+
+    <section id="links">
+      <h2>&rArr; Internal and External links</h2>
+
+      <section class="ext-int-links">
+        <!-- External links -->
+        <p>
+          External Link: <a href="http://google.com/">Click To View Page</a>
+        </p>
+
+        <p>
+          External Link &lpar;with target attribute sets to
+          &apos;&UnderBar;blank&apos;&rpar;:
+          <a href="http://google.com/" target="_blank">Click To View Page</a>
+        </p>
+        <!-- Setting "target" attr to blank opens new tab for the external link -->
+
+        <!-- Internal links -->
+        <!-- Relative path -->
+        <p>
+          Internal Link &lpar;Relative pathname&rpar;:
+          <a href="./Typography_headings_Paragraphs.html">Typograpghy 1</a>
+        </p>
+
+        <p>
+          Internal Link &lpar;Relative pathname without
+          &apos;&period;&apos;&rpar;:
+          <a href="Typography_headings_Paragraphs.html">Typograpghy 2</a>
+        </p>
+
+        <!--Absolute path-->
+        <!-- Be careful of the usage whereby "/" is used on server depending on the root document and the location of the file we are linking to -->
+        <p>
+          Internal Link &lpar;Absolute pathname from root folder&comma;
+          Frontend&rpar;:
+          <a href="/New/Traversy/html/Typography_headings_Paragraphs.html"
+            >Typograpghy 3</a
+          >
+        </p>
+        <!-- Can't work if opened manually because server makes the workspace the root document. However, the root document in the case non-server opening is the local disk, "C:/"  -->
+
+        <p>
+          Internal Link &lpar;Absolute pathname from local disc&rpar;:
+          <a
+            href="C:\Users\user\Documents\Programming\Training\Web\Frontend\New\Traversy\html\Typography_headings_Paragraphs.html"
+          >
+            Typograpghy 4</a
+          >
+        </p>
+        <hr />
+        <!-- Can't work because server makes the workspace the root document unless it is open manually from without liveserver -->
+      </section>
+      <!-- end ext-int-links -->
+
+      <!-- Linking to sections within a document and this is called creating anchors-->
+      <section class="anchors">
+        <h2>
+          &rArr; Linking to sections within the current or other document by
+          creating anchors
+        </h2>
+        <ul>
+          <li>list 1</li>
+          <li>list 2</li>
+          <li>list 3</li>
+          <li>list 4</li>
+          <li>list 5</li>
+          <li>list 6</li>
+          <li>list 7</li>
+          <li>list 8</li>
+          <li>list 9</li>
+          <li>
+            list 10&colon;
+            <a href="./Typography_headings_Paragraphs.html#linked-lorem"
+              ><em>Typography Section Link</em></a
+            >
+          </li>
+        </ul>
+      </section>
+      <!--end anchors-->
+    </section>
+
+    <!-- B. Images -->
+    <section id="images">
+      <!-- Local Images -->
+      <img src="../Images/links_images_attr/sample.jpg" alt="Sample" />
+
+      <!-- External Images -->
+      <img
+        src="http://source.unsplash.com/360x240/?buildings,technology,forest,water"
+        alt="Backgroud image"
+      />
+    </section>
+
+    <p><a href="#">Back To Top</a></p>
+  </body>
+</html>

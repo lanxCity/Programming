@@ -1,0 +1,155 @@
+// Reset styling
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: "Roboto", Aria, sans-serif;
+	overflow: hidden;
+	background: #ddd;
+}
+
+input {
+	height: 50px;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+// Main styling
+
+main {
+	background: #333;
+	width: 400px;
+	height: 500px;
+	margin: 100px auto;
+	padding: 2rem;
+
+	.main-container {
+		width: 100%;
+		display: grid;
+		grid-template-areas:
+			"section-screen section-screen section-screen section-screen"
+			"section-switch-clear section-switch-clear section-switch-clear  section-switch-clear"
+			"section-values section-values section-values section-operators";
+		justify-content: center;
+		grid-gap: 1rem;
+		background: #555;
+		padding: 1rem 0;
+	}
+
+	// ------------Screen section
+
+	#section {
+		&-screen {
+			grid-area: section-screen;
+
+			.screen-container {
+				width: 100%;
+
+				#screen {
+					width: 100%;
+					outline: none;
+					line-height: 2;
+					color: #333;
+					font-size: 1.5rem;
+					letter-spacing: 3px;
+					cursor: text;
+					padding: 0.5rem;
+				}
+			}
+		}
+
+		// ------------Switch section
+
+		&-switch-clear {
+			grid-area: section-switch-clear;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-between;
+			align-items: center;
+
+			#switch-container {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				visibility: hidden;
+
+				#switch {
+					position: relative;
+					top: 0;
+					left: 0;
+					width: 50px;
+					height: 50px;
+					z-index: 2;
+					opacity: 0;
+				}
+
+				div {
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 0.8rem;
+					width: 50px;
+					line-height: 50px;
+					text-align: center;
+					background: #ffffff;
+
+					#switch-off {
+						color: red;
+					}
+				}
+
+				#switch:checked + div #switch-on {
+					color: green;
+				}
+
+				#switch:checked + div #switch-off {
+					color: inherit;
+				}
+			}
+
+			// clear section
+			.clear-container {
+				text-align: right;
+				#clear {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+
+		// value section
+
+		&-values {
+			grid-area: section-values;
+
+			.values-container {
+				div {
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(3, 70px);
+					justify-content: space-between;
+
+					.equation {
+						grid-column: 2 / span 2;
+					}
+				}
+			}
+		}
+
+		&-operators {
+			grid-area: section-operators;
+
+			.operators-container {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+
+				.operator {
+					width: 70px;
+				}
+			}
+		}
+	}
+}

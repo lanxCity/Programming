@@ -1,0 +1,76 @@
+<style>
+
+h1{
+
+}
+
+body {
+
+	font-size: 200%;
+	background-color: #9BDAE2A8;	
+}
+
+div, p, .smaller, #smallest {
+	font-size: 80%;
+}
+
+
+hr {
+	width: 10in;
+}
+
+.Lorem {
+	color: hsl(200, 100%, 66%);
+	font-size: 50%;
+	line-height: 1em;
+}
+
+h2 {
+	line-height: 2em;
+}
+
+
+
+
+
+
+#xLarge {
+	font-size: x-large;
+
+}
+
+#large {
+	font-size: large;
+	color: #2bf666;
+}
+
+h2, p, div {
+	color: #003aee;
+}
+
+cite {
+	color: #cc9baa;
+	font-size: small;
+	font-weight: 900;
+}
+
+p cite, div cite {
+	color: #4b00ff;
+	font-size: large;
+}
+
+blockquote {
+	background-color: #968968FF;
+	color: #74B24CFF;
+	font-style: italic;
+}
+
+blockquote div {
+	font-style: normal;
+	text-align: right;
+}
+
+ 						/*the use color on a page*/
+
+
+</style>

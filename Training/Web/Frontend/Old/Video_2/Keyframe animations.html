@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Use Of Keyframes For Animation</title>
+
+	<style type="text/css">
+
+	/* You can animate using some properties that have midpoints e.g. position, width, color, opacity etc. */
+
+		* {	
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--flex-box: flex;
+		} 
+
+		body {
+			background: #e3e3e3;
+		}
+
+		.container {
+			border: 1px red solid;
+			height: 50vh;
+		}
+
+		.box {
+			background: #333;
+			height: 100%;
+			/* display: var(--flex-box);
+			align-items: center; */
+			color: #fff;
+			padding: 0 1rem;
+			position: relative;
+			/* animation-name: advert-box;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+			animation-direction: alternate;
+			animation-delay: 2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite; */
+			transition: all 3s ease-in-out;
+		 	
+		}
+
+		.box:hover p {
+			border-radius: 10px;
+			background: red;
+		}
+
+		.box p {
+			background: red;
+			width: 50%;
+			padding: 1rem;
+			animation: advert-content 5s forwards .5s ease-in-out;
+			position: relative;
+			top: 0;
+			left: 0;
+			text-indent: -9999px;
+		}
+
+		@keyframes advert-content {
+			to {
+				background: #e0e0e0;
+				color: #000;
+				width: 100%;
+				top: 40%;
+				visibility: visible;
+				text-indent: 0;
+			}
+			/*  10% {
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: red;
+			}
+
+			 20% {
+				top: 0;
+				left: 50%;
+				width: 30%;
+				background: blue;
+			} 
+
+			 30% {
+				top: 50%;
+				left: 50%;
+				width: 30%;
+				background: green;
+			}
+
+			 40% { 
+				top: 50%;
+				left: 0;
+				width: 100%;
+				background: red;
+			}
+
+			50% {
+				top: 50%;
+				left: 0;
+				width: 30%;
+				background: #333;
+			} 
+
+			60% {
+				top: 0;
+				left: 0;
+				width: 30%;
+				background: #333;
+			}	  */
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="box">
+			<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Earum tenetur aut iste exercitationem consectetur suscipit fugiat, fugit nemo sint, unde perferendis modi rerum culpa, veritatis. Molestias, accusantium obcaecati corrupti eos.
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>

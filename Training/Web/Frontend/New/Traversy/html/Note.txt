@@ -1,0 +1,23 @@
+-------------------------Topics-----------
+A. Creating html sample page
+
+B. Basic layout of html page
+    
+    -> <!DOCTYPE html> 
+
+    The "<!DOCTYPE>" is not an html tag but only used to instructs the browser about the version of html document written using 
+    DOCTYPE identifier. Therefore, <!Doctype html> declaration indicates the document is written in HTML5
+
+C. Setting up Live server and some other extensions. Also, the use of "Emmet" xtension to generate the html template or boilerplate
+   using "!" and then "tab" key.
+
+D. The "meta" tag & search engine
+E. Some Commands
+-shift+alt+down-arrw   => Copy down the line
+-ctrl+home/end  => To hover a whole word instead of each char.
+-ctrl+fn+home/end  => To go to the beginning or end of the file.
+-ctrl+windows+home/end  => To close or re-open all tasks or apps
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Using jQuery for AJAX</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <section id="section-heading">
+        <h1>Hello world! I&apos;m learning AJAX</h1>
+        <button id="ajaxBtn">View Code</button>
+      </section> -->
+      <!-- <main class="home-main">
+        <section class="section-a">
+          <h2>corporate intranet</h2>
+          <h3>lorem ipsum headline</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
+            unde maiores id tenetur optio eligendi? Hic recusandae quae vero
+            tenetur officia? Excepturi ullam, non culpa, id libero distinctio
+            atque nemo quidem aspernatur totam necessitatibus tempora modi
+            molestias animi quod at error nam minima! Ipsum voluptate earum
+            dolorum amet, a harum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+            mollitia eveniet beatae possimus quasi quod. Eaque enim blanditiis
+            at reiciendis perferendis! Distinctio aliquid sint voluptates vitae
+            nulla porro repellendus mollitia nam maxime aspernatur sunt quidem
+            quia esse, aliquam totam fuga dignissimos perferendis impedit dolor!
+            Et reiciendis corporis illo error debitis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, eaque
+            aliquam. Explicabo sint illo odit nulla minima quae, vero sit, eius
+            adipisci magni deleniti architecto aliquam ut deserunt quia tempora
+            ex fuga quo quam blanditiis omnis dolorem illum unde ipsum. Repellat
+            esse praesentium sed ipsum dolorem tempora doloribus, animi iste?
+          </p>
+        </section>
+        <section class="section-b office-rooms">
+          <h3>Meeting Rooms</h3>
+        </section>
+      </main>
+      <aside class="office-status">
+        <h3>Employees office status</h3>
+         <button id="viewEmployees">View Employees</button>
+      </aside>
+      <footer>
+        <p>copyright, the intranet corporation&period;</p>
+        <!-End of Employees Page->
+      </footer> -->
+
+      <!-- The form submission -->
+      <!-- <form action="/signUp" method="post" id="regForm">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          id="firstName"
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          id="lastName"
+        />
+        <input type="email" name="email" placeholder="Email" id="email" />
+        <button type="submit">Register</button>
+      </form> -->
+
+      <!-- End of the page -->
+      <!-- <h1>Welcome to my jQuery Page</h1>
+      <button id="btn">Click</button> -->
+
+      <!-- Section send request to outer source -->
+      <section id="flickrPhotos">
+        <div id="heading">
+          <h1>Flickr Photo Feeder</h1>
+          <p>Choose which kind of animal you'd like to return photos of...</p>
+        </div>
+        <div id="body">
+          <!-- <ul id="filterList">
+            <li><button class="btn">Dog</button></li>
+            <li><button class="btn">Cat</button></li>
+            <li><button class="btn">Moose</button></li>
+          </ul> -->
+          <form action="">
+            <input
+              type="text"
+              id="searchField"
+              placeholder="Type a search term"
+              ,
+            />
+            <button type="submit" id="searchBtn">Search</button>
+          </form>
+          <section id="results"></section>
+        </div>
+      </section>
+    </div>
+    <script src="../../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script src="./Intro.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Creating a function
+        function getData() {
+          const searchedField = $("#searchField");
+          const searchedButton = $("#searchBtn");
+          const searchedValue = searchedField.val();
+
+          $(searchedField).attr("disabled", true);
+          $(searchedButton).attr("disabled", true).text("Searching...");
+
+          $.getJSON(
+            "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+
+            {
+              tags: searchedValue,
+              format: "json",
+            },
+
+            (data) => {
+              // console.log(data.items);
+              if (data.items.length > 0) {
+                const ul = document.createElement("ul");
+                ul.setAttribute("id", "imgList");
+
+                // Looping through the data
+                $.each(data.items, (index, profile) => {
+                  // creating  element for each obj.
+
+                  const li = document.createElement("li");
+                  const a = document.createElement("a");
+                  a.setAttribute("href", profile.link);
+                  const img = document.createElement("img");
+                  img.setAttribute("src", profile.media.m);
+
+                  // Appending
+                  a.appendChild(img);
+                  li.appendChild(a);
+                  ul.appendChild(li);
+                });
+
+                $("section#results").html(ul);
+              } else {
+                $("section#results").html(
+                  "<p>No photos found that match: " + searchedValue + ".</p>"
+                );
+              }
+
+              // ---------------------------
+              $(searchedField).attr("disabled", false);
+              $(searchedButton).attr("disabled", false).text("Search");
+            }
+            // End getJSON
+          );
+        }
+
+        // Creating Event
+        $("form").submit((event) => {
+          event.preventDefault();
+          if (document.getElementById("searchField").value) {
+            getData();
+          }
+        });
+
+        $("#searchField").keyup((event) => {
+          let keyCode = event.which;
+
+          if ($(this).val()) {
+            if (keyCode === 13) {
+              getData();
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

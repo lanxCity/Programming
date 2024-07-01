@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The use of images on the page</title>
+	<style type="text/css">
+
+		#section_1{
+			background-color: burlywood;
+			clear: left;
+			max-width: 650px;
+		}
+
+		/*the use of "max-width" is in page 203 of chap 8*/
+		a {
+			background: deeppink;
+		}
+
+		.img_bullet {
+			border: solid silver;
+		}
+
+		.img_bullet img {
+			
+			vertical-align: middle;
+		}
+
+		.img_bullet li {
+			margin: 20px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1>The use of images on the page</h1>
+	<img src="../../../Images/sample_1.jpg" alt="sample_1" />
+	<div> 
+		<img src="../../../Images/bullet arrow head.jpg" alt="bullet" style="vertical-align: text-top; float: left; border: groove"> 
+		<p style="margin:0;">
+		Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Quasi dolores reiciendis illo provident doloribus minus non veritatis dolorem omnis mollitia tempore eaque optio ratione nesciunt aliquam voluptates ut, culpa fugiat harum quo
+		</p>
+		
+	</div>
+
+	<section id="section_1">
+		<h2>Vertical-align &lsquo;top&rsquo; versus Vertical-align &lsquo;text-top&rsquo;</h2>
+
+		<p style="border: solid;">
+			<a href=""><img src="../../../Images/bullet arrow head.jpg" alt=""></a>
+			The Vertical-align&colon;top&semi; 
+			<img src="../../../Images/bullet arrow head.jpg" alt="1" style="vertical-align: top;">
+			The Vertical-align&colon;text-top&semi; 
+			<img src="../../../Images/bullet arrow head.jpg" alt="1" style="vertical-align: text-top;">
+		</p>
+
+	</section>
+
+	<img src="C:\Users\ENGR. LANX\Pictures\lanx 2.jpg" alt="Lanx" width="320px" height="240"> <!--Not working for Firefox-->
+	<img src="/C:/Users/ENGR. LANX/Pictures/lanx 2.jpg" alt="lanx_2" style="width: 240px; height: 240px;">
+
+	<!-- <ul style="list-style: disc inside url('../../../Images/bullet arrow head.jpg');">  -->
+		<!--Rather than using "url" in list style type, we can assign "img" tag to the individual list-->
+		<li>home</li>
+		<li>content</li>
+		<li>contact</li>
+		<li>about</li>
+		<li>lanx</li>
+	</ul>
+
+	<ul style="list-style-type:none;" class="img_bullet"> 
+		<!--Rather than using "url" in list style type, we can assign "img" tag to the individual list-->
+		<li><img src="../../../Images/bullet arrow head.jpg" style="width: 50px; height: 50px;"><a href="">home</li>
+		<li><img src="../../../Images/bullet arrow head.jpg" style="width: 50px; height: 50px;"><a href="">content</li>
+		<li><img src="../../../Images/bullet arrow head.jpg" style="width: 50px; height: 50px;"><a href="">contact</li>
+		<li><img src="../../../Images/bullet arrow head.jpg" style="width: 50px; height: 50px;"><a href="">about</li>
+		<li><img src="../../../Images/bullet arrow head.jpg" style="width: 50px; height: 50px;"><a href="">lanx</li>
+	</ul>
+	
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <title>DOM Manipulation</title>
+
+    <style>
+      body {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #aaa;
+        font-size: 16px;
+      }
+      header {
+        text-align: center;
+        background-color: #333;
+        color: #f4f4f4;
+        padding: 1.5rem;
+        text-transform: capitalize;
+      }
+      .para-2 {
+        border: 2px solid blue;
+      }
+      .my-class {
+        background: lightblue;
+        color: #fff;
+      }
+
+      ul {
+        background: paleturquoise;
+        padding: 1rem;
+      }
+
+      li {
+        border: 1px solid pink;
+      }
+
+      li span {
+        float: right;
+        font-size: 10px;
+        padding: 3px;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The DOM Manipulation</h1>
+    </header>
+    <div class="container">
+      <p class="para-1">
+        This is paragraph one. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Minima aperiam quis rem nam? Id, sunt?
+      </p>
+      <p class="para-2">
+        This is paragraph two. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Minima aperiam quis rem nam? Id, sunt?
+      </p>
+      <div id="previewDiv">
+        <ul id="shopping-list">
+          <li>item-2</li>
+          <li>item-3</li>
+          <li>item-4</li>
+          <li>item-5</li>
+          <li>item-6</li>
+        </ul>
+      </div>
+      <input type="text" name="newItem" id="newItem" />
+      <button id="btn-1">Add Item</button>
+      <a href="http://google.com">Google.com</a>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // 1. ----------------------"css" method
+        // $("p.para-1").css("color", "red");
+        // For multiple prpties, we an object with "key-value" pairs
+        // $("p.para-1").css({ color: "red", background: "pink" });
+        // 2. ----------------------"class" methods
+        /* $("p.para-2").addClass("my-class");
+        // $("p.para-2").removeClass("para-2");
+        // $("p.para-2").hasClass("para-2");
+        $("#btn-1").click(() => {
+          $("p.my-class").toggleClass("para-2");
+        });*/
+        // 3. ------------------------"tag contents" methods
+        // $("#previewDiv").text("Hello World");
+        // $("#previewDiv").html("<h3>Hello World</h3>");
+        /*  $("#previewDiv").prepend("<h3>My Shopping List</h3>");
+        $("#previewDiv #shopping-list").prepend("<li>Item-1</li>");
+        $("#previewDiv #shopping-list").append("<li>Item-7</li>");
+        $(".para-2").prependTo(".para-1");
+        $("<span>Marked</span>").appendTo("#shopping-list li:nth-child(2n+1)");
+        $("#shopping-list li:nth-child(3)").before("<li>Item-10</li>");
+        $("#shopping-list li:nth-child(5)").after("<li>Item-15</li>");
+        $("#shopping-list").empty(); //removes all the children but the parent element still exist.
+        $("#shopping-list").detach();
+
+        // 3a. Working with attributes, "attr"
+        $("a").attr("target", "_blank");
+        // alert($("a").attr("href")); //Get attribute value
+        $("a").removeAttr("target"); */
+        // 3b. ---------------Others
+        // a. wrap
+        // $(".container").wrap("<main id='main-home'>");
+        // $(".container").wrapInner("<main id='main-home'>");
+        // $("p").wrap("<h1>");  //wrap each "p" with diff "h1"
+        // $("p").wrapAll("<h1>"); //wrap all "p" with just 1 "h1"
+        // b. press enter with "keyup" method
+        // NB: Every keys has its own code.
+        /*  $(newItem).keyup(function (event) {
+          // "which" and "keyCode" ppties get the key codes that's triggering the event.
+          let keyCode = event.which;
+          // console.log(keyCode);
+          if (event.target.value && keyCode === 13) {
+            let newLi = document.createElement("li");
+            $(newLi).text(event.target.value);
+            $("#shopping-list").append(newLi);
+            event.target.value = "";
+          }
+        }); */
+        // 4. Working with array methods
+        /* let myList = [1, 3, 4, 5, 4, 32, 1, 3, 4, 2, 1, 4];
+        $.each(myList, (index, element) => {
+          console.log(element);
+        }); */
+        // let myList = $("#shopping-list li"); //returns all the list items
+        // console.log(myList);
+        /* let myList = $("#shopping-list li").toArray();
+        console.log(myList);
+        $.each(myList, (index, element) => {
+          $(element).css("color", "brown");
+        }); */
+        //-------------------------- The End page "doc.ready"
+      });
+    </script>
+  </body>
+</html>

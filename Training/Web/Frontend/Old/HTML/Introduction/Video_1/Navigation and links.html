@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation And Links</title>
+
+	<style type="text/css">
+
+		body {
+			font-family: sans-serif;
+		}
+		 ul {
+			background: #ddd;
+			list-style: none;
+			padding: 0;
+		}
+
+		nav li {
+			display: inline;
+		}
+
+		form li {
+			margin-bottom: 15px;
+		}
+
+		form label {
+			display: block;
+			padding-bottom: 2px;
+		}
+
+		form textarea {
+			width: 400px;
+			height: 200px;
+		}
+
+		div {
+			background: red;
+		}
+
+		div img {
+			width: 400px;
+			height: 200px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<nav>
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Tutorial</li>
+			<li>Contact</li>
+			<li>Explore</li>
+		</ul>
+	</nav>
+	
+	
+	<form action="/lanx.js" method="get">
+
+		<ul>
+			<li>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name">
+			</li>
+			<li>
+				<label for="comment">Your Comment</label>
+				<textarea id="comment" name="Comment"></textarea>
+			</li>
+			<li>
+				<input type="submit" value="Submit">
+			</li>
+		</ul>
+
+	</form>
+</body>
+</html>

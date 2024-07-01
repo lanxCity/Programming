@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introduction to table</title>
+
+	<style>
+		body {
+			border: 1px solid rebeccapurple;
+			min-width: 900px;
+			max-width: 1024px;
+						
+		}
+
+		h2 {
+			border: 1px solid goldenrod;
+			display: table;
+		}
+
+		table {
+			border: 2px solid yellow;
+			border-collapse: collapse;
+							
+		}
+
+		table th:first-child{
+			padding:0 ;
+			background-color: #5171ADB1;
+
+		}
+
+
+		#level_4{
+			
+		}
+
+		#empty-cell{
+			margin: 20px 0 0 0;
+			background-color: #ED11E8FF;
+			padding: 0; /*"padding" is used to replace "cellpadding"*/
+			width: 60%;
+			border-collapse: separate;
+			border-spacing: 0;  /*"border-spacing" is used to replace the "cellspacing" attribute*/
+			float: left;
+		}
+
+		#empty-cell tr:first-child{
+			background-color: #897B14D2;
+		}
+
+		#empty-cell th ol {
+			padding-left: 0;
+			list-style: decimal inside;
+			margin: 0;
+
+		}
+
+		#empty-cell th ol  li {
+			padding: 0 15px 0 15px;
+		}
+
+		th, td {
+			padding: 5px 15px;
+			margin: 0;
+			border: 1px solid darkorange;
+		}
+
+		h1 {
+			width: 35%;
+			border: 1px red solid;
+			float:  right;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2>The Use Of Tables On A Page</h2>
+
+	<table id="level_4" border="2px">
+		<thead>
+			<th>S&#47;N</th>
+			<th>Matric No&period;</th>
+			<th>GES301</th>
+			<th>TAE411</th>
+			<th>TAE412</th>
+			<th>TAE413</th>
+			<th>TAE414</th>
+			<th>TAE415</th>
+			<th>MAT315</th>
+			<th>TIT499</th>
+		</thead>
+
+	</table>
+
+	<!-- Creating empty cell explicitly using "br" rather than leaving the tag empty -->
+	<table id="empty-cell" border="2px">
+
+		<caption>
+			<details>
+				<summary>The List Of The Qualifiers</summary>
+				<div>The following student are those qualified for the 2021&#47;2022 under&hyphen;17 football world cup</div> 
+			</details>
+		</caption>
+
+		<tr>
+			<th><br></th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Department</th>
+			<th>Level</th>
+		</tr>
+
+		<tr>
+			<th>
+				<ol>
+					<li></li>
+				</ol>
+			</th>
+			<td>Sodiq</td>
+			<td>5</td>
+			<td>Agricultural And Environmental Engineering</td>
+			<td>500</td>
+		</tr>
+
+		<tr>
+			<th>
+				<ol start="2">
+					<li></li>
+				</ol>
+			</th>
+			<td>Rasheed</td>
+			<td>20</td>
+			<td>English Education</td>
+			<td>400</td>
+		</tr>
+
+		<tr>
+			<th>
+				<ol start="3">
+					<li></li>
+				</ol>
+			</th>
+			<td>Kareemot</td>
+			<td>20</td>
+			<td>Biochemistry</td>
+			<td>100</td>
+		</tr>
+
+		<tr>
+			<th>
+				<ol start="4">
+					<li></li>
+				</ol>
+			</th>
+			<td>Rasheedah</td>
+			<td>30</td>
+			<td>Mathematics</td>
+			<td>100</td>
+		</tr>
+
+		<tr>
+			<th>
+				<ol start="5">
+					<li></li>
+				</ol>
+			</th>
+			<td>Muhammad</td>
+			<td>25</td>
+			<td>Theatre Art </td>
+			<td>300</td>
+		</tr>
+
+	</table>
+
+	<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse similique maiores repellat inventore cumque ipsa et temporibus itaque sunt.</h1>
+	
+</body>
+</html>

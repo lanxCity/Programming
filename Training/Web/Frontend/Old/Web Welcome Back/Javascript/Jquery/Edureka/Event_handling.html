@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+    <style>
+      html,
+      /* body {
+        margin: 0;
+        padding: 0;
+      } */
+      h1 {
+        transition: color 0.3s ease-in;
+      }
+
+      .container {
+        position: relative;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      #box-mover {
+        border: 1px solid grey;
+      }
+      li {
+      }
+
+      .room {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        border: 1px solid black;
+        position: relative;
+      }
+
+      .light-bulb {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2em;
+        transition: all 0.5s ease-in;
+      }
+      .off {
+        background-color: #333;
+      }
+      .on {
+        background-color: lawngreen;
+      }
+      .switch {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="room">
+      <div class="light-bulb off"></div>
+      <button class="switch">Power Off</button>
+    </div>
+    <div class="container">
+      <div class="box"></div>
+      <p id="box-mover">Move mouse over me to move the box</p>
+      <h1>This is Event handling in jQuery</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+        obcaecati, aspernatur doloremque laudantium ullam fugit quidem. Aliquam
+        ex, illum maxime doloribus quae dolorem voluptas a, assumenda ipsum
+        optio, sapiente officiis?
+      </p>
+
+      <!-- Adding Elements -->
+      <div class="field">
+        <input type="text" id="addInput" />
+        <button id="addBtn">Add Item</button>
+      </div>
+      <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+      </ul>
+    </div>
+    <a
+      href="http://google.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      id="my-link"
+      >Google</a
+    >
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script>
+      const print = console.log.bind();
+      // ---------The "bind()", unbind() and live() methods => Outdated or deprecated------------------
+      /* $("h1")
+        .bind("mouseenter", function (e) {
+          $(this).css("color", "red");
+        })
+        .bind("mouseleave", function (e) {
+          $(this).css("color", "inherit");
+        }); */
+
+      /*  $("h1").mouseenter(function (e) {
+          $(this).css("color", "red");
+        });
+        $("h1").mouseleave(function (e) {
+          $(this).css("color", "inherit");
+        }); */
+
+      /* $("h1").bind("mouseenter mouseleave", function (e) {
+        if (e.type === "mouseenter") $(this).css("color", "red");
+        if (e.type === "mouseleave") $(this).css("color", "inherit");
+
+        // --------the "type" ppty is the type of  occurring
+        // --------the "which" ppty is the keycode of the key triggering the event
+      }); */
+
+      /*  $(document).bind("keyup", function (e) {
+        if (!isNaN(e.key) && e.which != "32") print(e.key);
+      }); */
+      // The "unbind()" detach the event from a certain element. But the method would fails if an element is been added dynamically
+
+      /* $("ul").bind("mouseenter mouseleave", function (e) {
+        if (e.target.tagName === "LI") {
+          if (e.type === "mouseenter") {
+            $(e.target).css("color", "red");
+            print(e.target);
+          }
+          if (e.type === "mouseleave") $(e.target).css("color", "inherit");
+        }
+      }); */ //-----Not Working
+      /*
+      $("h1").bind("mouseenter mouseleave", function (e) {
+        if (e.type === "mouseenter") $(this).css("color", "red");
+        if (e.type === "mouseleave") {
+          $(this).css("color", "inherit");
+          $(this).unbind("mouseenter");
+        }
+      }); */
+      /*
+      mouseenter: means the mouse is coming from outside (the obj the event is called upon)
+      mouseleave: means the mouse is going out (the obj the event is called upon)
+      mouseover/mouseout: means the mouse is only affect that target triggering the event (the obj the event is called upon)
+
+      */
+
+      /*  $("ul").bind("mouseover mouseout", function (e) {
+        if (e.target.tagName === "LI") {
+          if (e.type === "mouseover") $(e.target).css("color", "red");
+          if (e.type === "mouseout") $(e.target).css("color", "inherit");
+        }
+      });
+
+      $("ul").mouseover(function (e) {
+        if (e.target.tagName === "LI" && $(e.target).is($("ul li").last())) {
+          e.stopImmediatePropagation();  //Not Working
+        }
+      }); */
+
+      $("#addBtn").bind("click", function (e) {
+        if ($("#addInput").val())
+          $("ul").append(`<li>${$("#addInput").val()}</li>`);
+        // print($("ul").eq(0)); returns element ul of index 0
+        // print($("ul li:last-child").index()); returns index of li searched
+        // print($("ul").children().length);
+
+        $("#addInput").val("");
+      });
+
+      // ------------------on and off methods => bind() replacement in jQuery v1.7 and above
+
+      // $(me).click((e) => {});
+
+      /*  $("ul").on({
+        mouseover: function (e) {
+          if (e.target.tagName === "LI") $(e.target).css("color", "red");
+        },
+        mouseout: function (e) {
+          if (e.target.tagName === "LI") $(e.target).css("color", "inherit");
+        },
+        /*
+        mousemove: function (e) {
+          print(e.pageX);
+          print("..................", e.clientX);
+        }, *
+      }); */
+
+      /* $("a[target='_blank']").on("click", function (e) {
+        e.preventDefault();   // prevent the Default of "a" tag
+        print(e.target);
+      }); */
+
+      /* $("h1").on("mouseenter mouseleave", function (e) {
+        if (e.type === "mouseenter") $(this).css("color", "red");
+        if (e.type === "mouseleave") {
+          $(this).css("color", "inherit");
+          print(e.target);
+          // $(this).off("mouseenter"); // only off mouseenter
+          $(this).off(); //  off all event
+        }
+      }); */
+
+      // ------------------------one() method: use if we want the event to only occur once and stopped; It bind and unbind event itself.
+
+      /* $("h1").one({
+        mouseenter: function (e) {
+          $(e.target).css("color", "red");
+        },
+        mouseleave: function (e) {
+          $(e.target).css("color", "inherit");
+        },
+      }); */
+
+      // --------------------trigger() method: used to trigger an event on a certain element
+
+      /* $("h1").bind("mouseenter mouseleave", function (e) {
+        if (e.type === "mouseenter") {
+          $(e.target).css("color", "red");
+
+          $("a").trigger("click"); //this doesn't actually open the link but only triggering the event handler
+        } else {
+          $(e.target).css("color", "inherit");
+        }
+      });
+
+      $("a").click(function () {
+        alert("hello");
+      }); */
+
+      /*
+      let h1Event = function (e) {
+        if (e.type === "mouseenter") {
+          $(e.target).css("color", "red");
+        } else {
+          $(e.target).css("color", "inherit");
+        }
+      };
+
+      $("h1").bind("mouseenter mouseleave", h1Event);
+      $("h1").trigger("mouseenter"); */
+
+      // ---------------Custom Event: Apart from in-built event, you can create your own event too. And trigger it.
+
+      /* $("h1").bind("mouseenter mouseleave", function (e) {
+        if (e.type === "mouseenter") {
+          $(e.target).css("color", "red");
+        } else {
+          $(e.target).css("color", "inherit");
+        }
+      });
+      $("h1").trigger("mouseenter"); */
+      /* 
+      let boxMove = function (e) {
+        if (!this.offsetLeft) {
+          $(e.target).animate({
+            top: 0,
+            left: this.offsetLeft + 50,
+            borderRadius: "50%",
+          });
+        } else {
+          $(e.target).animate({
+            top: 0,
+            left: this.offsetLeft - 50,
+            borderRadius: 0,
+          });
+        }
+      };
+
+      $(".box").bind("customEvent", boxMove);
+
+      // Mouse entering
+      $("#box-mover").mouseenter(function (e) {
+        $(".box").trigger("customEvent");
+      });
+
+      // Mouse leaving
+      $("#box-mover").mouseleave(function (e) {
+        $(".box").trigger("customEvent");
+        // print($(".box").offset().left);
+      }); */
+
+      $(".light-bulb").bind("light:toggle", function (e) {
+        if ($(this).is(".off")) {
+          $(this).removeClass("off");
+          $(this).addClass("on");
+          $(".switch").text("Power On");
+        } else {
+          $(this).removeClass("on");
+          $(this).addClass("off");
+          $(".switch").text("Power Off");
+        }
+      });
+
+      $(".switch").click(function (e) {
+        let room = $(this).closest(".room");
+
+        room.find(".light-bulb").trigger("light:toggle");
+
+        // $(".light-bulb").trigger("light-toggle");
+      });
+    </script>
+  </body>
+</html>

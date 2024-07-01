@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Copy the CDN from "bower" part of the official page -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+    <!-- Local Jquery -->
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <title>JQUERY SELECTORS</title>
+    <style>
+      body {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #aaa;
+        font-size: 16px;
+      }
+      header {
+        text-align: center;
+        background-color: #333;
+        color: #f4f4f4;
+        padding: 1.5rem;
+        text-transform: capitalize;
+      }
+
+      /* ul li:nth-child(3n + 1) {
+        color: red;
+      } */
+      input[type="submit"] {
+        background: yellow;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>introduction to jQuery: selectors</h1>
+    </header>
+    <div class="container">
+      <h2 id="heading-1">This is the page subheading</h2>
+      <p class="para-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aut
+        dolorum eius debitis
+        <span>saepe fuga explicabo, cupiditate suscipit repellat maiores!</span>
+      </p>
+      <h2 class="heading-2">This is the page subheading</h2>
+      <p class="para-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aut
+        dolorum eius debitis
+        <span>saepe fuga explicabo, cupiditate suscipit repellat maiores!</span>
+      </p>
+
+      <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+        <li>Item 12</li>
+        <li>Item 13</li>
+        <li>Item 14</li>
+        <li>Item 15</li>
+      </ul>
+      <input type="text" name="" id="" />
+      <input type="submit" value="Submit" />
+      <input type="button" value="Clear Form" />
+      <br />
+      <a href="http://google.com/">Google</a>
+      <a href="http://ui.edu.ng/">UI page</a>
+    </div>
+    <script>
+      // Calling jquery func on (element)
+      //   $("h2").hide();
+      //   $("#heading-1").hide();
+      //   $(".heading-2").hide();
+      //   $("p span").css("color", "#a3a");
+      //   $("#heading-1 + p span").css("color", "#a3a");
+      // $("#list li:first").css("color", "red");
+      // $("#list li:last").css("color", "purple");
+      $("#list li:even").css("color", "purple");
+      $("#list li:odd").css("background-color", "#cccccc");
+      $("#list li:nth-child(3n)").css("list-style", "inside");
+      // $(":button").hide();
+      // $(":submit").hide();
+      // $("input[type = 'button']").hide();
+      $("[href]").css("color", "brown");
+      $("[href = 'http://google.com/']").css("color", "green");
+      // $("*").css("display", "none");
+      // $("*").hide();
+      //   Plain JS
+      setTimeout(() => console.log("welcome Lanx"), 3000);
+    </script>
+  </body>
+</html>

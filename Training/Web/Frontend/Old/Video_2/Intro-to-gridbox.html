@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Grid Box</title>
+	<style type="text/css">
+
+		h1 {
+			background: pink;
+		}
+
+		.grid-bo {
+			padding: 1rem;
+			background: grey;
+			display: grid;
+
+			/* ------- For Grid Columns */
+
+			/* grid-template-columns: 200px auto 200px; */
+
+			/* --------the auto set the width to fill the view port. And also, the number of widths set determine the number of column the grid is going to have */
+
+			/* --------------Setting all the column to the same width */
+
+			/* grid-template-columns: auto auto auto auto; */
+
+			/* grid-template-columns: repeat(3,250px); */
+
+			/* --------------The use of fraction or "fr" unit*/
+
+			/* grid-template-columns:1fr 2fr 2fr; */
+
+			/* -------------For grid spacing */
+			/* grid-gap: 1rem; *
+		}
+
+		.grid-box .grid-item {
+			background: yellowgreen;
+			padding: 2rem;
+			border: 1px red solid;
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-gap: 2rem;*/
+		}
+
+
+		/* ----------For grid rows---------- */
+
+		.grid-box {
+
+			display: grid; 
+			/* grid-template-rows: 1fr 2fr 3fr; */
+
+			 /* 
+			 1fr (for everything on row 1)
+			 2fr (for everything on row 2)
+			 3fr (for everything on row 3) 
+
+
+			 */
+
+			/*grid-template-rows: repeat(2, 4fr); /* 2rows with 4fr */
+
+			/* grid-auto-rows: 1fr; */
+			/* grid-template-columns: repeat(1, 1fr); /* 3 columns with 2fr */
+
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.grid-item {
+			background: grey;
+			border: 1px solid red;
+		}
+
+		.grid-item:first-child {
+			/* grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 4; */
+
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+		}
+
+		.grid-item:nth-child(12) {
+			grid-column: 3 / span 2;
+			grid-row: 3 / span 2;
+		}
+
+		/* --------------Spanning grid columns and rows */
+
+		/* .container {
+			display: grid;
+			background: grey;
+			grid-template-columns: repeat(3,1fr);
+		}
+
+		header {
+			background: pink;
+			/*grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 4;*
+
+			grid-column: 1 / span 3;
+			grid-row: 1 / span 2;
+		}
+
+		main {
+			grid-column: 1 / span 3;
+			display: grid;
+			grid-template-columns:2fr 1fr;
+			grid-gap: 1rem;
+			background: yellowgreen;
+		} */
+
+	</style>
+</head>
+<body>
+
+	<!---------- The grid system-------------------- 
+
+		1. It's more like flex system but little bit complex and powerful and capable of "two dimensional layouts".
+		2. "grid-template-columns" property defines width and number of columns.
+		3. Grid has a new system of measurement called "FR" or Fraction.
+		4. "grid-template-rows" property defines the height and number of rows.
+
+	 -->
+
+	 <h1>Introduction To CSS Grid</h1>
+	 <div class="grid-box">
+	 	<div class="grid-item">item 1</div>
+	 	<div class="grid-item">item 2</div>
+	 	<div class="grid-item">item 3</div>
+	 	<div class="grid-item">item 4</div>
+	 	<div class="grid-item">item 5</div>
+	 	<div class="grid-item">item 6</div>
+	 	<div class="grid-item">item 7</div>
+	 	<div class="grid-item">item 8</div>
+	 	<div class="grid-item">item 9</div>
+	 	<div class="grid-item">item 10</div>
+	 	<div class="grid-item">item 11</div>
+	 	<div class="grid-item">item 12</div>
+	 	<div class="grid-item">item 13</div>
+	 	<div class="grid-item">item 14</div>
+	 	<div class="grid-item">item 15</div>
+
+	 </div>
+<!-- 
+	 <div class="container">
+	 	<header>
+	 		<h1>LanxtEchwoRld</h1>
+	 		<nav>
+	 			<ul>
+	 				<li>Home</li>
+	 				<li>Services</li>
+	 				<li>Projects</li>
+	 				<li>Contact</li>
+	 			</ul>
+	 		</nav>
+	 	</header>
+		<main>
+		 	<section>
+		 		<h2>Welcome to my site</h2>
+		 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem itaque aliquam mollitia quod velit, nisi totam maxime quibusdam quasi quas deleniti laborum? Officiis, tempora, nisi?</p>
+		 	</section>
+		 	<aside>
+		 		<h3>This is an aside</h3>
+		 		<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Id, iure.</p>
+		 	</aside>
+		</main>
+	 	<footer>
+	 		<p>This is a footer</p>
+	 	</footer>
+	 </div> -->
+
+	
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Abdulrasheed",
+    "email": "bogson@gmail.com",
+    "inOffice": false
+  },
+  {
+    "name": "Sodiq",
+    "email": "sramon@gmail.com",
+    "inOffice": true
+  },
+  {
+    "name": "Kareemot",
+    "email": "kmaruff@gmail.com",
+    "inOffice": false
+  },
+  {
+    "name": "Abdulwarith",
+    "email": "lanre@gmail.com",
+    "inOffice": true
+  },
+  {
+    "name": "Ridwan",
+    "email": "r1@gmail.com",
+    "inOffice": true
+  },
+  {
+    "name": "Ayomide",
+    "email": "r1@gmail.com",
+    "inOffice": true
+  },
+  {
+    "name": "Adigun",
+    "email": "r1@gmail.com",
+    "inOffice": false
+  }
+]

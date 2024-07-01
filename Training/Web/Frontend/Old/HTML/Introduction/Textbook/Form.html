@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PLAYING WITH THE INPUT TAG</title>
+
+	<style type="text/css">
+
+	body {
+		min-width: 512px;
+		max-width: 1028px;
+	}
+		form {
+			background: #e3e3e3;
+			width: 40%;
+			min-width: 512px;
+			max-width: 1028px;
+			padding-top: 15px;
+			margin: 0;
+
+		}
+
+		form div {
+			background: grey;
+			height: 40px;
+			margin-bottom:15px;
+		}
+
+		form div > label {
+			
+			
+		}
+
+		form label {
+
+			float: left;
+			display: block;
+			width: 20%;
+			text-align: right;
+			margin-right:2%;
+			font-family: sans-serif;
+			font-weight: bold;
+		}
+
+		form input.formField {
+			background: pink;
+			border: 5px blue outset;
+			line-height: 30px;
+			width: 40%;
+		}
+
+		form #password {
+
+		}
+
+		form div > p {
+			color: red;
+			margin: 0 0 0 22%;
+			 
+		}
+
+		form div#fileUpload {
+			margin-top: 60px;
+		}
+
+
+		#fileUpload input[type="file"] {
+			line-height: 40px;
+			padding-left: 20%;
+		}
+
+		form input:valid {
+			color: #007F0EFF;
+		} 
+
+		form input:invalid {
+			color: red;
+		} 
+
+		/* form .formField:valid {
+			border: 2px green inset;
+		}
+
+		form .formField:invalid {
+			border: 2px red inset;
+		} */
+
+		form #submission {
+			margin-top: 70px;
+			text-align: right;
+		}
+
+		form #submit {
+			margin-right: 36%;
+		}
+
+		aside {
+			position: absolute;
+			width: 50%;
+			right: 5%;
+			top: 0;
+			background: #e3e3e3;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="form-processing.js" method="get" enctype="multipart/form-data">
+
+		<div>
+			<label for="name">Name&colon;</label>
+			<input type="text" name="name" id="name" class="formField" required="">
+
+			<!-- we can use [A-Za-z] for the mixture of upper and lower cases or [A-z] -->
+		</div>
+
+		<div>
+			<label for="matNum">Matric Number&colon;</label>
+			<input type="text" name="matNum" class="formField" id="matNum" pattern="[0-9]{6}" title="Your six (6) digits number e.g.195259" required="">
+
+			<!-- that means 0 to 2, and 4, 7 to 9 -->
+
+			<!-- note that the "pattern" attribute only works for (text,url,password,search,email,and tel) elements -->
+
+		</div>
+
+		<div>
+			<label for="phone">Telephone&colon;</label>
+			<input type="tel" name="phone" id="phone" pattern="\+[0-9]{3}([-])[0-9]{3}\1[0-9]{3}\1[0-9]{4}" maxlength="17" class="formField" placeholder="+234-xxx-xxx-xxxx" required="">
+
+			<!-- using "pattern='.'" means any single character is allowed, unless it is masked using '\.' -->
+
+			<!-- Another possibility is to use the plus sign, the asterisk or the question mark. 
+			The "plus" sign stands for at least one occurrence of the expression [0-9]+ . 
+			The "asterisk" [0-9]* stands for none or any number of occurrences. 
+			The "question mark" [0-9]? stands for once or no time. 
+			The "pipe sign" | stands for "or"
+			The "^" circumflex is used to exclude-->
+
+			<!-- To abbreviate letters and number selection, there are predefined characters. They are also preceded by a backslash to distinguish them from a normal character. 
+			\d eine Ziffer, also [0-9]
+			\D ein Zeichen das keine Ziffer ist, also [^0-9] oder [^\d].
+			\w ein Buchstabe, eine Ziffer oder der Unterstrich, also [a-zA-Z_0-9] 
+			\W ein Zeichen, das kein Buchstabe, keine Ziffer oder kein Unterstrich ist, also [^a-zA-Z_0-9] = §$%&!:#...
+			\s das Leerraum (whitespace) Leerzeichen, Tab..
+			\S ein Zeichen, das kein Leerzeichen ist, also [^ ] oder [^\s]
+			\t ein Tab (ist nur durch copy + paste in ein input-feld zu bekommen. -->
+		</div>
+
+
+		<div>
+			<label for="birthdate">Date of Birth&colon;</label>
+			<input type="date" name="birthdate" id="birthdate" class="formField" required="">
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" class="formField" required="">
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" pattern="(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).*" class="formField" required="">
+
+			<p>&ast;Password must be at least 8 characters long and must contain upper case letters, lower case letters, numbers and special characters&excl;&ast;</p>
+
+			<!-- NOTE THAT "PATTERN=ABCD" IS DIFF FROM "PATTERN=[A-D] OR [ABCD]" -->
+		</div>
+
+		<div id="fileUpload">
+			<label>Passport photograph</label><input type="file" name="Passport">
+			<p id="photo" required="">&ast;Photograpgh must be at most 80kb&ast;</p>
+			
+		</div>
+
+		<div id="submission"><input type="submit" value="submit" id="submit"></div>
+		<!-- <div><label for=""></label><input type="text"></div>
+		<div><label for=""></label><input type="text"></div>
+		<div><label for=""></label><input type="text"></div> -->
+
+	</form>
+
+	<aside>
+		<article>
+			<h2>MR&period; LOREM'S STORY</h2>
+			<P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, nobis, dolor. Consectetur reiciendis, odio, quae rerum magnam ipsam a illo harum. Nostrum consectetur praesentium non perferendis, aliquam officiis nesciunt maiores officia quasi numquam, saepe debitis ut! Consequuntur, dicta saepe commodi eum assumenda hic deserunt unde sunt earum eos possimus officia.</P>
+		</article>
+	</aside>
+	
+</body>
+</html>

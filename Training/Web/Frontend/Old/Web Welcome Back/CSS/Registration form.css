@@ -1,0 +1,49 @@
+body {
+	min-width: 768px;
+	max-width: 1280px;
+	background:pink;
+
+}
+
+p span {
+	color:red;
+}
+
+form {
+	width: 50%;
+	margin: 0 5%;
+	background: #e3e3e3;
+	font-family: sans-serif;
+}
+
+form .required {
+	font-weight: bold;
+} 
+
+form .title {
+	float: left;
+	display: block;
+	text-align: right;
+	width: 30%;
+	margin: 0 4% 0 0;
+}
+
+form .field {
+	float: left;
+	width: 65%;
+	margin: 0;
+	clear: none;
+}
+
+form div {
+	clear: both;
+	margin: 0 0 50px 0;
+}
+
+div#register {
+	padding: 15px 0;
+}
+div button[type="submit"] {
+	margin-left: 34%;
+	cursor: pointer;
+}

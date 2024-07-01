@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selectors, Animation & More</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background: #333;
+			}
+
+			/* A. Targeting selectors*/
+
+			/* 1. Direct child */
+			body > p {
+				background: yellow;
+			}
+
+			/* 2. First direct sibling*/
+			h1 + div {
+				background: #333;
+				color: #fff;
+			}
+
+			/* 3. Attribute selectors*/
+
+			a[target="_self"] {
+				background: red;
+			}
+
+			input[type="text"],
+			input[type="email"] {
+				width: 100%;
+				margin-bottom: 0.5rem;
+			}
+
+			/* B. The use of pseudo-selectors */
+
+			ul li:first-child,
+			ul li:last-child {
+				list-style: none;
+				margin: 0.25rem;
+				padding: 0.25rem;
+			}
+
+			li:nth-child(3) {
+				/* position 3 */
+				background: purple;
+			}
+
+			li:nth-child(3n + 7) {
+				/* n starts from 0, and the prpty takes effect starting from child 7, every 3 means the offset after item 7.*/
+				background: pink;
+			}
+
+			li:nth-child(odd) {
+				/* every "odd" */
+				background: #aaa;
+			}
+
+			li:nth-child(even) {
+				/* every "odd" */
+				background: #ddd;
+			}
+
+			/* The use of "before" and "after" selector*/
+
+			header {
+				display: flex;
+				flex-direction: column;
+				color: #fff;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			header:before {
+				content: "";
+				background: url("./showcase.jpg") no-repeat center center/cover;
+				opacity: 0.7;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+
+			header h1,
+			header p,
+			header a {
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 1. Targeting selectors -->
+
+		<!-- <h1>This is about how to target HTML selectors</h1>
+
+	<div>
+		<h2>Header: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</h1>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+
+	</div>
+	<div>
+		<h2>Header: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</h1>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem nisi porro at fugiat quod perferendis neque sit placeat consequuntur.</p>
+	</div>
+
+	<p>First direct paragragh: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, velit?</p>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, velit?</p>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, velit?</p>
+
+	<a href="http://google.com" target="_blank">Google</a>
+	<a href="#" target="_self">Page 1</a>
+
+	<form action="">
+		<input type="text" placeholder="Name">
+		<input type="email" placeholder="Email">
+		<input type="submit" value="Submit">
+	</form> -->
+
+		<!-- B. The Pseudo selectors (and "nth-child") -->
+
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+			<li>Item 6</li>
+			<li>Item 7</li>
+			<li>Item 8</li>
+			<li>Item 9</li>
+			<li>Item 10</li>
+		</ul>
+		<!-- C. The use of "before" and "after" pseudo selector-->
+
+		<header>
+			<h1>Welcome To Lanx Page</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing, elit. Veniam
+				aspernatur sint incidunt, assumenda? Quod, ex.
+			</p>
+			<a href="#">Read More</a>
+		</header>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
+			vitae, corrupti! Odio sequi quo accusamus, harum tempore corrupti
+			totam ratione, quisquam voluptas at perferendis laboriosam,
+			repudiandae. Minus eligendi a velit odio aut nostrum earum sed, ipsa
+			expedita fuga, odit perspiciatis vel accusamus at, ipsum maxime,
+			reiciendis. Ratione quibusdam, aliquam velit?
+		</p>
+	</body>
+</html>

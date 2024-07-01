@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3e3e3;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  text-transform: capitalize;
+}
+
+p {
+  padding: 0.3rem 0;
+}
+
+.container {
+  max-width: 1028px;
+  margin: auto;
+  color: #444;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-areas: "main aside" "footer footer";
+  grid-gap: 1rem;
+  background: #fff;
+}
+
+main {
+  grid-area: main;
+  padding: 1.5rem 1rem 0 1rem;
+}
+#section-heading {
+  background-color: lightblue;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+  background: darkslategray;
+  color: #fff;
+  opacity: 0.8;
+  border: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+button:hover {
+  opacity: 1;
+}
+#sectionBody {
+  background-color: steelblue;
+  padding: 2rem;
+}
+
+#ajax-body code {
+  display: block;
+  text-transform: lowercase;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid lightgray;
+}
+
+aside {
+  grid-area: aside;
+  background-color: lightgray;
+  padding: 1.5rem 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.office-status li,
+.office-rooms li {
+  padding: 0.5rem 0;
+}
+.office-status li:last-child,
+.office-rooms li:last-child {
+  padding-bottom: 0;
+}
+.office-status li span,
+.office-rooms li span {
+  display: inline-block;
+  font-size: 0.7rem;
+  width: 2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  color: #fff;
+}
+.office-rooms li span {
+  width: 2.5rem;
+}
+.office-status li.out span,
+.office-rooms li.full span {
+  background-color: rgb(190, 10, 10);
+}
+
+.office-status li.out,
+.office-rooms li.full {
+  color: rgb(151, 148, 148);
+}
+.office-status li.in span,
+.office-rooms li.empty span {
+  background-color: green;
+}
+.office-status li.in,
+.office-rooms li.empty {
+  color: #000;
+}
+footer {
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  grid-area: footer;
+  padding: 0 1rem;
+}

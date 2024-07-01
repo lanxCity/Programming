@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <title>AJAX With jQuery</title>
+    <style>
+      body {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #aaa;
+        font-size: 16px;
+      }
+      header {
+        text-align: center;
+        background-color: #333;
+        color: #f4f4f4;
+        padding: 1.5rem;
+        text-transform: capitalize;
+      }
+
+      .blogs .card {
+        padding: 1rem;
+        background: lightblue;
+        color: #fff;
+        border-bottom: 1px solid #222;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The DOM Manipulation</h1>
+    </header>
+    <div class="container">
+      <p class="para-1">
+        This is paragraph one. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Minima aperiam quis rem nam? Id, sunt?
+      </p>
+      <!-- <button id="btn-1">Click</button> -->
+      <!--  <div class="employees">
+         <button id="btn-1">View Teachers' profile</button>
+       </div> -->
+      <!-- -------------------------------------- -->
+      <!-- <div class="blogs">
+        <button id="btn-1">View Blogs</button>
+      </div> -->
+      <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Post Title"
+        /><br /><br />
+        <textarea name="body" id="body" placeholder="Post Body"></textarea
+        ><br />
+        <button type="submit" id="btn">Submit</button>
+      </form>
+    </div>
+    <script>
+      /*  let myXhr = new XMLHttpRequest();
+
+      myXhr.onreadystatechange = () => {
+        if (myXhr.readyState === 4) {
+          $("#btn-1").click((event) => {
+            $(".container").prepend(myXhr.responseText);
+            console.log(myXhr.responseText);
+            event.target.style.display = "none";
+          });
+        }
+      };
+
+      myXhr.open("GET", "./Ajax_result.html");
+      myXhr.send(); */
+
+      // $(document).ready(function () {
+      /* $("#btn-1").click((event) => {
+          $(".container").load(
+            "./Ajax_result.html",
+            (responseTxt, statusText, myXhr) => {
+              if (statusText === "success") {
+                console.log("-----------------Done--------------");
+              } else {
+                throw "There is an Error!!!!!!!!!!!!";
+              }
+            }
+          );
+          // $(event.target).hide();
+        }); */
+
+      // ------------------Using "get" method
+      /*  $("#btn-1").click((event) => {
+          $.get("./Ajax_result.html", (response) => {
+            $(".container").html(response);
+          });
+        }); */
+      // -----------------Getting JSON contents using "getJASON" method
+      /* $("#btn-1").click((event) => {
+          event;
+          $.getJSON("./data/employees.json", (data, statusText, xhr) => {
+            // console.log(data);
+            // Actions--------------------------
+            let ul = document.createElement("ul");
+            $(".employees").html(ul);
+            /* data.forEach((profile) => {
+              let li = document.createElement("li");
+              li.textContent = profile.name;
+
+              $(".container ul").append(li);
+              // if(profile.inOffice)
+            }); *
+
+            /* $.each(data, (index, profile) => {
+              let li = document.createElement("li");
+              li.textContent = profile.name;
+
+              $(".container ul").append(li);
+            }); *
+          });
+        }); */
+      // --------------Using the third party APIs using "ajax" method
+      // E.g. "json typicode": an open source web to play around with data
+      // The "$.ajax()" can also be used. It is the most flexible and has so many options within.
+      /* $("#btn-1").click(function (event) {
+          $.ajax({
+            method: "GET",
+            url: "https://jsonplaceholder.typicode.com/posts",
+            dataType: "json",
+          }).done((data) => {
+            // Hiding the button
+            $(event.target).hide();
+            // Data is the array of all posts
+            $.map(data, (userPost, index) => {
+              // Accessing Each object inside the array
+              let personCard = document.createElement("section");
+              personCard.className = "card";
+              let postTitle = document.createElement("h2");
+              postTitle.textContent = userPost.title;
+              let postBody = document.createElement("p");
+              postBody.textContent = userPost.body;
+
+              // Appending title and body inside the card
+              personCard.appendChild(postTitle);
+              personCard.appendChild(postBody);
+
+              // Appending each card
+              $(".blogs").append(personCard);
+            });
+          });
+          // ---------------End
+        }); */
+      // -------------------Making "post" request with "post" method
+      /* $("form").submit(function (event) {
+          event.preventDefault();
+          // ----------url from the form action
+          var title = $("#title").val();
+          var body = $("#body").val();
+          var url = $(this).attr("action");
+          // var me = $(this).serialize();
+          // alert(me);
+
+          $.post(url, { title: title, body: body }).done((data) => {
+            console.log("----------------------------------");
+            console.log(data);
+          });
+        });
+      }); */
+    </script>
+  </body>
+</html>

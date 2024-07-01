@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <title>JQUERY SELECTORS</title>
+    <!--  <script>
+      // the "ready" function means the program should run after page,css, and all other necessary program has been loaded.
+    //   And Even if the program  would be at the botthom, it's still a best practice you add the "ready" function
+      console.log("I am program 1");
+      $(document).ready(function () {
+        console.log('I am inside the "ready" function.');
+        $("#btn-1").click(() => {
+          alert("Form submitted");
+        });
+      });
+      console.log("I am program 2");
+    </script> -->
+    <style>
+      body {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #aaa;
+        font-size: 16px;
+      }
+      header {
+        text-align: center;
+        background-color: #333;
+        color: #f4f4f4;
+        padding: 1.5rem;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Events</h1>
+    </header>
+    <div class="container">
+      <ol id="events">
+        <li>
+          <h3>Mouse Events</h3>
+          <div>
+            <button id="btn-1">Hide content</button>
+            <button id="btn-2">Button 2</button>
+            <p id="para-1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              nulla esse debitis eius eligendi velit beatae atque numquam culpa
+              alias animi vero, veritatis, expedita, magnam amet odit. Ducimus
+              minima deserunt voluptatum quam molestias veniam error. Nihil modi
+              expedita magni doloribus. Delectus suscipit, recusandae repellat
+              officia fuga rem inventore asperiores! Harum!
+            </p>
+          </div>
+        </li>
+      </ol>
+      <h2 id="coords"></h2>
+      <form id="form">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" class="field" />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" class="field" />
+        </div>
+        <div class="form-group">
+          <label for="">Gender: </label>
+          <label for="male"
+            >Male
+            <input type="radio" name="gender" id="male" value="male" checked />
+          </label>
+
+          <label for="female"
+            >Female
+            <input type="radio" name="gender" id="female" value="female" />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="field" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" class="field" />
+        </div>
+        <div class="form-group">
+          <label for="password_confirmation">Confirm Password</label>
+          <input
+            type="password"
+            name="password_confirmation"
+            id="password_confirmation"
+            class="field"
+          />
+        </div>
+        <div id="submit">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      console.log("I am program 1");
+      //  ------------ Ready page function
+      $(document).ready(function () {
+        console.log('I am inside the "ready" function.');
+
+        // A.--------------------------------The mouse events
+        // 1.---------------- click
+        /* $("#btn-1").click(() => {
+            alert("Form submitted");
+          }); */
+
+        // Instead of the shorthand "click", we can also use "on" function
+        /* $("#btn-1").on("click", (event) => {
+          /*
+          if ($("#para-1").css("display", "block")) {
+            $("#para-1").hide();
+            event.target.textContent = "Show Content";
+          } else {
+            $("#para-1").css("display", "block");
+            event.target.textContent = "Hide Content";
+          }
+         --------- Does not work------------------------
+         ------------But we can use "toggle" method*
+          $("#para-1").toggle();
+          if (document.getElementById("para-1").style.display === "") {
+            event.target.textContent = "Hide Content";
+          } else {
+            event.target.textContent = "Show Content";
+          }
+        });*/
+
+        // 2.-------------------dblClick
+        /* $("#btn-1").dblclick(() => {
+          $("#para-1").toggle();
+        }); */
+
+        // 3.-------------------hover (shorthand form of "mouseenter" and "mouseout" or "mouseleave" events and combines the two together.) and is not an actual event.
+        /* $("#btn-1").hover(() => {
+          $("#para-1").toggle();
+        }); */
+        // ----------------------------------------
+        /* $("#btn-1").on("hover", () => {
+          $("#para-1").toggle();
+        }); */ // Doesn't work since "hover" is not an  actual event.
+        // ----------------------------------------
+        /* $("#btn-1").on("mouseenter", (event) => {
+          $("#para-1").toggle();
+          event.target.textContent = "Show Content";
+        });
+        /* $("#btn-1").on("mouseout", () => {
+          $("#para-1").toggle();
+        }); *
+        $("#btn-1").on("mouseleave", (event) => {
+          $("#para-1").toggle();
+          event.target.textContent = "Hide Content";
+        }); */
+
+        /* // 4.------------------mousemove
+        $("#btn-1").mousemove(() => {
+          $("#para-1").toggle();
+        }); */
+        // 4.------------------mousedown and mouseup
+        /* $("#btn-1").mousedown(() => {
+          $("#para-1").toggle();
+        });
+        $("#btn-1").mouseup(() => {
+          $("#para-1").toggle();
+        }); */
+        // -----------------------Cool things with mousemove
+        /* $("#btn-1").mousemove((event) => {
+          console.log(`Coords: Y: ${event.clientY}, X: ${event.clientX}`);
+        }); */
+        /* $(document).mousemove((event) => {
+          console.log(`Coords: Y: ${event.clientY}, X: ${event.clientX}`);
+        }); */
+        /* $(document).mousemove((event) => {
+          /* $("#coords").text(`Coords: Y: ${event.clientY}, X: ${event.clientX}`); *
+          $("#coords").html(`Coords: Y: ${event.clientY}, X: ${event.clientX}`);
+        }); */
+
+        // B----------------------------The Form Events
+        // 1. "Focus" (clicking into the input field) and "blur" events
+
+        $(".field").focus(function (event) {
+          // console.log(event.target.getAttribute("type"));
+          // $(event.target).css("background", "#ccc");
+          $(this).css("background", "#ccc");
+        });
+        $(".field").blur(function (event) {
+          $(this).css("background", "white");
+        });
+
+        // 2. "Keyup" (after releasing a key pressed on the keyboard),"keydown", and "keypress"
+
+        /*  $(".field").keyup(function (event) {
+          console.log("keyup");
+        });
+        $(".field").keydown(function (event) {
+          console.log("keydown");
+        }); */
+        /* $(".field").keypress(function (event) {
+          console.log("keypress");
+        }); */
+
+        // 3. change(this is mostly used with "select" and "option" fields or something related )
+        /* $("input[name = 'gender']").change(function (event) {
+          console.log(event.target.value);
+        }); */
+
+        // 4. "submit" method by grabbing the form itself
+        $("form").submit((event) => {
+          event.preventDefault();
+          /*//Not working because the form is actually submitting. But we can prevent it
+          console.log("submitted");
+          */
+          //  Getting hold on those values of the Form
+          let name = $(first_name).val();
+          console.log(name);
+        });
+        //   ----------End ready page function
+      });
+      console.log("I am program 2");
+    </script>
+  </body>
+</html>

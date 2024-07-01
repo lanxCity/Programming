@@ -1,0 +1,21 @@
+aside {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgb(33, 37, 41);
+}
+
+aside .list-group-item {
+  background-color: transparent;
+  color: #ddd;
+}
+
+main table {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  #navbarNav > ul {
+    border-top: 1px dotted #555;
+    margin-top: 1rem;
+  }
+}

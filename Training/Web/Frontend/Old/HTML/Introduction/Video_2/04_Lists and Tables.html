@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>List and Tables</title>
+
+	<style type="text/css">
+
+		header {
+			border: 1px #999 solid;
+		}
+
+		header h2 {
+			margin: 0;
+			padding: 0;
+		}
+
+		header h2:first-letter {
+			font-size: 50px;
+			font-family: sans-serif;
+			float: left;
+			padding:0 5px 0 5px;
+
+		}
+
+		#listSection header ul {
+			list-style-type: none;
+			margin: 0;
+			background-color: palevioletred;
+			padding: 0;
+			width: fit-content;
+			clear: both;
+		}
+
+
+		#listSection header ul li {
+			display: inline;
+			margin-right: 10px;
+		}
+
+		#listSection header ul li:first-child {
+			margin:0 10px 0 10px;
+		}
+
+
+		#listSection header ul ul {
+			list-style-type: none;
+			display: none;
+		}
+
+
+		ol{
+			float: left;
+		}
+
+		#section_3{
+			clear: both;
+		}
+
+		table {
+			border: 1px solid red;
+			width: 50%;
+		}
+
+		th, td {
+			border: ;
+		}
+
+		#gototop{
+			float: right;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1 id="top">THE USE OF LISTS AND TABLES</h1>
+
+	<div id="listSection">
+		<!-- Creating lists -->
+
+		<!-- 1. Unordered list -->
+		<header>
+
+			<h2>The use of lists on a page</h2>
+
+			<ul>
+				<li><a href="" id="home">Home</a></li>
+				<li><a href="">Contents</a>
+					<ul>
+						<li><a href="#section_1">Section 1</a></li>
+						<li><a href="#section_2">Section 2</a></li>
+						<li><a href="#section_3">Section 3</a></li>
+					</ul>
+				</li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Address</a></li>
+			</ul>
+		</header>
+
+		<article>
+
+			<section id="section_1">
+
+				<h3>Unordered List</h3>
+
+				<ul type="circle" style="list-style-position: inside;">
+					<li>Item 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse explicabo ducimus quasi nulla eos eligendi, accusamus nesciunt eaque officiis aspernatur corporis, officia praesentium accusantium eveniet autem! Dolor sed, nam.
+					</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+
+				 <!-- Using images for bullet -->
+				 <ul style="list-style: circle inside url('/C:/Users/ENGR. LANX/Pictures/Personal/Web Pictures/bullet arrow head.jpg');  "> 
+				 	<!--The url is working -->
+				 	<li>do you love me</li>
+				 	<li>do you miss me</li>
+				 	<li>do you want me</li>
+				 	<li>do need me</li>
+				 	<li>I miss you</li>
+				 </ul>
+			</section>
+
+			<!-- End pf section 1 -->
+
+				<!-- Note that we can create list tags as much as we can by using "li*number of tags" e.g. li*5   -->
+			<!-- 2. Ordered lists -->
+
+			<section id="section_2">
+
+				<h3>Ordered list</h3>
+
+				<ol style="list-style: lower-alpha;">
+					<li>Order 1</li>
+					<li>Order 1</li>
+					<li>Order 1</li>
+					<li>Order 1</li>	
+				</ol>
+
+				<!-- 2b. -->
+				<ol type="1" start="3">
+					<li>Order 1</li>
+					<li>Order 1</li>
+					<li value="9">Order 1</li>
+					<li>Order 1</li>	
+				</ol>
+			</section>
+
+			<!-- End of section 2 -->
+
+			
+			<!-- When customizing, we have "start", "type", "value" attributes for "ordered lists". And for "unordered lists", "type" we have "list-style-type" in CSS.
+			 -->
+
+			 <!--3. Definition lists -->
+			 <section id="section_3">
+				 <h3>List of cereals</h3>
+
+				 <dl >
+				 	<dt>Rice</dt>
+				 	<dd>This is a Non-Nigerian food. But has become must-to-eat daily food</dd>
+				 	<dt>Wheat</dt>
+				 	<dd>This is commonly planted in eastern part of Africa, specifically in Egypt.</dd>
+				 </dl>
+			</section>
+
+			<!-- End of section 3 -->
+		</article>
+
+	</div>                              
+
+													 <!--End of List section-->
+
+
+
+	<div id="tableSection">
+		<header>
+			<h2>The use of &ldquo;TABLE&rdquo; on a page&period;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, culpa adipisci? Praesentium, accusamus vero officia explicabo ut, quaerat ducimus obcaecati doloremque nobis eos, corrupti dicta cum, incidunt veritatis sed voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing, elit. Recusandae amet perferendis corporis nulla. Dolore suscipit magnam impedit ab placeat, illo veniam. Vel dicta quae labore earum nisi odio deserunt ratione, modi sequi facere error culpa dolore. Maxime velit aspernatur blanditiis eligendi et repellendus laboriosam, aliquam ullam error porro corporis dignissimos?</h2>
+		</header>
+
+		<table>
+			<caption>
+				<details>
+					<summary>The first table</summary>
+					
+						<p>I initially wrote the ITCC to start my industrial training at the Psaltry International Company ltd. Ado Awaye, Iseyin, Oyo State. In which the work ethics of the aforementioned company, which include the twelve working hours per day and night shift like (like casual workers), were not favorable for my health as I am Asthmatic.</p>
+				</details>
+			</caption>
+
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>sex</th>
+					<th>age</th>
+				</tr>
+			</thead>
+
+		</table>
+	</div>
+
+	<footer>
+		<p id="gototop"><a href="#top">Go Back</a></p>
+	</footer>
+	
+</body>
+</html>

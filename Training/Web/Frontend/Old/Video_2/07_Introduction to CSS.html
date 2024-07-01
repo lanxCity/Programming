@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introduction to CSS</title>
+
+	<style type="text/css">
+	/* #img_bgrd {
+		background: url('../../../Images/DATA-ANALYSIS.png') no-repeat center top/cover;
+		width: 480px;
+		height: 240px;
+
+		background-image: url('../../../Images/DATA-ANALYSIS.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top; 
+
+		/* the "cover" value is used to fit the background within it container 
+	} */
+
+	/*------------- Some other CSS properties include "box-sizing: border-box;(so that the padding doesn't affect the actual size)", "visiblity" ---------------------- */
+
+
+
+	/* The Form challenge with "facebook background (#4c6ca0)" */
+
+	*{
+		box-sizing: border-box;
+		margin: 0;
+        padding: 0;
+	}
+
+	body {
+		background: #344a72;
+        color: #fff;
+        line-height: 1.8;
+	}
+	#container {
+		font-family: arial;
+		margin: 30px auto;
+		max-width: 400px;
+		padding: 20px;
+	}
+	#form-wrap {
+		background: #fff;
+		color: #333;
+		padding:15px 25px;
+	}
+
+	#form-wrap h1, #form-wrap p {
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	#form-wrap label {
+		display: block;
+		margin-top: 15px;
+		color: #666;
+	}
+
+	#form-wrap input {
+		width:100%;
+		border-radius: 5px;
+		border: 1px #ddd solid; 
+		padding: 10px;
+	}
+
+	#form-wrap button {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		margin-top: 20px;
+		background: #49c1a2;
+        color: #fff;
+        cursor: pointer;
+	}
+
+	#form-wrap button:hover {
+		background: #37a08e;
+	}
+
+	#form-wrap #bottom-text {
+		font-size: 13px;
+		margin-top: 20px;
+	}
+
+	#container footer {
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	#container footer a {
+		color: #49c1a2;
+
+	}
+
+
+	
+	</style>
+</head>
+<body>
+	<!-- The use of background images -->
+
+	<!-- <div id="img_bgrd">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia magnam magni nam deleniti nisi iure quod possimus dolore saepe optio sapiente enim hic beatae assumenda, provident maxime cupiditate animi!
+		
+	</div> -->
+
+	<!-- <p style="color: white; background:#333; position: relative;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reiciendis sed nihil beatae suscipit voluptates id quasi magnam odio.<span style="position: absolute;   background:red;"> Voluptate perferendis, dignissimos, sint officiis ex iure reprehenderit incidunt quae? Nisi labore eveniet deleniti,</span> cumque consectetur id cupiditate pariatur asperiores, sunt, laudantium obcaecati, tenetur aliquam explicabo ea vero nemo dolorem dicta?</p>
+	<p style="position: absolute;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde obcaecati esse quibusdam illo harum, laboriosam dignissimos impedit omnis corrupti odio, veritatis aut possimus accusamus! Corporis ex labore perferendis veritatis aspernatur at eveniet pariatur laudantium, nobis harum iusto ut. Temporibus corporis deleniti sed, ullam eligendi amet nostrum quo placeat animi. Omnis, sit. Quia natus tempora sint obcaecati, corporis alias minus aliquid distinctio eos commodi aut porro quo sed officia cumque, blanditiis ex eum assumenda laboriosam. Consectetur mollitia aspernatur reprehenderit reiciendis explicabo rerum, nulla consequatur omnis sint quos distinctio. Accusantium, quia. Sequi temporibus deleniti fuga sint sunt beatae nam recusandae quam.</p> -->
+
+
+
+	<!-- The form challenge -->
+
+	
+		<div id="container">
+
+			<div id="form-wrap">
+				<h1>Sign Up</h1>
+				<p>It&apos;s free and only takes a minute</p>
+
+				<form action="#" method="post">
+
+					<div class="form-group">
+						<label for="first_name">First Name</label>
+						<input type="text" name="first_name" id="first_name">
+					</div>
+					<div class="form-group">
+						<label for="last_name">Last Name</label>
+						<input type="text" name="last_name" id="last_name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password">
+					</div>
+					<div class="form-group">
+						<label for="password_confirmation">Confirm Password</label>
+						<input type="password" name="password_confirmation" id="password_confirmation">
+					</div>
+					<div id="submit">
+						<button type="submit">Sign Up</button>
+					</div>
+
+					<p id="bottom-text">
+						By clicking the Sign Up button&comma;&nbsp;you agree to our
+						<a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>
+					</p>
+			</form>
+		</div>
+
+		<footer>
+			<p>Already have an account&quest;
+				<a href="#">Login Here</a>
+			</p>
+		</footer>
+	</div>
+	
+</body>
+</html>

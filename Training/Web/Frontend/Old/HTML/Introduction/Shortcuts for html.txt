@@ -1,0 +1,28 @@
+ctrl + U -------------chrome inspection
+ctrl + f -------------to search a word on chrome inspection
+F12 --------------------------- for developer tools on the chrome
+ctrl+shft+j or F12---------------------- for console
+
+tab------------------------------- to nav through the tags
+ctrl + ? or / -------------for "comment tag" VS code or sublime text
+! + tab ------------- Boilerplate
+ctrl + enter ------------- go to next line, no matter where you are on the previous line
+shft + alt --------------- to copy down (not working on sublime)
+ctrl + left arrow or right arrow ------------- to move over a word
+ctrl + shft + arrow up or down --------------- to move up and down
+alt + f3 ----------------------for selection of same tag
+
+ul>li{$}*4 --------------------- for content increment 1-4
+#container>.item{<h3>item $</h3>}*3 ----------------- for content creation
+
+ctrl + d ---------------------- for same selection one after the other 
+# + tab ------------------------ This is for "div" element with id
+font.google.com----------------- used to choose fonts remotely (from google)
+
+color-hex.com or htmlcolorcodes.com--------------------for color combo
+
+Note that "jpeg" images can not be transparent but "png" files can have a transparent background.
+
+to create a folder from cmd => mkdir folderName
+
+to open vscode from cmd => code.

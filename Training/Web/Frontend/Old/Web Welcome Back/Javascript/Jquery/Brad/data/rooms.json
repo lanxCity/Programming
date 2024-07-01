@@ -1,0 +1,26 @@
+[
+  {
+    "roomNum": "Room101",
+    "vacant": true
+  },
+  {
+    "roomNum": "Room102",
+    "vacant": true
+  },
+  {
+    "roomNum": "Room103",
+    "vacant": false
+  },
+  {
+    "roomNum": "Room104",
+    "vacant": true
+  },
+  {
+    "roomNum": "Room105",
+    "vacant": false
+  },
+  {
+    "roomNum": "Room106",
+    "vacant": false
+  }
+]

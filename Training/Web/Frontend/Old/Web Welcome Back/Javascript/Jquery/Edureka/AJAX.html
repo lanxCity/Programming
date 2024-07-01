@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery &verbar; AJAX</title>
+    <style>
+      .current {
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><a href="#section-1">Section-1</a></li>
+        <li><a href="#section-2">Section-2</a></li>
+        <li><a href="#section-3">Section-3</a></li>
+        <li><a href="#section-4">Section-4</a></li>
+        <li><a href="#section-5">Section-5</a></li>
+      </ul>
+
+      <section id="section-1">
+        <h1>This is Section 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro
+          placeat corporis, quia sit consectetur odit doloremque, sed, sequi
+          ullam aliquid! Pariatur, dolore! Sed ut ipsam quisquam odit placeat
+          exercitationem illo nam tempore accusamus, ratione aliquid suscipit,
+          iure excepturi dolores doloremque quo vitae perspiciatis, cupiditate
+          ducimus sit voluptas tenetur saepe.
+        </p>
+      </section>
+      <section id="section-2">
+        <h1>This is Section 2</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro
+          placeat corporis, quia sit consectetur odit doloremque, sed, sequi
+          ullam aliquid! Pariatur, dolore! Sed ut ipsam quisquam odit placeat
+          exercitationem illo nam tempore accusamus, ratione aliquid suscipit,
+          iure excepturi dolores doloremque quo vitae perspiciatis, cupiditate
+          ducimus sit voluptas tenetur saepe.
+        </p>
+      </section>
+      <section id="section-3">
+        <h1>This is Section 3</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro
+          placeat corporis, quia sit consectetur odit doloremque, sed, sequi
+          ullam aliquid! Pariatur, dolore! Sed ut ipsam quisquam odit placeat
+          exercitationem illo nam tempore accusamus, ratione aliquid suscipit,
+          iure excepturi dolores doloremque quo vitae perspiciatis, cupiditate
+          ducimus sit voluptas tenetur saepe.
+        </p>
+      </section>
+      <section id="section-4">
+        <h1>This is Section 4</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro
+          placeat corporis, quia sit consectetur odit doloremque, sed, sequi
+          ullam aliquid! Pariatur, dolore! Sed ut ipsam quisquam odit placeat
+          exercitationem illo nam tempore accusamus, ratione aliquid suscipit,
+          iure excepturi dolores doloremque quo vitae perspiciatis, cupiditate
+          ducimus sit voluptas tenetur saepe.
+        </p>
+      </section>
+      <section id="section-5">
+        <h1>This is Section 5</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores porro
+          placeat corporis, quia sit consectetur odit doloremque, sed, sequi
+          ullam aliquid! Pariatur, dolore! Sed ut ipsam quisquam odit placeat
+          exercitationem illo nam tempore accusamus, ratione aliquid suscipit,
+          iure excepturi dolores doloremque quo vitae perspiciatis, cupiditate
+          ducimus sit voluptas tenetur saepe.
+        </p>
+      </section>
+    </div>
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+    <script>
+      /*
+          // JS is "single threaded"; synchronous language
+          => $.get()
+          => $.getScript()
+          => $.getJASON()
+          => $.post()
+          => $.load()
+
+          // jQuery $.ajax() requires some instruction as to the type of data you get back from an AJAX request, e.g. text, html, script, json, jsonp.
+          // Also, it takes a config object that contains all the instructions that jQuery requires to complete its request.
+          // And it is recommended over others includes;
+           async => true or false, False would make syc request and     blocks execution of other codes until request is completed.
+
+           cache => ,
+           complete => Like "finally", callback after the request is success or not,
+
+           data => data to be sent to the server,
+           dataType => data expecting from the server,
+           error => callback if error occurs,
+           jsonp => callback name to send in a query string,
+           success => callback(data,statusText)
+           timeout => time set (in ms) and consider as failure once the time elapsed
+
+
+          // Same Original Policy And JSONP (JSON with padding)
+        */
+
+      /*  $.ajax({
+          url: "https://api.jsonbin.io/b/628fbdcd402a5b38020efead",
+          type: "GET",
+          dataType: "json",
+          success: function (data, textStatus) {
+            console.log(data);
+            console.log(textStatus);
+          },
+          timeout: 2500,
+          error: function (err) {
+            console.log(err);
+          },
+
+          complete: function () {
+            console.log("!!!!!!!!!!Request Finished");
+            console.log("Hey");
+          },
+        }); */
+
+      /*  $.get(
+          "https://api.jsonbin.io/b/628fbdcd402a5b38020efead",
+          function (data, textStatus, jqXHR) {
+            console.log(data);
+            console.log(textStatus);
+          },
+          "json"
+        ); */
+
+      /*  $.getJSON(
+          "https://api.jsonbin.io/b/628fbdcd402a5b38020efead",
+          function (data, textStatus, jqXHR) {
+            console.log(data);
+            console.log(textStatus);
+          },
+          "json"
+        ); */
+
+      /* ----------Serialization:
+        =>jQuery serializes from form inputs with the following two methods.
+
+        =>serialize(): This method serializes the form's data into a query string. Where the input elements must have the "name" attr.
+        =>serializeArray(): This method produces an array of objects, instead of a string.
+
+      */
+
+      //$.each() is for array,obj, and array-like obj. And not jQuery collections e.g $.each($('p'), function(){doStuff}) would not work. It provides ".each" for such; $('p').each()
+      // $.each(Array,function(index,value)){})
+      // $.each(obj,function(key,value)){})
+
+      // $.map() and ".map()"   => Just like "each" methods
+
+      // let newArray = new Array("Sodiq", "Abdulrasheed", "Kareemah");
+
+      let newProfile = {
+        name: "Sodiq",
+        Occupation: "Student",
+        age: 56,
+      };
+
+      // $.trim(): To erase every white spaces at the beginning and the end of a string.
+      // $.inArray(): To check if an element exist an array.
+      // $.isArray()
+      // $.isFunction()
+      // $.isPlainObject()
+
+      // ----------------The "defer" object: It describes the state of availability of something by starting with "pending" state and change the interface on there is a change in state; resolve or reject.  This is mainly useful for Ajax request
+      // ----------------Learning pending
+      /* function getData(url, callback) {
+        const request = $.Deferred();
+
+        request.resolve();
+      } */
+
+      // ----------------The Promise objects-------------
+      // Pending---------------------------------
+
+      /*  $("a").click(function (e) {
+        // e.preventDefault();
+        $(this.hash).toggleClass("current");
+        console.log(this.hash);
+      }); */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../JQuery downloaded file/jquery-3.6.0.js"></script>
+
+    <title>Animations And Effect</title>
+    <style>
+      body {
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #aaa;
+        font-size: 16px;
+      }
+      header {
+        text-align: center;
+        background-color: #333;
+        color: #f4f4f4;
+        padding: 1.5rem;
+        text-transform: capitalize;
+      }
+
+      #box {
+        width: 500px;
+        height: 200px;
+        background: #555;
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 5;
+      }
+      #box-2 {
+        width: 150px;
+        height: 150px;
+        background: red;
+        position: relative;
+
+        /* border-radius: 5px 20px 30px 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The DOM Manipulation</h1>
+    </header>
+    <div class="container">
+      <!-- <button id="fade-out">Fade out</button>
+      <button id="fade-in">Fade In</button>
+      <button id="fade-toggle">Fade Toggle</button>
+      <hr size="2" noshade="" color="lightblue" /> -->
+      <!-- <button id="slide-up">Slide up</button>
+      <button id="slide-down">Slide down</button>
+      <button id="slide-toggle">Slide toggle</button>
+      <button id="stop">Stop</button>
+      <hr size="2" noshade="" color="lightblue" />
+      <div id="box">Animation Box</div> -->
+
+      <!------------------ Animate box --------------->
+
+      <button id="left">Left</button>
+      <button id="right">Right</button>
+      <button id="move-around">Move Around</button>
+      <hr size="2" noshade="" color="lightblue" />
+      <div id="box-2"></div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        // 1.-----------------"Fade" methods
+        /* $("#fade-out").on("click", () => {
+          //--------- ppties: 'slow','fast',number(ms) and func (optional); callback after fading completed
+
+          //   $("#box").fadeOut('slow'); //default
+          //   $("#box").fadeOut("fast");
+          $("#box").fadeOut(1000, () => {
+            $("#fade-out").text("'It's Gone");
+          });
+        });
+        $("#fade-in").click(() => {
+          $("#box").fadeIn(1000, () => {
+            $("#fade-out").text("Fade Out");
+          });
+        });
+        $("#fade-toggle").click(() => {
+          $("#box").fadeToggle(1000, () => {
+            $("#fade-out").text("Fade Out");
+          });
+        });*/
+        // 2.-----------------"Slide" methods
+        /*  $("#slide-up").click(() => {
+          $("#box").slideUp(2000);
+        });
+        $("#slide-down").click(() => {
+          $("#box").slideDown(2000);
+        });
+        $("#slide-toggle").click(() => {
+          $("#box").slideToggle(2000);
+        });
+        $("#stop").click(() => {
+          $("#box").stop();
+        }); */
+        // 3.------------------"Animate" methods
+        $("#right").click(function () {
+          $("#box-2").animate(
+            {
+              left: 300,
+              width: "360px",
+              height: "360px",
+            },
+            1000
+          );
+        });
+        $("#left").click(function () {
+          $("#box-2").animate(
+            {
+              left: 0,
+              width: "150px",
+              height: "150px",
+            },
+            1000
+          );
+        });
+        $("#move-around").click(function () {
+          let box = $("#box-2");
+          // --------No. 1
+          box.animate(
+            {
+              left: 300,
+              // borderRadius: top-left top-right bottom-right, bottom-left;
+              borderTopLeftRadius: "50%",
+            },
+            1000
+          );
+          // --------No. 2
+          box.animate(
+            {
+              left: 300,
+              top: 300,
+              borderTopRightRadius: "50%",
+            },
+            1000
+          );
+          // --------No. 3
+          box.animate(
+            {
+              top: 300,
+              left: 0,
+              borderBottomRightRadius: "50%",
+            },
+            1000
+          );
+          // --------No. 4
+          box.animate(
+            {
+              top: 0,
+              left: 0,
+              borderBottomLeftRadius: "50%",
+            },
+            1000
+          );
+          box.animate(
+            {
+              top: 0,
+              left: 0,
+              borderRadius: "0",
+            },
+            1000
+          );
+        });
+
+        // ---------------------End
+      });
+    </script>
+  </body>
+</html>

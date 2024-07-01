@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid Template Areas</title>
+	<style type="text/css">
+		.container {
+			background: gray;
+			display: grid;
+			grid-template-areas: 
+				'header header'
+				'main sidebar'
+				'footer footer';
+			grid-gap: 1rem;
+		}
+
+		header /* you can also use class as selectors */ {
+			grid-area: header;
+			border: 1px solid red;
+		}
+
+		main {
+			grid-area: main;
+			border: 1px solid brown;
+		}
+
+		.sidebar {
+			grid-area: sidebar;
+			border: 1px solid yellow;
+		}
+
+		footer {
+			grid-area: footer;
+			text-align: center;
+			border: 1px solid green;
+		}
+
+		@media screen and (max-width: 500px) {
+			
+			.container {
+			background: gray;
+			display: grid;
+			grid-template-areas: 
+				'header'
+				'main'
+				'sidebar'
+				'footer';
+			grid-gap: 1rem;
+		}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	 	<header>
+	 		<h1>LanxtEchwoRld</h1>
+	 		<nav>
+	 			<ul>
+	 				<li>Home</li>
+	 				<li>Services</li>
+	 				<li>Projects</li>
+	 				<li>Contact</li>
+	 			</ul>
+	 		</nav>
+	 	</header>
+		<main>
+		 	<section>
+		 		<h2>Welcome to my site</h2>
+		 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem itaque aliquam mollitia quod velit, nisi totam maxime quibusdam quasi quas deleniti laborum? Officiis, tempora, nisi?</p>
+		 	</section>
+		</main>
+	 	<aside class="sidebar">
+	 		<h3>This is an aside</h3>
+	 		<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Id, iure.</p>
+	 	</aside>
+	 	<footer>
+	 		<p>This is a footer</p>
+	 	</footer>
+	 </div>
+</body>
+</html>

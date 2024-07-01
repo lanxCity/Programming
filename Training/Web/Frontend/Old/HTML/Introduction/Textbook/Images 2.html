@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Images as background</title>
+	<style>
+
+		/*This is a "background" splitted properties*/
+		body{
+			border: solid 2px red;
+			background-image: url('../../../Images/best-forest.jpg'); 
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: scroll;
+		}
+		
+		header{ 
+			margin: 0 auto; 
+			background-color: brown;
+			height: 320px;
+			width: 240px;
+		}
+
+		/*This is a "background" conjoined property*/
+		section{
+			background: #579AA7E5 url('../../../Images/wood bridge.jpg') no-repeat fixed 0 100%;
+			color: #FFFFFFFF;
+			width: 630px;
+			height: 415px;
+		}
+
+		section p {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- Using images as background -->
+	<header>
+
+		<div>This is a header element with &ldquo;lighter&hyphen;brown&rdquo; background color</div>
+
+	</header>
+
+	<section>
+		<p>This is a section element with  </p>
+	</section>
+
+	
+</body>
+</html>
