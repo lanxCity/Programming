@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID And Class</title>
+    <style>
+      /* 
+        * The order of Specificity or precedence of a
+        * selector is as * follows:
+        * inline >> id >> class >> type
+        * 
+        * NB: inline is by adding a style attr inside
+        * of a tag of an element
+        * --> Irregardless of the arrangement, the 
+        * precedence stays the same
+        */
+      #section-1 {
+        color: red;
+        border: 1px solid red;
+      }
+
+      .section {
+        color: brown;
+        border: 1px dashed brown;
+      }
+
+      div {
+        color: blue;
+        border: 1px dashed blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section" id="section-1">
+      <h2>Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam temporibus
+        illum est esse eos veniam velit adipisci expedita, nobis explicabo.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem itaque
+        quo magni beatae, temporibus unde ad adipisci animi explicabo?
+      </p>
+    </div>
+    <div class="section" id="section-2">
+      <h2>Section 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam temporibus
+        illum est esse eos veniam velit adipisci expedita, nobis explicabo.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem itaque
+        quo magni beatae, temporibus unde ad adipisci animi explicabo?
+      </p>
+    </div>
+    <div
+      class="section"
+      id="section-3"
+      style="color: cadetblue; border: 1px solid cadetblue"
+    >
+      <h2>Section 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam temporibus
+        illum est esse eos veniam velit adipisci expedita, nobis explicabo.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem itaque
+        quo magni beatae, temporibus unde ad adipisci animi explicabo?
+      </p>
+    </div>
+  </body>
+</html>

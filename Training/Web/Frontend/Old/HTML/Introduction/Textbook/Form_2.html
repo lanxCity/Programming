@@ -1,165 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>FORM TWO</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM TWO</title>
 
-	<style type="text/css">
+    <style type="text/css">
+      form {
+        width: 50%;
+        padding-top: 20px;
+        background: #9a8464ff;
+        height: 800px;
+      }
 
-		form {
-			width: 50%;
-			padding-top: 20px;
-			background: #9A8464FF;
-			height: 800px;
-		}
+      .container:first-of-type {
+        height: 60px;
+      }
 
-	 .container:first-of-type {
-			height: 60px
-		}
+      .container {
+        font-weight: bold;
+        margin-bottom: 15px;
+        height: 30px;
+      }
 
-		.container {
-			font-weight: bold;
-			margin-bottom: 15px;
-			height: 30px
-		}
+      form div p,
+      #reason {
+        float: left;
+        display: block;
+        margin: 0 12px;
+        width: 40%;
+        font-weight: bolder;
+        font-family: sans-serif;
+        text-align: right;
+      }
 
+      form div div,
+      #note {
+        background: #1c7739db;
+        float: right;
+        display: block;
+        width: 55%;
+      }
 
-		form div p, #reason{
-			float: left;
-			display: block;
-			margin:0 12px;
-			width: 40%;
-			font-weight: bolder;
-			font-family: sans-serif;
-			text-align: right;
+      form #gender {
+        clear: both;
+      }
 
-		}
+      form fieldset {
+        text-align: center;
+        background: #aaa;
+        font-weight: bold;
+      }
+      fieldset legend {
+        font-weight: bold;
+        font-size: 20px;
+      }
 
-		form div div,#note {
-			background: #1C7739DB;
-			float: right;
-			display: block;
-			width: 55%;
-			
-		}
+      input[type="image"] {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        background: transparent;
+      }
 
-		form #gender {
-			clear: both;
-		}
+      input[type="image"]:hover {
+        background: #1c7739db;
+      }
 
-		form fieldset {
-			text-align: center;
-			background: #aaa;
-			font-weight: bold;
-		}
-		fieldset legend {
-			font-weight: bold;
-			font-size: 20px;
-		}
+      #submission,
+      #arrow,
+      #clearForm {
+        width: 55%;
+        float: right;
+        clear: right;
+      }
 
+      #submission #submit {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- for input type, we have "text, number, tel, email, pasword, checkbox,submit, reset, radio, image, button  -->
 
-		input[type="image"] {
-			width: 50px;
-			height: 50px;
-			padding: 5px;
-			background: transparent;
-		}
+    <!-- some attributes, "type, name, size, cols, rows, pattern, value, tabindex, accesskey,readonly, disabled" -->
 
-		input[type="image"]:hover {
-			background: #1C7739DB;
-		}
+    <form action="#">
+      <!-- grouping form fields -->
+      <div class="container">
+        <p>What are your favorite courses&colon;</p>
 
-		#submission, #arrow, #clearForm {
-			width: 55%;
-			float: right;
-			clear: right;
-		}
+        <div>
+          <label for="GES301">GES301</label>
+          <input type="checkbox" name="favorite" value="GES301" id="GES301" />
 
-		#submission #submit {
-			cursor: pointer;
-		}
+          <label for="MAT351">MAT351</label>
+          <input type="checkbox" name="favorite" value="MAT351" id="MAT351" />
 
+          <label for="TAE411">TAE411</label>
+          <input type="checkbox" name="favorite" value="TAE411" id="TAE411" />
 
-	</style>
-</head>
-<body>
-	<!-- for input type, we have "text, number, tel, email, pasword, checkbox,submit, reset, radio, image, button  -->
+          <label for="TAE412">TAE412</label>
+          <input
+            type="checkbox"
+            name="favorite"
+            value="TAE412"
+            id="TAE412"
+          /><br /><br />
 
-	<!-- some attributes, "type, name, size, cols, rows, pattern, value, tabindex, accesskey,readonly, disabled" -->
+          <label for="TAE413">TAE413</label>
+          <input type="checkbox" name="favorite" value="TAE413" id="TAE413" />
 
-	<form action="#">
+          <label for="TAE414">TAE414</label>
+          <input type="checkbox" name="favorite" value="TAE414" id="TAE414" />
 
-		<!-- grouping form fields -->
-		<div class="container">
-			<p>What are your favorite courses&colon;</p>
+          <label for="TAE415">TAE415</label>
+          <input type="checkbox" name="favorite" value="TAE415" id="TAE415" />
+        </div>
+      </div>
 
-			<div>
-				<label for="GES301">GES301</label>
-				<input type="checkbox" name="favorite" value="GES301" id="GES301">
+      <div id="gender" class="container">
+        <p>Gender&colon;</p>
+        <div>
+          <label for="male">Male</label
+          ><input type="radio" name="gender" value="Male" id="male" />
 
-				<label for="MAT351">MAT351</label>
-				<input type="checkbox" name="favorite" value="MAT351" id="MAT351">
-
-				<label for="TAE411">TAE411</label>
-				<input type="checkbox" name="favorite" value="TAE411" id="TAE411">
-
-				<label for="TAE412">TAE412</label>
-				<input type="checkbox" name="favorite" value="TAE412" id="TAE412"><br><br>
-
-				<label for="TAE413">TAE413</label>
-				<input type="checkbox" name="favorite" value="TAE413" id="TAE413">
-
-				<label for="TAE414">TAE414</label>
-				<input type="checkbox" name="favorite" value="TAE414" id="TAE414">
-
-				<label for="TAE415">TAE415</label>
-				<input type="checkbox" name="favorite" value="TAE415" id="TAE415">
-			</div>
-
-		</div>
-
-		<div id="gender" class="container">
-			<p>Gender&colon;</p>
-			<div>
-
-				<label for="male">Male</label><input type="radio" name="gender" value="Male" id="male">
-
-				<label for="female">Female</label><input type="radio" name="gender" value="Female" id="female">
-				<!-- <label for=""></label>
+          <label for="female">Female</label
+          ><input type="radio" name="gender" value="Female" id="female" />
+          <!-- <label for=""></label>
 				<label for=""></label> -->
-			</div>
-		</div>
+        </div>
+      </div>
 
-		<!-- the use of "fielset" for grouping and "legend" element for caption -->
+      <!-- the use of "fieldset" for grouping and "legend" element for caption -->
 
+      <div>
+        <label for="reason" id="reason">why do you think you are qualify</label>
+        <textarea
+          name="reason"
+          id=""
+          rows="10"
+          style="width: 55%"
+          id="note"
+        ></textarea>
+      </div>
 
-		<div><label for="reason" id="reason">why do you think you are qualify</label>
-			<textarea name="reason" id="" rows="10" style="width: 55%;" id="note"></textarea>
-		</div>
+      <fieldset>
+        <legend>Which of these is an Asian country</legend>
+        <label for="Mexico"
+          >Mexico<input
+            type="radio"
+            name="AsianCountry"
+            value="Mexico"
+            id="Mexico"
+        /></label>
+        <label for="Uruguay"
+          >Uruguay<input
+            type="radio"
+            name="AsianCountry"
+            value="Uruguay"
+            id="Uruguay"
+        /></label>
+        <label for="Cuba"
+          >Cuba<input type="radio" name="AsianCountry" value="Cuba" id="Cuba"
+        /></label>
+        <label for="Meldives"
+          >Meldives<input
+            type="radio"
+            name="AsianCountry"
+            value="Meldives"
+            id="Meldives"
+        /></label>
+        <label for="Eswatini"
+          >Eswatini<input
+            type="radio"
+            name="AsianCountry"
+            value="Eswatini"
+            id="Eswatini"
+        /></label>
+      </fieldset>
 
-		<fieldset>
-			<legend>Which of these is an Asian country</legend>
-			<label for="Mexico">Mexico<input type="radio" name="AsianCountry" value="Mexico" id="Mexico"></label>
-			<label for="Uruguay">Uruguay<input type="radio" name="AsianCountry" value="Uruguay" id="Uruguay"></label>
-			<label for="Cuba">Cuba<input type="radio" name="AsianCountry" value="Cuba" id="Cuba"></label>
-			<label for="Meldives">Meldives<input type="radio" name="AsianCountry" value="Meldives" id="Meldives"></label>
-			<label for="Eswatini">Eswatini<input type="radio" name="AsianCountry" value="Eswatini" id="Eswatini"></label>
-		</fieldset>
+      <!-- The use of the "button" element -->
 
-		<!-- The use of the "button" element -->
+      <div id="arrow">
+        <input
+          type="image"
+          src="../../../Images/bullet arrow head.jpg"
+          alt="arrow"
+          name="submitArrow"
+          id="submitArrow"
+          onclick="submitArrow()"
+        />
+      </div>
 
-		<div id="arrow"><input type="image" src="../../../Images/bullet arrow head.jpg" alt="arrow" name="submitArrow" id="submitArrow" onclick="submitArrow()"></div>
+      <div id="submission"><input type="submit" id="submit" /></div>
 
-		<div id="submission"><input type="submit" id="submit"></div>
-
-		<div id="clearForm">
-			<button type="reset">Clear form</button>
-			<!-- <button></button>
+      <div id="clearForm">
+        <button type="reset">Clear form</button>
+        <!-- <button></button>
 			<button></button> -->
-		</div>
-
-	</form>
-	
-</body>
+      </div>
+    </form>
+  </body>
 </html>

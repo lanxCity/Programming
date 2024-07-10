@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Box Styling */
+      .box1 {
+        display: flex;
+        background-color: aqua;
+        /* flex-wrap: wrap; */
+        /* height: 50vh; */
+        /* Along the main axis */
+        /* justify-content: space-between; */
+
+        /* Along cross-axis (but height of the container must have been set in order to take effect) */
+        /* align-items: end; */
+      }
+
+      /* .box2 {
+        display: flex;
+        flex-direction: column;
+        background-color: brown;
+        height: 70vh;
+        /*The height now affect main-axis (vertical)
+        Along the main axis *
+        justify-content: space-between;
+
+        /* Along cross-axis (but height of the container must have been set in order to take effect) *
+        align-items: center;
+      } */
+
+      /* Items styling */
+      .box1 .item {
+        /* width: 100px; */
+        height: 100px;
+
+        /* --> The width of the items
+        * flex-basis is the width of an item when starting out
+        */
+        /* flex-basis: 300px; */
+
+        /* Shorthand for flex-basis, flex-grow, and flex-shrink is: "flex: grow shrink basis;" */
+        /* flex: 1 0 100px; */
+
+        /* Instead of setting the basis, it can just be 0 for smaller screen */
+        /* flex: 1 0 0; */
+        flex: 1; /* Same as above*/
+        background-color: aliceblue;
+        margin: 10px;
+
+        /* For individual item */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* .box2 .item {
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        margin: 10px;
+      } */
+
+      /* Single item*/
+      .box1 .item:nth-of-type(1) {
+        /* To align itself */
+        /* align-self: start; */
+        /* To swap its position with other item */
+        /* order: 3; */
+
+        /* flex-grow is a factor of the flex item's main size. it is more like a growth rate of the "flex-basis" in order to ensure all the items filled up the viewport, and using the flex-basis value as fall back width (no matter how smaller the screen). It is of a single value with default value of 0*/
+        /* flex-grow: 1; */
+
+        /* flex-shrink is the opposite of "flex-grow". Where no matter how large is the viewport, the item can not extend more than the flex-basis value (leaving xtra space left)*/
+        /* flex-shrink: 1; */
+      }
+      .box1 .item:nth-of-type(2) {
+        /* order: 2; */
+        /* flex-grow: 2; */
+        /* flex-shrink: 2; */
+      }
+      .box1 .item:nth-of-type(3) {
+        /* order: 1; */
+        /* flex-grow: 1; */
+        /* flex-shrink: 3; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <!-- <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 3</div> -->
+    </div>
+
+    <!-- <div class="box2">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div> -->
+
+    <!-- 
+    - Flexible Box Model is a 1-Dimensional layout model that provides a method to offer space distro and powerful alignment capabilities
+
+    - The flexcontainer is the el that holds the flex items. Flex items are direct children of flex container. A container is created with "display: flex;"
+    - Flex-direction is "row" by default, where horizontal is main-axis & vertical is cross-axis.
+    - if  Flex-direction is "column", horizontal is cross-axis & vertical is main-axis.
+    - Flex container ppties -> flex-direction, flex-wrap, flex-flow, justify content, align-items, align-content.
+
+    - Flex-item ppties -> order, flex-grow, flex-shrinks, flex-basis, align-self.
+     -->
+  </body>
+</html>

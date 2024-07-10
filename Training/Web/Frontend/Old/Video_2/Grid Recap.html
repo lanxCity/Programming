@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Grid Recap</title>
-	<style type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Recap</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*
+			The border-box ensures there is no extra spaces added for padding or other thing, aside from the original width set for the element.
+			*/
+      }
+      .container {
+        background: #ccc;
+        padding: 2rem;
+        /* max-width: 814px; /* For "autofit" and "Minmax" */
+      }
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		.container {
-			background: #ccc;
-			padding: 2rem;
-			/* max-width: 814px; /* For "autofit" and "Minmax" */
-		}
+      .grid {
+        display: grid;
+        /* grid-template-columns: 200px; /* 1 col */
 
-		.grid {
-			display: grid;
-			/* grid-template-columns: 200px; /* 1 col */
-
-			/*grid-template-columns: 200px 200px; /* 2 cols *
+        /*grid-template-columns: 200px 200px; /* 2 cols *
 
 			grid-template-columns: 200px 200px 200px; /* 3 cols *
 
@@ -38,45 +40,37 @@
 
 			grid-template-columns: repeat(2,1fr); /* 2 cols */
 
+        /* Instead of margin, we can use "grid-gap" property */
 
-			/* Instead of margin, we can use "grid-gap" property */
+        /* grid-gap: 1rem; */
 
-			/* grid-gap: 1rem; */
+        /* Introduction to template grid template row */
 
+        /* grid-template-rows: 1fr 2fr 4fr;  */
 
+        /* that is, the no. of rows an element is going to occupied. And this is called "implicit grid" or "row" where you don't manually set a specific value to a certain element. No specific height. */
 
-			/* Introduction to template grid template row */
+        /* For the rest of the items we have, */
 
-			/* grid-template-rows: 1fr 2fr 4fr;  */
+        /* grid-auto-rows: 2fr; */
 
-			/* that is, the no. of rows an element is going to occupied. And this is called "implicit grid" or "row" where you don't manually set a specific value to a certain element. No specific height. */
+        /* Spanning items in multiple rows and cols */
+      }
 
-			/* For the rest of the items we have, */
+      .item {
+        background: red;
+        border: 1px solid black;
+        padding: 1rem;
+        text-align: center;
+      }
 
-			/* grid-auto-rows: 2fr; */
-
-
-
-			/* Spanning items in multiple rows and cols */
-
-
-		}
-
-
-		.item {
-			background: red;
-			border: 1px solid black;
-			padding: 1rem;
-			text-align: center;
-		}
-
-		/*.item:first-child {
+      /*.item:first-child {
 			/* grid-column-start: 1;
 			grid-column-end: 3; /*you count the vertical lines from the start *
 			grid-row-start: 1;
 			grid-row-end: 3; */
 
-			/* shortcut*
+      /* shortcut*
 
 			grid-column: 1 / span 3; /* the spanning means the cells and not counting from the lines*
 
@@ -92,32 +86,26 @@
 
 		/* Autofit and Minmax: which can make your grid kind of responsive. But not so good, and it is great for image galleries and not for page layout.*/
 
-
-		 /* .grid {
+      /* .grid {
 		 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		 } */
 
-		 /* The grid template areas: THIS LET YOU SET YOUR PAGE LAYOUT WITHIN YOUR CSS. And map out your page alignment within the CSS */
-
-
-		 
-
-
-	</style>
-</head>
-<body>
-	<h1>Grid Box Recap</h1>
-	<div class="container grid">
-		<div class="item">Item 1</div>
-		<div class="item">Item 2</div>
-		<div class="item">Item 3</div>
-		<div class="item">Item 4</div>
-		<div class="item">Item 5</div>
-		<div class="item">Item 6</div>
-		<div class="item">Item 7</div>
-		<div class="item">Item 8</div>
-		<div class="item">Item 9</div>
-		<div class="item">Item 10</div>
-	</div>
-</body>
+      /* The grid template areas: THIS LET YOU SET YOUR PAGE LAYOUT WITHIN YOUR CSS. And map out your page alignment within the CSS */
+    </style>
+  </head>
+  <body>
+    <h1>Grid Box Recap</h1>
+    <div class="container grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+    </div>
+  </body>
 </html>

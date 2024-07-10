@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="#">
+      <div>
+        <input type="text" name="username" placeholder="username" />
+
+        <input type="password" name="password" placeholder="password" />
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="email" />
+      </div>
+      <div>
+        Favourite Colors?
+        <input type="radio" name="color" value="red" /> Red
+        <input type="radio" name="color" value="blue" /> Blue
+        <input type="radio" name="color" value="yellow" /> Yellow
+        <input type="radio" name="color" value="green" /> Green
+      </div>
+
+      <div>
+        <input type="text" list="countries" placeholder="Country" />
+        <datalist id="countries">
+          <option value="Afghanistan"></option>
+          <option value="Albania"></option>
+          <option value="Algeria"></option>
+          <option value="Andorra"></option>
+          <option value="Angola"></option>
+          <option value="Antigua & Deps"></option>
+          <option value="Argentina"></option>
+          <option value="Armenia"></option>
+          <option value="Australia"></option>
+          <option value="Austria"></option>
+          <option value="Azerbaijan"></option>
+        </datalist>
+      </div>
+
+      <input type="submit" value="Submit" />
+      <button type="button">Submit</button>
+    </form>
+  </body>
+</html>
