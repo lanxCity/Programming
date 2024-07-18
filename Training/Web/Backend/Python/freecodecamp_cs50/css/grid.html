@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Intro</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        background-color: #f5f5f5;
+        color: 333;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 100px auto;
+        padding: 10px;
+        background-color: gray;
+        display: grid;
+        /* ->>> For columns */
+        /* Nothing happens until the number of columns and theirs are specified */
+        /* grid-template-columns: 100px 300px; */
+        /*for 2 cols */
+        /* grid-template-columns: 100px 300px 400px; */
+        /*for 3 cols */
+        /* grid-template-columns: 20% 30% 50%; */
+        /*for 3 cols using "%" */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /*for 3 cols using fraction "fr" */
+        /* grid-template-columns: 1fr 3fr 2fr; */
+        /*for 3 cols with different fractions */
+        /* grid-template-columns: repeat(3, 1fr); */
+        /*for 3 cols with the same fraction repeat(3times, 1fr) */
+        /* Responsiveness 2 (see below for no. 1) */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* To wrap and xtend items based on width*/
+        /* column-gap: 10px; */
+        /* for (vertical) spacing btw cols */
+        /* row-gap: 20px; */
+        /* for (horizontal) spacing btw rows */
+        gap: 20px 10px;
+        /* for both rows and cols spacing (row, col) */
+
+        /* -> For rows */
+        /* grid-auto-rows: 200px; */
+        /* To set items (row) height  */
+        /* grid-auto-rows: minmax(100px, 300px); */
+        /* To set items minmax(minHeight, maxHeight)*/
+        /* grid-auto-rows: minmax(100px, auto); */
+        /* To set items minmax(minHeight, auto). The auto is used to fit to the height of longest content on that particular row. while other items below and above that row are set to minheight*/
+        /* grid-template-rows: 1fr 2fr 2fr; */
+        /* grid-template-rows: repeat(3, 1fr); */
+        /* To set the number of rows in the container */
+        /* align-items: start; */
+        /* the default value is "stretch" depending on the most content. incase if "grid-auto-rows" is not set, only row with the uneven content would be affected */
+        /* justify-content: end; */
+        /* For justify-contents, it is effective when the item do not occupy the whole space horizontally. NB: it works the same as just "flex-direction: row" 
+        Imagine when the items widths are small. "grid-template-columns: repeat(3, 100px);"*/
+      }
+
+      .item {
+        font-size: 20px;
+        color: #fff;
+        padding: 20px;
+        background-color: darkgray;
+        border: 1px solid skyblue;
+      }
+      /* Aligning individual item */
+      /* .item:nth-of-type(2) {
+        width: 100px;
+        /* the width is smaller for the item to be effective *
+        align-self: end;
+        justify-self: center;
+      } */
+
+      /* Spanning item across n. of rows and col. */
+      /* For coloumns *
+      .item:nth-of-type(1) {
+        background-color: black;
+        grid-column-start: 1;
+        /* the starting (point or) of card (column).
+        NB: you can enable grid line number under layout of the "dev tool" settings */
+      /* grid-column-end: 3; */
+      /* the end point of the card. NB: the item1 starting point is "point 1"; "point 2" is the start of item2; and "point 3" is end of item2. In summary, "grid-column-end: 3" indicates 2 cols... */
+      /*grid-column: 1 / 3; /* Same as point 1 to point 3*
+
+        grid-column: 1 / span 2; /* From point 1, span with 2 columns *
+      }
+
+      /* For row spanning *
+
+      .item:nth-of-type(3) {
+        background-color: #333;
+        grid-row: 2 / 4;
+      }
+
+      .item:nth-of-type(5) {
+        background-color: #333;
+        grid-column: 3 / 4;
+        grid-row: 2 / span 2;
+      }
+        */
+
+      /* Responsiveness 1 */
+      @media screen and (max-width: 500px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="item">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
+        repellendus asperiores animi nihil qui suscipit.
+      </div> -->
+
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+      <div class="item">item 9</div>
+    </div>
+    <!-- 
+    - Grid is a used to align items on the page by
+    - creating 2-Dimensional layout with rows and colums 
+    - Both flex and grid can be used in similar way
+    - Flex has more bowser compatibility
+    - A container is created with "display: grid;"
+    - Grid container ppties -> grid-template-columns, grid-template-rows, grid-gap, grid-auto-rows, grid-auto-columns, grid-template-areas, justify-content, align-items
+
+    - Grid items ppties -> grid-column, grid-row, grid-area, align-self, justify-self
+    - Unlike flex where you can only set items to either row or column, grid is of 2-D layout where we can create rows and columns at a time
+    -->
+  </body>
+</html>

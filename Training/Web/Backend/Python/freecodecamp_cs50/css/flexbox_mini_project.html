@@ -4,6 +4,227 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox Mini Project</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      /* Reset styling */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+      }
+
+      /* General styling */
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        background: #a1c3ff;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* main styling */
+      .container {
+        padding: 0 2rem;
+        color: #fff;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      #nav-bar {
+        background: #3474e6;
+        height: 60px;
+      }
+
+      #nav-bar .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #nav-bar ul {
+        display: flex;
+      }
+
+      #nav-bar h2 {
+        font-size: x-large;
+      }
+
+      #nav-bar ul li {
+        margin-left: 20px;
+      }
+      #nav-bar ul a {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      #nav-bar a:hover {
+        color: lightblue;
+      }
+
+      /* Header */
+      header {
+        min-height: 60vh;
+        background-color: #0151cc;
+        display: flex; /*to make the container fill up the whole header NB: make height is not set to 100% in the container*/
+        /* justify-items: center; */
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #header_contents h1 {
+        font-size: 2.5rem;
+      }
+
+      img {
+        max-width: 400px;
+      }
+
+      header .showcase {
+        padding-left: 2rem;
+      }
+
+      /* Section */
+      section .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      section .card {
+        flex: 1;
+        background-color: #0151cc;
+        margin: 1.2rem 0.7rem;
+        padding: 1rem 1.2rem;
+        border-radius: 1rem;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+      }
+
+      section .card:nth-of-type(1) {
+        margin: 1.2rem 0.7rem 1.2rem 0;
+      }
+
+      section .card .title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      section .card .title i {
+        margin-right: 1rem;
+      }
+
+      /* For mobile */
+      @media screen and (max-width: 760px) {
+        header .container {
+          flex-direction: column;
+          padding-top: 1.2rem;
+          text-align: center;
+        }
+
+        header .showcase {
+          padding: 2rem 0;
+        }
+
+        section .container {
+          /* flex-direction: column; */
+          display: block;
+        }
+        section .card {
+          margin: 1.2rem 0;
+        }
+        img {
+          max-width: 350px;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <nav id="nav-bar">
+      <div class="container">
+        <div id="logo">
+          <h2>Flexbox</h2>
+        </div>
+
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End of nav-bar -->
+    <header>
+      <div class="container">
+        <div id="header_contents" class="item">
+          <h1>Flexbox Crash Course</h1>
+          <p>
+            This crash course was created by Brad Traversy to help you learn the
+            basics of flexbox. Flexbox is a very important and useful tool in
+            CSS.
+          </p>
+        </div>
+        <div class="showcase item">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1674571895797-3ca2aaf89eed?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <article class="card">
+          <div class="title">
+            <i class="fas fa-arrows-alt-v"></i>Alignment & Space
+          </div>
+          <div class="body">
+            <p>
+              A more efficient way to lay out, align and distribute space among
+              items in a container
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="title">
+            <i class="fas fa-arrows-alt"></i>Tricky Positioning
+          </div>
+          <div class="body">
+            <p>
+              Flexbox usually solves tricky problems including how to position
+              or dynamically resize elements on a page
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="title">
+            <i class="fas fa-mobile"></i>Responsive Design
+          </div>
+          <div class="body">
+            <p>
+              Flexbox makes building a website layout (and making it
+              responsive!) much, much easier
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- End of container -->
+    <script
+      src="https://kit.fontawesome.com/53a532ef3f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

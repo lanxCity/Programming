@@ -1,0 +1,10 @@
+ul, ol {
+  list-style-type: none;
+  font-size: 14px;
+  color: red;
+}
+
+ol {
+  font-size: 20px;
+  color: red;
+}/*# sourceMappingURL=sass_intro.css.map */

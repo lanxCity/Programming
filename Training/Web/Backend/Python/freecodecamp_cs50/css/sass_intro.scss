@@ -1,0 +1,13 @@
+// Creating variables for common properties
+$red-color: red;
+
+ul, ol{
+    list-style-type: none;
+    font-size: 14px;
+    color: $red-color;
+}
+
+ol {
+    font-size: 20px;
+    color: $red-color;
+}

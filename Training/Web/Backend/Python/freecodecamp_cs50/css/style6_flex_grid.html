@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex And Grids</title>
+    <style>
+      /* Reset styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      ul[class$="box"] {
+        background-color: gray;
+        padding: 1rem;
+        margin: 2rem 0;
+      }
+
+      .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flexbox li {
+        background-color: aliceblue;
+        width: 200px;
+        height: 100px;
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      /* For grid */
+      .gridbox {
+        display: grid;
+        grid-template-columns: 200px 300px minmax(200px, auto);
+        gap: 20px;
+      }
+      .gridbox li {
+        background-color: aliceblue;
+        height: 100px;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>This is Flexbox</h2>
+    <ul class="flexbox">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+    </ul>
+    <h2>This is Gridbox</h2>
+    <ul class="gridbox">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+    </ul>
+  </body>
+</html>

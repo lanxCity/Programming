@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Template Areas</title>
+    <style>
+      /* Reset styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aliceblue;
+        height: 100vh; /* To take the entire viewport */
+        display: grid;
+        /* grid-template-area -> is like a text or physical rep of how we want our layout and of which the words or terms used are just grid areas that would be attached to the actual grid items. */
+        grid-template-areas:
+          "header header header" /* for 3 cols */
+          "nav content sidebar" /* 1 col, 1 col, 1 cols*/
+          "nav pgfooter pgfooter" /*Any words can be used*/;
+        grid-template-columns: 1fr 6fr 2fr;
+        grid-template-rows: 80px 1fr 70px;
+      }
+
+      /* Main styling */
+      header,
+      main,
+      nav,
+      aside,
+      footer {
+        background-color: cadetblue;
+        color: #fff;
+        border: 1px, solid gray;
+        padding: 10px;
+      }
+
+      /* Using the above template areas to create the grid areas by using normal html selectors*/
+      header {
+        grid-area: header;
+      }
+
+      nav {
+        grid-area: nav;
+      }
+
+      main {
+        grid-area: content;
+      }
+
+      aside {
+        grid-area: sidebar;
+      }
+
+      footer {
+        grid-area: pgfooter;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <main>Content</main>
+    <nav>Navigation</nav>
+    <aside>Sidebar</aside>
+    <footer>Footer</footer>
+  </body>
+</html>
