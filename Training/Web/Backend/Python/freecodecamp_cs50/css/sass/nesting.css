@@ -12,12 +12,16 @@ body {
 header {
   background-color: aliceblue;
 }
+
 header .showcase p {
   background-color: antiquewhite;
   line-height: 1.5;
 }
+
 header p {
   background-color: greenyellow;
   margin: 1rem auto;
   line-height: 1.7;
-}/*# sourceMappingURL=nesting.css.map */
+}
+
+/*# sourceMappingURL=nesting.css.map */

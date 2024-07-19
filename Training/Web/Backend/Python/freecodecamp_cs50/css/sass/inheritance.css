@@ -1,0 +1,24 @@
+/*
+ * This is a generic styling for all the messages 
+ * to inherit
+ */
+.error, .warning, .success {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid darkgray;
+  padding: 20px;
+  margin: 20px;
+}
+
+.success {
+  background-color: green;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.error {
+  background-color: red;
+}/*# sourceMappingURL=inheritance.css.map */
