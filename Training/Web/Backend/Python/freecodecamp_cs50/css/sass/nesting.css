@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  list-style: 1.5;
+}
+
+header {
+  background-color: aliceblue;
+}
+header .showcase p {
+  background-color: antiquewhite;
+  line-height: 1.5;
+}
+header p {
+  background-color: greenyellow;
+  margin: 1rem auto;
+  line-height: 1.7;
+}/*# sourceMappingURL=nesting.css.map */
