@@ -288,7 +288,7 @@ for student in score_sheet:
 
 
 print(score_sheet)
-"""
+
 
 # Exercise - Determine the number of days of the month entered
 def is_leap(yr):
@@ -333,12 +333,19 @@ class Circle:
     PI = math.pi  # class attr
     def __init__(self, radius):
         self.radius = radius
+
     @property
     def area(self):
         return Circle.PI * (self.radius ** 2)
+
     @property
     def circumference(self):
         return 2 * (Circle.PI * self.radius)
+
+
+    def change_radius(self, radius):
+        if radius > 0:
+            self.radius = radius
 
 
 c1 = Circle(6)
@@ -346,11 +353,10 @@ c1 = Circle(6)
 print(round(c1.area, 3))
 print(round(c1.circumference, 3))
 
+print('-' * 10)
+print(1_034)   # 1,034
 
-print("{:d}".format(78) * 10)
-print(10_34)
 
-"""
 
 
 

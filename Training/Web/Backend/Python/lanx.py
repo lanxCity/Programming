@@ -168,11 +168,27 @@ print(len('\n'))
 '''
 
 
+class Do_stuff:
+    def __init__(self, data):
+        self.__data = data
+
+    def __repr__(self):
+        return '{:.2f}'.format(self.__data)
+
+    @staticmethod
+    def me():
+        pass
 
 
+stuff = Do_stuff(50)
+print(stuff)
 
-
-
+li = ['2', '100', '1', '56', '-12', '0', '-10']
+li2 = [2, 100, 1, 56, -12, 0, -10]
+li.sort()
+print(li)
+li2.sort()
+print(li2)
 
 
 

@@ -103,6 +103,9 @@ print({}.fromkeys(['age', 'name', 'level'], 67))
 
 
 
+data = {}
+data.update({'name': 'Lanx'})
 
+print(list(data.items()))
 
 

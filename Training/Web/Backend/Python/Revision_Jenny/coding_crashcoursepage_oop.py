@@ -68,6 +68,7 @@ def non_neg_sum(func):
 
 # summation = non_neg_sum(sum)
 # print(summation(data))
+
 @non_neg_sum
 def miniSum(li):
     return sum(li)
