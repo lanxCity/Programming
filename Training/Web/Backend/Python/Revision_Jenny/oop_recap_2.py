@@ -135,40 +135,141 @@ class Student(Human):
 
 s1 = Student('Lanx', 50, 'M', 'TAE', ['TAE701', 'TAE751', 'TAE722'])
 
-print(s1)
+# print(s1)
 
 
 # -------> Multiple inheritance - One child from multiple parents
-class A:
-    def __init__(self):
-        pass
+# The MRO started from the "first parent (param)"
+
+# class A:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def shout(self):
+#         print('I am MR. A')
+#         return
+#
+#
+# class B:
+#     def __init__(self, gender):
+#         self.gender = gender
+#
+#     def shout(self):
+#         print('I am MR. B')
+#         return
+#
+#
+# class C(A, B):
+#     # The effect of MRO
+#     def __init__(self, name, gender):
+#         A.__init__(self, name)
+#         B.__init__(self, gender)
+#
+#
+# c1 = C('Lanx', 'Male')
+# print(c1.name)
+# print(c1.gender)
+
+
+# -------> Multilevel inheritance - One child from multiple parents
+# The MRO started from the immediate/first parent (param) to the base parent
+# class A:
+#     def __init__(self, name):
+#         print('This is from class A')
+#         self.name = name
+#
+#     def shout(self):
+#         print('I am MR. A')
+#         return
+#
+#
+# class B(A):
+#     def __init__(self, gender):
+#         print('This is from class B')
+#         self.gender = gender
+#
+#     def shout(self):
+#         print('I am MR. B')
+#         return
+#
+#
+# class C(B):
+#     # The effect of MRO
+#     # def __init__(self, name, gender):
+#     #     A.__init__(self, name)
+#     #     B.__init__(self, gender)
+#     pass
+#
+#
+# c1 = C('Male')
+# print(c1.gender)
+#
+
+# -------> Hierarchical inheritance - Multiple children from one parent
+# The MRO started from the immediate/first parent (param) to the base parent
+class User:
+    def __init__(self, name):
+        print('This is from class A')
+        self.name = name
 
     def shout(self):
         print('I am MR. A')
         return
 
 
-class B:
+class Teacher(User):
     def __init__(self):
-        pass
-
+        print('This is from class Teacher')
     def shout(self):
         print('I am MR. B')
         return
 
 
-class C(A, B):
+class Student(User):
+    # The effect of MRO
+    # def __init__(self, name, gender):
+    #     A.__init__(self, name)
+    #     B.__init__(self, gender)
     pass
 
 
-c1 = C()
-c1.shout()
+# -------> Hybrid inheritance - Mixing of two or more inheritance methods
+# The MRO is same as multiple's (L -> R) but also extend to the base of the
+# current class being searched at that time
+class A:
+    # def __init__(self, name):
+    #     self.name = name
+
+    def shout(self):
+        print('Shouting from A')
+        return
 
 
+class B(A):
+    def walk(self):
+        print('Walking from B')
+        return
+
+    def shout(self):
+        print('Shouting from B')
+        return
 
 
+class C:
+    # The effect of MRO
+    def run(self):
+        print('Run from C')
+        return
+    def shout(self):
+        print('Shouting from C')
+        return
+
+class D(B, C):
+    pass
 
 
+d1 = D()
+d1.shout()
 
 
 

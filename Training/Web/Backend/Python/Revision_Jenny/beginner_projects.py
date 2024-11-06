@@ -478,83 +478,153 @@ game(data)
 '''
 
 # Design Coffee machine
-available_material = {
-    'coffee': 100,  # grams
-    'milk': 500,  # ml
-    'water': 500  #ml
-}
-coffee_data = __import__('coffee_data').coffee_data
-coffee_list = [item['name'] for item in coffee_data]
-coffee_list_disp = [item['name'].capitalize() for item in coffee_data]  # Just for display
-coins_list = [10, 50, 100]  # Naira
+# available_material = {
+#     'coffee': 100,  # grams
+#     'milk': 500,  # ml
+#     'water': 500  #ml
+# }
+# coffee_data = __import__('coffee_data').coffee_data
+# coffee_list = [item['name'] for item in coffee_data]
+# coffee_list_disp = [item['name'].capitalize() for item in coffee_data]  # Just for display
+# coins_list = [10, 50, 100]  # Naira
+#
+#
+# def check_material(material_left, order_material):
+#     for item in order_material:
+#         if order_material[item] > material_left[item]:
+#             return False
+#
+#     return True
+#
+#
+# is_on = True
+# order_report = ''
+#
+# while is_on:
+#     choice = input(f"What would like to have? ({'/'.join(coffee_list_disp)}): ").lower()
+#
+#     if choice in coffee_list:
+#         order_data = coffee_data[coffee_list.index(choice)]
+#         order_prize = order_data['prize']
+#         order_report = order_data['material']
+#
+#         payment = 0
+#         change = 0
+#
+#         material_sufficient = check_material(available_material, order_report)
+#
+#         if material_sufficient:
+#             for coin in coins_list:
+#                 num_of_coins = int(input(f'How many {coin}-Naira coins: '))
+#                 payment += num_of_coins * coin
+#
+#             if payment >= order_prize:
+#
+#                 if payment > order_prize:
+#                     change += (payment - order_prize)
+#                     print(f'Here is your {change}Naira change')
+#
+#                 print(f'====> Enjoy your {choice}')
+#
+#                 # Adjusting the available material
+#                 for item in order_report:
+#                     available_material[item] -= order_report[item]
+#
+#             else:
+#                 print('Sorry, insufficient payment!')
+#                 continue
+#         else:
+#             print(f'{choice.capitalize()} not available... Please, check back later.')
+#
+#     else:
+#         if choice == 'off':
+#             print('\t\tGood Bye!')
+#             is_on = False
+#         elif choice == 'report':
+#             if order_report:
+#                 for item in order_report:
+#                     unit = 'g' if item == 'coffee' else 'ml'
+#                     print(f'{item}: {order_report[item]}{unit}')
+#             else:
+#                 print('\t\t\tNo report...')
+#         else:
+#             os.system('cls')
+#             print('Invalid input! Please choose from the options shown below...')
+#             order_report = ''
 
 
-def check_material(material_left, order_material):
-    for item in order_material:
-        if order_material[item] > material_left[item]:
-            return False
+# Quiz Game
+class QuizData:
+    questions = [
+        'What is the capital of France',
+        'Which planet is known as the "Red Planet"',
+        'Who wrote "Romeo and Juliet',
+        'Which element has the atomic number 1',
+        'What is the largest ocean on Earth',
+        'What is the square root of 64',
+        'In which year did World War II end',
+        'What is the chemical symbol for gold',
+        'Which of the following is a prime number',
+        'What language is primarily spoken in Brazil'
+    ]
 
-    return True
+    options = [
+        ('Rome', 'Madrid', 'Paris', 'Berlin'),
+        ('Earth', 'Mars', 'Jupiter', 'Venus'),
+        ('Charles Dickens', ' J.K. Rowling', 'William Shakespeare', 'George Orwell'),
+        ('Helium', 'Hydrogen', 'Oxygen', 'Nitrogen'),
+        ('Atlantic Ocean', 'Indian Ocean', 'Pacific Ocean', 'Arctic Ocean'),
+        (6, 7, 8, 9),
+        (1940, 1942, 1945, 1948),
+        ('Ag', 'Go', 'Au', 'Gd'),
+        (9, 15, 21, 13),
+        ('Spanish', 'Portuguese', 'French', 'English')
+    ]
 
+    ans_ind = (2, 1, 2, 1, 2, 2, 2, 2, 3, 1)
 
-is_on = True
-order_report = ''
+class Quiz:
 
-while is_on:
-    choice = input(f"What would like to have? ({'/'.join(coffee_list_disp)}): ").lower()
+    def __init__(self):
+        self.score = 0
 
-    if choice in coffee_list:
-        order_data = coffee_data[coffee_list.index(choice)]
-        order_prize = order_data['prize']
-        order_report = order_data['material']
+    def start(self):
+        print('Welcome to LanxCity quiz competition')
+        print('*' * 50)
 
-        payment = 0
-        change = 0
+        num_of_qeustions = len(QuizData.questions)
+        counter = 0
+        point = 100 / num_of_qeustions
+        total_got = 0
 
-        material_sufficient = check_material(available_material, order_report)
+        # option dictionary for direct lookup
+        opt = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
 
-        if material_sufficient:
-            for coin in coins_list:
-                num_of_coins = int(input(f'How many {coin}-Naira coins: '))
-                payment += num_of_coins * coin
+        while counter < num_of_qeustions:
+            print()
+            print(f'{QuizData.questions[counter]}?')
+            ans = QuizData.options[counter]
+            correct_ans = QuizData.ans_ind[counter]
 
-            if payment >= order_prize:
+            for el in opt:
+                print(f'{el}. {ans[opt[el]]}')
 
-                if payment > order_prize:
-                    change += (payment - order_prize)
-                    print(f'Here is your {change}Naira change')
-
-                print(f'====> Enjoy your {choice}')
-
-                # Adjusting the available material
-                for item in order_report:
-                    available_material[item] -= order_report[item]
-
+            user_input = input('Enter your answer (A/B/C/D): ').upper()
+            if user_input in opt and opt[user_input] == correct_ans:
+                self.score += point
+                total_got += 1
+                print(f'Correct Answer! Points: {self.score}')
             else:
-                print('Sorry, insufficient payment!')
-                continue
-        else:
-            print(f'{choice.capitalize()} not available... Please, check back later.')
+                print('**Sorry, Incorrect Answer...')
+                print(f'The correct answer is "{ans[correct_ans]}"')
+                print(f'Your current point is {self.score}')
 
-    else:
-        if choice == 'off':
-            print('\t\tGood Bye!')
-            is_on = False
-        elif choice == 'report':
-            if order_report:
-                for item in order_report:
-                    unit = 'g' if item == 'coffee' else 'ml'
-                    print(f'{item}: {order_report[item]}{unit}')
-            else:
-                print('\t\t\tNo report...')
-        else:
-            os.system('cls')
-            print('Invalid input! Please choose from the options shown below...')
-            order_report = ''
+            counter += 1
+
+        print(f'You got {total_got} correctly out of {num_of_qeustions} questions')
 
 
-
-
+Quiz().start()
 
 
 
