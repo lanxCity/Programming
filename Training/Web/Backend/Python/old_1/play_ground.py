@@ -57,7 +57,7 @@ from random import random
 #         if perc_sum == 100:
 #             break
 #         elif perc_sum > 100:
-#             max_num = max(perc_breakdown)
+#             max_num = max_sum(perc_breakdown)
 #             excess_num = perc_sum - 100
 #
 #             if excess_num == max_num:

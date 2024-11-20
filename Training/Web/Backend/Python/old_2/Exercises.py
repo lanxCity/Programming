@@ -154,7 +154,7 @@ import random
 # if user_choice.isdigit() and len(user_choice) == 2:
 #     user_choice_list = [int(i) for i in user_choice]
 #     min_user_entry = min(user_choice_list)
-#     max_user_entry = max(user_choice_list)
+#     max_user_entry = max_sum(user_choice_list)
 #
 #     if 0 < min_user_entry <= 5 and 0 < max_user_entry <= 5:
 #         row = user_choice_list[0]

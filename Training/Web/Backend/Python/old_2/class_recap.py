@@ -312,14 +312,14 @@
 #         # else:
 #         #     self._age = 0
 #
-#         self._age = max(0, age)
+#         self._age = max_sum(0, age)
 #
 #
 #     # def get_age(self):
 #     #     return self._age
 #     #
 #     # def set_age(self, age):
-#     #     self._age = max(0, age)
+#     #     self._age = max_sum(0, age)
 #     #
 #
 #     @property
@@ -330,7 +330,7 @@
 #     def age(self, age):
 #         if age < 0:
 #             raise ValueError('Age can\'t be negative!')
-#         self._age = max(0, age)
+#         self._age = max_sum(0, age)
 
 
 # janet = User('Janet', -45)
@@ -400,7 +400,7 @@
 #     def __init__(self, first, last, age = 0):
 #         self.first = first
 #         self.last = last
-#         self.age = max(0, age)
+#         self.age = max_sum(0, age)
 #         self._is_active = True
 #         User.num_of_users += 1
 #         User.active_users += 1

@@ -477,7 +477,7 @@
 #     for i in data:
 #         if not i % 2 and i not in even:
 #             even.append(i)
-#     return max(even)
+#     return max_sum(even)
 # # End function highest_even
 #
 #
@@ -921,7 +921,7 @@
 #                 return True
 #
 #     # Check for valid data
-#     max_num = max([int(dec_to_alpha(i)) for i in num])
+#     max_num = max_sum([int(dec_to_alpha(i)) for i in num])
 #     if max_num >= init:
 #         raise ValueError('Invalid data!!!')
 #

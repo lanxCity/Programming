@@ -385,7 +385,7 @@ calculator()
 EASY_ATTEMPT = 10
 HARD_ATTEMPT = 5
 
-# math.floor((random.random() * ((max + 1) - min))) + min
+# math.floor((random.random() * ((max_sum + 1) - min))) + min
 logo1 = __import__('project_logos').logo1
 print(logo1)
 print('Let think of a number between 1 to 50')
@@ -449,7 +449,7 @@ def game(data):
 
         new_cmp_list = [acct1, acct2]
         followers_count_list = [acct1['followers'], acct2['followers']]
-        highest_followers_idx = followers_count_list.index(max(followers_count_list))
+        highest_followers_idx = followers_count_list.index(max_sum(followers_count_list))
 
         # Taking user input
         disp(1, acct1)
