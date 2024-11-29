@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HTML and CSS for Complete Beginners: Example 2-12</title>
+
+    <!-- This CSS and font is purely for presentational purposes. -->
+    <link rel="stylesheet" href="css/presentation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="flip">
+    <section class="learn">
+      <!-- Practice area start -->
+
+      <h1>Payouts</h1>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>PAYEE</th>
+            <th>AMOUNT</th>
+            <th>DATE</th>
+            <th>STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>John Wick</span><br /><span>Shoota Inc</span></td>
+            <td>$12,332.21</td>
+            <td>Jan 13, 2022</td>
+            <td><span>Processing</span></td>
+          </tr>
+          <tr>
+            <td><span>Alamu Johnson</span><br /><span>Spider Inc</span></td>
+            <td>$9,311.21</td>
+            <td>Apr 13, 2021</td>
+            <td><span>Success</span></td>
+          </tr>
+          <tr>
+            <td><span>Mike Adenuga</span><br /><span>GTB Inc</span></td>
+            <td>$32,713.21</td>
+            <td>Feb 13, 2020</td>
+            <td><span>Success</span></td>
+          </tr>
+          <tr>
+            <td><span>Israel Frank</span><br /><span>Toshiba Inc</span></td>
+            <td>$12,013.30</td>
+            <td>Sep 2, 2023</td>
+            <td><span>Revert</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total paid</td>
+            <!-- 'colspan' ensures alignment with the data above-->
+            <td colspan="3">$90,837.14</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Miscellaneous -->
+      <!-- Semantic elements include,
+       -> header, nav, main (must exist once on a page), aside, section, article, footer  
+       -->
+
+      <!-- Practice area end -->
+    </section>
+
+    <section
+      class="preview"
+      data-content="lesson 2-12: Displaying Tabular Data with Tables"
+    >
+      <img width="903" src="images/reference/table.png" alt="Reference image" />
+    </section>
+  </body>
+</html>

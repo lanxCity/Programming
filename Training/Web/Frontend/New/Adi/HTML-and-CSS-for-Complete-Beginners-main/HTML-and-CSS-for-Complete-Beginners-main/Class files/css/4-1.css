@@ -1,0 +1,175 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+input,
+textarea,
+button {
+    display: inline-block;
+}
+
+/* utility */
+.container {
+    background-color: rgb(189, 197, 199);
+    max-width: 1200px;
+    margin: auto;
+    padding: 12em 4em;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.muted {
+    opacity: .5;
+}
+
+.section-intro {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.belt {
+    margin: 4em 0;
+}
+
+header h3 {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 1.5em;
+}
+
+/* header styling */
+header #logo {
+    margin-bottom: 6em;
+}
+
+header #logo img {
+    width: 2.5em;
+}
+
+header h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 4em;
+}
+
+header .btn {
+    border: 1px #333 solid;
+    padding: 1em 3em;
+}
+
+/* our-chair styling */
+#our-chair header {
+    padding: 0 12em 4em;
+}
+
+#our-chair .gallery {
+    display: flex;
+    gap: 3em;
+    text-align: left;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery .chair-number {
+    font-size: 1.5em;
+}
+
+.gallery p,
+.gallery h4 {
+    margin: 1em 0;
+}
+
+/* contact styling */
+#contact form {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+form div {
+    margin-bottom: 1em;
+}
+
+form label {
+    font-size: 0.9em;
+    display: block;
+    text-transform: uppercase;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: .5em 1em;
+    outline: none;
+}
+
+form textarea {
+    height: 200px;
+    resize: none;
+}
+
+form .btn {
+    font-size: 1em;
+}
+
+#contact .belt {
+    margin: 2em 0;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* store */
+#store h3 {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+#store .addr {
+    font-size: 1.2em;
+}
+
+#store .social-icons {
+    display: flex;
+    gap: 2em;
+    margin-top: 6em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+footer .container p {
+    width: 50%;
+    margin: auto;
+
+}
